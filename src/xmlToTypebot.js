@@ -273,7 +273,7 @@ async function xmlToTypebot(xmlString, options = {}) {
   let optionMappings; // Array de { number, targetNodeId, isSubmenu, subOptions }
   if (flowMap?.options?.length > 0) {
     optionMappings = flowMap.options
-      .filter(opt => opt.targetNodeId && nodeContent[opt.targetNodeId])
+      .filter(opt => opt.targetNodeId && (nodeContent[opt.targetNodeId] || adjacency[opt.targetNodeId]))
       .sort((a, b) => a.number - b.number);
   } else {
     const sortedTargets = [...mainTargets].sort((a, b) => {
@@ -575,47 +575,79 @@ function textToRichText(text) {
 
 /** Interpreta a estrutura do fluxo com IA — identifica menu principal e mapeamento opção→nó */
 async function interpretFlowWithAI(nodeContent, adjacency, vertices, openaiClient) {
-  const nodes = vertices
-    .map(v => ({ id: v.$.id, text: (nodeContent[v.$.id]?.text || '').substring(0, 400) }))
-    .filter(n => n.text.replace(/\s/g, '').length > 10);
+  // Inclui TODOS os nós — até os de texto curto são necessários (são labels de opções)
+  const nodes = vertices.map(v => ({
+    id: v.$.id,
+    text: (nodeContent[v.$.id]?.text || '').substring(0, 500),
+  }));
 
   const edgeList = [];
   for (const [src, targets] of Object.entries(adjacency)) {
     for (const tgt of (targets || [])) edgeList.push(`${src} → ${tgt}`);
   }
 
-  const prompt = `Analise este diagrama DrawIO de chatbot e retorne um JSON descrevendo a estrutura de menus.
+  // Detecta antecipadamente quantas opções o menu principal provavelmente tem
+  const bestMenuNode = nodes
+    .map(n => ({
+      id: n.id,
+      count: (n.text.match(/(?:^|\n)\s*(?:\d{1,2}[.)* ]|[1-9️⃣🔟])/gm) || []).length,
+    }))
+    .sort((a, b) => b.count - a.count)[0];
+  const expectedCount = bestMenuNode?.count || '?';
 
-NODOS:
-${nodes.map(n => `[${n.id}]\n${n.text}`).join('\n\n')}
+  const prompt = `Você está analisando um diagrama de fluxo de chatbot (DrawIO).
+Sua tarefa: identificar o MENU PRINCIPAL e mapear CADA opção numerada ao seu nó de destino.
 
-ARESTAS:
+O menu principal provavelmente tem ~${expectedCount} opções numeradas.
+
+═══ TODOS OS NÓS DO DIAGRAMA ═══
+${nodes.map(n => `[ID: ${n.id}]\n${n.text || '(nó sem texto)'}`).join('\n\n')}
+
+═══ ARESTAS (source → target) ═══
 ${edgeList.join('\n') || '(nenhuma aresta encontrada)'}
 
-Retorne um JSON com esta estrutura:
-{
-  "mainMenuNodeId": "id do nó que contém o menu principal com opções numeradas",
-  "options": [
-    { "number": 1, "targetNodeId": "id do nó de resposta para opção 1" },
-    { "number": 2, "targetNodeId": "id do nó de resposta para opção 2" }
-  ]
-}
+═══ REGRAS IMPORTANTES ═══
+1. O menu principal é o nó com lista de opções numeradas: "1." / "1️⃣" / "1*" / "1)" etc.
+2. Para CADA opção do menu (incluindo as de número alto como 11, 12, 13, 14), siga a aresta correspondente e retorne o nó de destino.
+3. O nó de destino PODE ter texto curto ou até vazio — inclua-o mesmo assim.
+4. Se um destino também tem sub-opções numeradas, adicione "isSubmenu": true e "subOptions": [...].
+5. Use SOMENTE IDs que aparecem na lista de nós acima.
+6. NÃO omita opções — retorne TODAS as opções encontradas no menu principal.
 
-Regras:
-- O menu principal é o nó com lista de opções numeradas (1. / 1️⃣ / 1* / etc.)
-- Cada "targetNodeId" deve ser um ID válido da lista de nós acima
-- Se um nó filho também tem sub-opções numeradas, adicione "isSubmenu": true e "subOptions": [{"number":1,"targetNodeId":"..."},...]
-- Use apenas IDs existentes na lista de nós acima`;
+Retorne APENAS um JSON (sem markdown):
+{
+  "mainMenuNodeId": "string",
+  "totalOptions": ${expectedCount},
+  "options": [
+    { "number": 1, "targetNodeId": "string" },
+    { "number": 2, "targetNodeId": "string" }
+  ]
+}`;
 
   const response = await openaiClient.chat.completions.create({
-    model: 'gpt-4o',
-    messages: [{ role: 'user', content: prompt }],
+    model: 'gpt-4.1',
+    messages: [
+      {
+        role: 'system',
+        content: 'Você é um especialista em análise de diagramas de chatbot. Analise grafos de fluxo com precisão e retorne JSON estruturado. Nunca omita opções de menu — inclua todas, mesmo as com nós de destino sem texto.',
+      },
+      { role: 'user', content: prompt },
+    ],
     temperature: 0,
     response_format: { type: 'json_object' },
-    max_tokens: 2000,
+    max_tokens: 4000,
   });
 
-  return JSON.parse(response.choices[0].message.content);
+  const result = JSON.parse(response.choices[0].message.content);
+
+  // Validação: se a IA retornou menos opções do que o esperado, loga aviso
+  if (bestMenuNode && result.options?.length < bestMenuNode.count) {
+    console.warn(
+      `[interpretFlowWithAI] IA retornou ${result.options?.length} opções mas o menu parece ter ${bestMenuNode.count}. Verifique o diagrama.`
+    );
+  }
+
+  return result;
 }
 
 /** Chama IA apenas para nós com HTML ilegível — minimiza tokens */

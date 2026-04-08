@@ -34,13 +34,42 @@ async function xmlToTypebot(xmlString, options = {}) {
 
   // 1. Parse XML
   const parsed = await xml2js.parseStringPromise(xmlString, { explicitArray: true });
-  const root = parsed?.mxfile?.diagram?.[0]?.mxGraphModel?.[0]?.root?.[0];
+  const diagrams = parsed?.mxfile?.diagram || [];
+  if (!diagrams.length) throw new Error('XML inválido: estrutura mxGraphModel não encontrada');
+
+  // Em diagramas multi-página, usa a página com mais nós de conteúdo
+  let root = null;
+  for (const diagram of diagrams) {
+    const r = diagram?.mxGraphModel?.[0]?.root?.[0];
+    if (!r) continue;
+    const count = (r.mxCell?.length || 0) + (r.UserObject?.length || 0);
+    if (!root || count > (root.mxCell?.length || 0) + (root.UserObject?.length || 0)) {
+      root = r;
+    }
+  }
   if (!root) throw new Error('XML inválido: estrutura mxGraphModel não encontrada');
 
   const cells = root.mxCell || [];
 
-  // 2. Separar vértices e arestas
-  const vertices = cells.filter(c => c.$.vertex === '1' && c.$.id !== '0' && c.$.id !== '1');
+  // 2. Separar vértices e arestas (suporte a mxCell e UserObject)
+  // UserObject: nó com label HTML + atributo "link" com texto mais limpo
+  const userObjects = root.UserObject || [];
+  const userObjVertices = userObjects
+    .filter(uo => uo.mxCell?.[0]?.$.vertex === '1')
+    .map(uo => ({
+      $: {
+        id: uo.$.id,
+        value: uo.$.label || '',
+        _linkText: uo.$.link || '',
+        vertex: '1',
+      },
+      mxGeometry: uo.mxCell?.[0]?.mxGeometry,
+    }));
+
+  const vertices = [
+    ...cells.filter(c => c.$.vertex === '1' && c.$.id !== '0' && c.$.id !== '1'),
+    ...userObjVertices,
+  ];
   const edges = cells.filter(c => c.$.edge === '1');
 
   // 3. Construir mapa de adjacência: sourceId → [targetId]
@@ -76,13 +105,18 @@ async function xmlToTypebot(xmlString, options = {}) {
   const sortedByOut = [...vertices].sort((a, b) => (outDegree[b.$.id] || 0) - (outDegree[a.$.id] || 0));
 
   // 5. Extrair conteúdo de cada vértice
+  // UserObject: usa atributo "link" como fonte de texto preferencial (mais limpo que o label HTML)
   const nodeContent = {};
   const needsAI = [];
   for (const v of vertices) {
     const raw = v.$.value || '';
-    const text = stripHtml(raw).trim();
+    const linkText = v.$._linkText || '';
+    // link attribute (UserObject) → stripHtml para remover spans residuais
+    // value attribute (mxCell)    → stripHtml normal
+    const text = linkText ? stripHtml(linkText).trim() : stripHtml(raw).trim();
     nodeContent[v.$.id] = { raw, text, vertex: v };
-    if (raw.includes('<') && text.length < 20) {
+    // Só aciona IA para mxCell com HTML ilegível (UserObject tem link limpo)
+    if (!linkText && raw.includes('<') && text.length < 20) {
       needsAI.push(v.$.id);
     }
   }

@@ -73,32 +73,70 @@ async function xmlToTypebot(xmlString, options = {}) {
   const edges = cells.filter(c => c.$.edge === '1');
 
   // 3. Construir mapa de adjacência: sourceId → [targetId]
-  const adjacency = {};     // sourceId → [targetId]
-  const edgeMap = {};       // edgeId → { source, target }
-  const brokenEdgeSources = new Set(); // fontes com arestas quebradas (target="undefined")
+  // Suporta dois formatos de aresta:
+  //   a) target="nodeId"  — conexão explícita (formato padrão)
+  //   b) sem target attr, mas com mxPoint as="targetPoint" — aresta "flutuante"
+  //      (frequente em diagramas exportados sem snap a nós)
+  const adjacency = {};
+  const edgeMap = {};
+  const brokenEdgeSources = new Set();
+
+  // Pré-indexa geometria de cada vértice para resolução de arestas por coordenada
+  const vertexGeo = new Map(); // id → { x, y, w, h, cx, cy }
+  for (const v of vertices) {
+    const g = v.mxGeometry?.[0]?.$ || {};
+    const x = parseFloat(g.x || 0);
+    const y = parseFloat(g.y || 0);
+    const w = parseFloat(g.width || 0);
+    const h = parseFloat(g.height || 0);
+    vertexGeo.set(v.$.id, { x, y, w, h, cx: x + w / 2, cy: y + h / 2 });
+  }
+
+  // Resolve target de aresta flutuante pela coordenada mxPoint as="targetPoint"
+  function resolveTargetByCoord(edgeGeo, srcId) {
+    if (!edgeGeo?.[0]) return null;
+    const pts = edgeGeo[0].mxPoint || [];
+    const tgtPt = pts.find(p => p.$.as === 'targetPoint');
+    if (!tgtPt) return null;
+    const tx = parseFloat(tgtPt.$.x);
+    const ty = parseFloat(tgtPt.$.y);
+    if (isNaN(tx) || isNaN(ty)) return null;
+    let bestId = null;
+    let bestDist = Infinity;
+    for (const [vid, g] of vertexGeo) {
+      if (vid === srcId) continue;
+      // Bounding-box hit: preferência absoluta
+      if (tx >= g.x && tx <= g.x + g.w && ty >= g.y && ty <= g.y + g.h) return vid;
+      // Caso contrário: guarda o mais próximo por distância euclidiana ao centro
+      const dist = Math.hypot(tx - g.cx, ty - g.cy);
+      if (dist < bestDist) { bestDist = dist; bestId = vid; }
+    }
+    return bestId;
+  }
+
   for (const e of edges) {
     const src = e.$.source;
     const tgt = e.$.target;
     if (!src) continue;
-    if (!tgt || tgt === 'undefined') {
-      // Aresta com source mas sem target válido — registra para reparar depois
-      if (src) brokenEdgeSources.add(src);
+    // Resolve target: explícito ou por coordenada de ponto-final
+    const resolvedTgt = (tgt && tgt !== 'undefined')
+      ? tgt
+      : resolveTargetByCoord(e.mxGeometry, src);
+    if (!resolvedTgt) {
+      brokenEdgeSources.add(src);
       continue;
     }
     if (!adjacency[src]) adjacency[src] = [];
-    adjacency[src].push(tgt);
-    edgeMap[e.$.id] = { source: src, target: tgt };
+    if (!adjacency[src].includes(resolvedTgt)) adjacency[src].push(resolvedTgt);
+    edgeMap[e.$.id] = { source: src, target: resolvedTgt };
   }
 
-  // 4. Encontrar nó raiz (mais saídas ou nó referenciado por menos entradas)
+  // 4. Graus de entrada/saída calculados da adjacência resolvida
   const inDegree = {};
-  for (const e of edges) {
-    if (e.$.target) inDegree[e.$.target] = (inDegree[e.$.target] || 0) + 1;
-  }
-  // Nó com mais saídas = menu principal
   const outDegree = {};
-  for (const e of edges) {
-    if (e.$.source) outDegree[e.$.source] = (outDegree[e.$.source] || 0) + 1;
+  for (const [src, tgts] of Object.entries(adjacency)) {
+    outDegree[src] = (outDegree[src] || 0) + tgts.length;
+    for (const tgt of tgts) inDegree[tgt] = (inDegree[tgt] || 0) + 1;
   }
 
   // Ordena vértices por grau de saída decrescente para pegar o menu principal primeiro
@@ -581,10 +619,15 @@ async function interpretFlowWithAI(nodeContent, adjacency, vertices, openaiClien
     text: (nodeContent[v.$.id]?.text || '').substring(0, 500),
   }));
 
+  // Arestas resolvidas (já incluem as deduzidas por coordenada)
   const edgeList = [];
   for (const [src, targets] of Object.entries(adjacency)) {
     for (const tgt of (targets || [])) edgeList.push(`${src} → ${tgt}`);
   }
+
+  // IDs de nós que NÃO aparecem como targets de nenhuma aresta (potencialmente orphans)
+  const allTargets = new Set(edgeList.map(e => e.split(' → ')[1]));
+  const unreachableIds = nodes.filter(n => !allTargets.has(n.id)).map(n => n.id);
 
   // Detecta antecipadamente quantas opções o menu principal provavelmente tem
   const bestMenuNode = nodes
@@ -603,16 +646,22 @@ O menu principal provavelmente tem ~${expectedCount} opções numeradas.
 ═══ TODOS OS NÓS DO DIAGRAMA ═══
 ${nodes.map(n => `[ID: ${n.id}]\n${n.text || '(nó sem texto)'}`).join('\n\n')}
 
-═══ ARESTAS (source → target) ═══
+═══ ARESTAS RESOLVIDAS (source → target) ═══
 ${edgeList.join('\n') || '(nenhuma aresta encontrada)'}
+
+═══ NÓS SEM ARESTA DE ENTRADA (possíveis opções sem conexão explícita no diagrama) ═══
+${unreachableIds.join(', ') || '(nenhum)'}
 
 ═══ REGRAS IMPORTANTES ═══
 1. O menu principal é o nó com lista de opções numeradas: "1." / "1️⃣" / "1*" / "1)" etc.
-2. Para CADA opção do menu (incluindo as de número alto como 11, 12, 13, 14), siga a aresta correspondente e retorne o nó de destino.
-3. O nó de destino PODE ter texto curto ou até vazio — inclua-o mesmo assim.
-4. Se um destino também tem sub-opções numeradas, adicione "isSubmenu": true e "subOptions": [...].
-5. Use SOMENTE IDs que aparecem na lista de nós acima.
-6. NÃO omita opções — retorne TODAS as opções encontradas no menu principal.
+2. Para cada opção numerada do menu, localize o nó de destino correspondente:
+   a) Primeiro: use as arestas (o nó que a aresta do menu aponta para aquela opção)
+   b) Se não há aresta para aquela opção: busque nos nós sem aresta de entrada acima — o nó cujo texto começa com "N*" ou "N." onde N é o número da opção
+3. Inclua TODAS as opções, mesmo as sem aresta explícita.
+4. O nó de destino PODE ter texto curto ou vazio — inclua mesmo assim.
+5. Se um destino também tem sub-opções numeradas, adicione "isSubmenu": true e "subOptions": [...].
+6. Use SOMENTE IDs que aparecem na lista de nós acima.
+7. NÃO omita opções — retorne TODAS as ${expectedCount} opções do menu.
 
 Retorne APENAS um JSON (sem markdown):
 {
@@ -629,7 +678,7 @@ Retorne APENAS um JSON (sem markdown):
     messages: [
       {
         role: 'system',
-        content: 'Você é um especialista em análise de diagramas de chatbot. Analise grafos de fluxo com precisão e retorne JSON estruturado. Nunca omita opções de menu — inclua todas, mesmo as com nós de destino sem texto.',
+        content: 'Você é um especialista em análise de diagramas de chatbot. Analise grafos de fluxo com precisão e retorne JSON estruturado. Para opções sem aresta explícita, encontre o nó correspondente pelo número no início do texto (ex: "4* Consulta com Enfermeiro" = opção 4). Nunca omita opções.',
       },
       { role: 'user', content: prompt },
     ],
@@ -640,7 +689,7 @@ Retorne APENAS um JSON (sem markdown):
 
   const result = JSON.parse(response.choices[0].message.content);
 
-  // Validação: se a IA retornou menos opções do que o esperado, loga aviso
+  // Validação
   if (bestMenuNode && result.options?.length < bestMenuNode.count) {
     console.warn(
       `[interpretFlowWithAI] IA retornou ${result.options?.length} opções mas o menu parece ter ${bestMenuNode.count}. Verifique o diagrama.`

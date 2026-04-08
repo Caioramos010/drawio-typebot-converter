@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DrawIO ↔ Typebot Converter</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    :root {
+      --bg: #0a0c12;
+      --surface: #13161f;
+      --surface2: #1c2030;
+      --surface3: #232840;
+      --border: #2a2f4a;
+      --accent: #4f80ff;
+      --accent2: #7c5cfc;
+      --success: #22c55e;
+      --error: #ef4444;
+      --warn: #f59e0b;
+      --text: #e2e8f0;
+      --text2: #a0aec0;
+      --muted: #4a5568;
+      --radius: 12px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', system-ui, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    /* ── Toast ── */
+    #toast-container {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      pointer-events: none;
+    }
+    .toast {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--surface3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 12px 16px;
+      font-size: 13px;
+      min-width: 260px;
+      max-width: 360px;
+      box-shadow: 0 8px 30px rgba(0,0,0,.5);
+      animation: toastIn .25s cubic-bezier(.4,0,.2,1);
+      pointer-events: auto;
+    }
+    .toast.toast-success { border-left: 3px solid var(--success); }
+    .toast.toast-error   { border-left: 3px solid var(--error); }
+    .toast.toast-info    { border-left: 3px solid var(--accent); }
+    .toast.toast-out { animation: toastOut .2s ease forwards; }
+    @keyframes toastIn  { from { opacity:0; transform:translateX(30px); } to { opacity:1; transform:translateX(0); } }
+    @keyframes toastOut { to   { opacity:0; transform:translateX(30px); } }
+
+    /* ── Header ── */
+    header {
+      padding: 16px 32px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10,12,18,.85);
+    }
+    header .logo { font-size: 20px; font-weight: 700; letter-spacing: -.5px; }
+    header .logo span { color: var(--accent); }
+    header .badge {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      font-size: 11px;
+      padding: 2px 9px;
+      color: var(--muted);
+    }
+    .ai-pill {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      padding: 5px 13px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text2);
+    }
+    .ai-pill .dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--muted);
+      transition: background .4s;
+    }
+    .ai-pill .dot.on { background: var(--success); box-shadow: 0 0 6px var(--success); }
+
+    /* ── Layout ── */
+    main {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 0;
+    }
+    @media (max-width: 860px) { main { grid-template-columns: 1fr; } }
+
+    /* ── Panels ── */
+    .panel {
+      padding: 28px 32px 36px;
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      overflow-y: auto;
+      height: calc(100vh - 57px);
+    }
+    .panel:last-child { border-right: none; background: rgba(124,92,252,.02); }
+
+    .panel-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .panel-title .icon {
+      width: 36px; height: 36px; border-radius: 9px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    .icon-blue   { background: rgba(79,128,255,.15); }
+    .icon-purple { background: rgba(124,92,252,.15); }
+
+    /* ── Form fields ── */
+    .field { display: flex; flex-direction: column; gap: 6px; }
+    label { font-size: 12px; color: var(--text2); font-weight: 500; letter-spacing: .3px; }
+    input[type=text] {
+      width: 100%;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 9px 12px;
+      color: var(--text);
+      font-size: 13px;
+      outline: none;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    input[type=text]:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(79,128,255,.12);
+    }
+
+    /* ── Drop zone ── */
+    .dropzone {
+      border: 2px dashed var(--border);
+      border-radius: var(--radius);
+      padding: 24px 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: border-color .2s, background .2s, transform .15s;
+      position: relative;
+      background: var(--surface);
+    }
+    .dropzone:hover { border-color: var(--accent); background: rgba(79,128,255,.04); }
+    .dropzone.drag {
+      border-color: var(--accent);
+      background: rgba(79,128,255,.08);
+      transform: scale(1.01);
+    }
+    .dropzone.has-file {
+      border-style: solid;
+      border-color: rgba(79,128,255,.4);
+      background: rgba(79,128,255,.05);
+    }
+    .dropzone input[type=file] { position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; height: 100%; }
+    .dz-icon { font-size: 26px; margin-bottom: 6px; line-height: 1; }
+    .dz-label { font-size: 13px; color: var(--text2); }
+    .dz-label strong { color: var(--text); }
+
+    /* file info card */
+    .file-info {
+      display: none;
+      align-items: center;
+      gap: 10px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 13px;
+      animation: fadeSlideIn .2s ease;
+    }
+    .file-info.show { display: flex; }
+    .file-info .fi-icon { font-size: 20px; flex-shrink: 0; }
+    .file-info .fi-name { font-weight: 500; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .file-info .fi-size { color: var(--muted); font-size: 11px; white-space: nowrap; }
+    .file-info .fi-clear {
+      background: none; border: none; color: var(--muted);
+      cursor: pointer; font-size: 15px; padding: 2px 4px; border-radius: 4px;
+      transition: color .15s;
+    }
+    .file-info .fi-clear:hover { color: var(--error); }
+
+    /* ── Queue IDs ── */
+    .queue-table { display: flex; flex-direction: column; gap: 8px; }
+    .queue-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 28px;
+      gap: 8px;
+      align-items: center;
+      animation: fadeSlideIn .15s ease;
+    }
+    .queue-row input { margin: 0; }
+    .btn-icon {
+      background: none; border: none; color: var(--muted);
+      cursor: pointer; font-size: 15px; padding: 2px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 5px; transition: color .15s, background .15s;
+    }
+    .btn-icon:hover { color: var(--error); background: rgba(239,68,68,.1); }
+    .btn-add {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: none; border: 1px dashed var(--border);
+      color: var(--muted); border-radius: 8px;
+      padding: 6px 13px; font-size: 12px; cursor: pointer;
+      transition: border-color .2s, color .2s, background .2s;
+      width: 100%; justify-content: center;
+    }
+    .btn-add:hover { border-color: var(--accent); color: var(--accent); background: rgba(79,128,255,.05); }
+
+    /* ── Convert button ── */
+    .btn-convert {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #fff;
+      border: none;
+      border-radius: var(--radius);
+      padding: 13px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity .2s, transform .1s, box-shadow .2s;
+      box-shadow: 0 4px 20px rgba(79,128,255,.25);
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-convert::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,.1), transparent);
+      opacity: 0;
+      transition: opacity .2s;
+    }
+    .btn-convert:hover:not(:disabled)::before { opacity: 1; }
+    .btn-convert:hover:not(:disabled) { box-shadow: 0 6px 28px rgba(79,128,255,.4); }
+    .btn-convert:active:not(:disabled) { transform: scale(.98); }
+    .btn-convert:disabled { opacity: .4; cursor: not-allowed; box-shadow: none; }
+    .btn-convert .spinner {
+      width: 16px; height: 16px;
+      border: 2px solid rgba(255,255,255,.3);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin .7s linear infinite;
+      display: none;
+    }
+    .btn-convert.loading .spinner { display: block; }
+    .btn-convert.loading .btn-text { display: none; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── Result ── */
+    .result-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity .25s ease, transform .25s ease;
+      pointer-events: none;
+      max-height: 0;
+    }
+    .result-box.show {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+      max-height: none;
+    }
+    .result-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border);
+      font-size: 13px;
+      background: var(--surface2);
+    }
+    .result-status { display: flex; align-items: center; gap: 8px; }
+    .status-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .status-dot.ok  { background: var(--success); box-shadow: 0 0 6px var(--success); }
+    .status-dot.err { background: var(--error);   box-shadow: 0 0 6px var(--error); }
+    .result-actions { display: flex; gap: 6px; align-items: center; }
+
+    .btn-action {
+      display: inline-flex; align-items: center; gap: 5px;
+      background: var(--surface3);
+      border: 1px solid var(--border);
+      color: var(--text2);
+      border-radius: 7px;
+      padding: 5px 11px;
+      font-size: 12px;
+      cursor: pointer;
+      transition: border-color .15s, color .15s, background .15s;
+      white-space: nowrap;
+    }
+    .btn-action:hover { border-color: var(--accent); color: var(--text); }
+    .btn-action.primary {
+      background: linear-gradient(135deg, rgba(79,128,255,.2), rgba(124,92,252,.2));
+      border-color: rgba(79,128,255,.4);
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .btn-action.primary:hover {
+      background: linear-gradient(135deg, rgba(79,128,255,.3), rgba(124,92,252,.3));
+      border-color: var(--accent);
+    }
+
+    /* stats row */
+    .result-stats {
+      display: flex; gap: 14px; flex-wrap: wrap;
+      padding: 8px 14px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(79,128,255,.04);
+    }
+    .stat-chip {
+      display: flex; align-items: center; gap: 5px;
+      font-size: 11px; color: var(--text2);
+    }
+    .stat-chip .val { color: var(--text); font-weight: 600; }
+
+    .result-preview {
+      padding: 14px;
+      max-height: 380px;
+      overflow-y: auto;
+      font-family: 'Cascadia Code', 'Fira Code', monospace;
+      font-size: 11px;
+      color: var(--text2);
+      white-space: pre;
+      tab-size: 2;
+      line-height: 1.6;
+    }
+    .result-preview.error-text { color: var(--error); }
+
+    /* ── Scrollbar ── */
+    ::-webkit-scrollbar { width: 5px; height: 5px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--muted); }
+
+    /* ── Divider ── */
+    .divider { height: 1px; background: var(--border); }
+
+    /* ── Info box ── */
+    .info-box {
+      background: rgba(79,128,255,.06);
+      border: 1px solid rgba(79,128,255,.15);
+      border-radius: var(--radius);
+      padding: 10px 14px;
+      font-size: 12px;
+      color: var(--text2);
+      line-height: 1.65;
+    }
+    .info-box strong { color: var(--text); }
+
+    /* ── Animations ── */
+    @keyframes fadeSlideIn {
+      from { opacity: 0; transform: translateY(-6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<div id="toast-container"></div>
+
+<header>
+  <div class="logo">DrawIO <span>↔</span> Typebot</div>
+  <span class="badge">v1.0</span>
+  <div class="ai-pill" id="aiPill">
+    <span class="dot" id="aiDot"></span>
+    <span id="aiLabel">Verificando IA…</span>
+  </div>
+</header>
+
+<main>
+
+  <!-- ─── Painel 1: XML → Typebot ──────────────────────────────────────── -->
+  <div class="panel">
+    <div class="panel-title">
+      <div class="icon icon-blue">📐</div>
+      DrawIO XML → Typebot JSON
+    </div>
+
+    <div class="info-box">
+      <strong>Como funciona:</strong> o conversor detecta automaticamente menus numerados, submenus e respostas finais.
+      A IA só é acionada para nós com HTML muito complexo — economizando tokens.
+    </div>
+
+    <!-- Arquivo -->
+    <div class="field">
+      <label>Arquivo DrawIO (.xml ou .drawio)</label>
+      <div class="dropzone" id="dropzoneXml">
+        <input type="file" id="fileXml" accept=".xml,.drawio" />
+        <div class="dz-icon">📂</div>
+        <div class="dz-label">Arraste o arquivo ou <strong>clique para selecionar</strong></div>
+      </div>
+      <div class="file-info" id="fileXmlInfo">
+        <span class="fi-icon">📄</span>
+        <span class="fi-name" id="fileXmlName"></span>
+        <span class="fi-size" id="fileXmlSize"></span>
+        <button class="fi-clear" onclick="clearFile('xml')" title="Remover arquivo">✕</button>
+      </div>
+    </div>
+
+    <!-- Campos -->
+    <div class="field">
+      <label>Nome do fluxo</label>
+      <input type="text" id="flowName" placeholder="CS Ingleses" value="CS Ingleses" />
+    </div>
+
+    <div class="field">
+      <label>TOKEN WhatsApp</label>
+      <input type="text" id="tokenWhatsapp" placeholder="9QBAQA8P21FZEMR9K6Y6YN4LJR7ZZV" />
+    </div>
+
+    <div class="field">
+      <label>Workspace ID (opcional)</label>
+      <input type="text" id="workspaceId" placeholder="cmdevtbwc0007pd17z2i0ikfc" />
+    </div>
+
+    <div class="field">
+      <label>Folder ID (opcional)</label>
+      <input type="text" id="folderId" placeholder="cmnp12h1y002bqh16vdjrz3oj" />
+    </div>
+
+    <!-- Queue IDs -->
+    <div class="field">
+      <label>IDs de fila (Typebot link) — nós que redirecionam para outra fila</label>
+      <div class="queue-table" id="queueTable"></div>
+      <button class="btn-add" onclick="addQueueRow()">＋ Adicionar fila</button>
+    </div>
+
+    <div class="divider"></div>
+
+    <button class="btn-convert" id="btnXmlToTypebot" onclick="convertXmlToTypebot()">
+      <span class="btn-text">⚡ Converter → Typebot JSON</span>
+      <div class="spinner"></div>
+    </button>
+
+    <div class="result-box" id="resultXmlToTypebot">
+      <div class="result-header">
+        <div class="result-status">
+          <span class="status-dot ok" id="dotXmlToTypebot"></span>
+          <span id="statusXmlToTypebot">Pronto</span>
+        </div>
+        <div class="result-actions">
+          <button class="btn-action" onclick="copyResult('resultXmlToTypebotData', this)">
+            📋 Copiar
+          </button>
+          <button class="btn-action primary" onclick="downloadJson()">
+            ⬇ Baixar JSON
+          </button>
+        </div>
+      </div>
+      <div class="result-stats" id="statsXmlToTypebot" style="display:none"></div>
+      <div class="result-preview" id="resultXmlToTypebotData"></div>
+    </div>
+  </div>
+
+  <!-- ─── Painel 2: Typebot → XML ──────────────────────────────────────── -->
+  <div class="panel">
+    <div class="panel-title">
+      <div class="icon icon-purple">🔁</div>
+      Typebot JSON → DrawIO XML
+    </div>
+
+    <div class="info-box">
+      <strong>Como funciona:</strong> lê grupos, blocos e edges do Typebot e gera vértices + arestas no formato DrawIO
+      para visualizar e editar em <a href="https://app.diagrams.net" target="_blank" style="color:var(--accent);text-decoration:none">app.diagrams.net</a>.
+    </div>
+
+    <!-- Arquivo -->
+    <div class="field">
+      <label>Arquivo Typebot (.json)</label>
+      <div class="dropzone" id="dropzoneJson">
+        <input type="file" id="fileJson" accept=".json" />
+        <div class="dz-icon">📂</div>
+        <div class="dz-label">Arraste o arquivo ou <strong>clique para selecionar</strong></div>
+      </div>
+      <div class="file-info" id="fileJsonInfo">
+        <span class="fi-icon">📋</span>
+        <span class="fi-name" id="fileJsonName"></span>
+        <span class="fi-size" id="fileJsonSize"></span>
+        <button class="fi-clear" onclick="clearFile('json')" title="Remover arquivo">✕</button>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <button class="btn-convert" id="btnTypebotToXml" onclick="convertTypebotToXml()">
+      <span class="btn-text">⚡ Converter → DrawIO XML</span>
+      <div class="spinner"></div>
+    </button>
+
+    <div class="result-box" id="resultTypebotToXml">
+      <div class="result-header">
+        <div class="result-status">
+          <span class="status-dot ok" id="dotTypebotToXml"></span>
+          <span id="statusTypebotToXml">Pronto</span>
+        </div>
+        <div class="result-actions">
+          <button class="btn-action" onclick="copyResult('resultTypebotToXmlData', this)">
+            📋 Copiar
+          </button>
+          <button class="btn-action primary" onclick="downloadXml()">
+            ⬇ Baixar .drawio
+          </button>
+        </div>
+      </div>
+      <div class="result-preview" id="resultTypebotToXmlData"></div>
+    </div>
+  </div>
+
+</main>
+
+<script>
+// ── Estado ────────────────────────────────────────────────────────────────────
+let fileXmlContent = null;
+let fileJsonContent = null;
+let lastJsonResult  = null;   // resultado da conversão XML → JSON
+let lastXmlResult   = null;   // resultado da conversão JSON → XML
+let lastJsonFilename = 'typebot.json';
+let lastXmlFilename  = 'diagrama.drawio';
+
+// ── Toast ─────────────────────────────────────────────────────────────────────
+function toast(msg, type = 'info', duration = 3500) {
+  const container = document.getElementById('toast-container');
+  const el = document.createElement('div');
+  const icons = { success: '✅', error: '❌', info: 'ℹ️' };
+  el.className = `toast toast-${type}`;
+  el.innerHTML = `<span>${icons[type] || ''}</span><span>${msg}</span>`;
+  container.appendChild(el);
+  const remove = () => {
+    el.classList.add('toast-out');
+    el.addEventListener('animationend', () => el.remove(), { once: true });
+  };
+  setTimeout(remove, duration);
+}
+
+// ── Verifica status da IA ─────────────────────────────────────────────────────
+(async () => {
+  try {
+    const r = await fetch('/api/health').then(x => x.json());
+    const dot = document.getElementById('aiDot');
+    const lbl = document.getElementById('aiLabel');
+    if (r.aiEnabled) {
+      dot.classList.add('on');
+      lbl.textContent = 'IA habilitada';
+    } else {
+      lbl.textContent = 'IA desabilitada';
+    }
+  } catch { /* silencioso */ }
+})();
+
+// ── Drag-and-drop ─────────────────────────────────────────────────────────────
+function setupDropzone(dzId, inputId, infoId, nameId, sizeId, onLoad) {
+  const dz    = document.getElementById(dzId);
+  const input = document.getElementById(inputId);
+
+  input.addEventListener('change', () => handleFile(input.files[0]));
+  dz.addEventListener('dragover',  e => { e.preventDefault(); dz.classList.add('drag'); });
+  dz.addEventListener('dragleave', () => dz.classList.remove('drag'));
+  dz.addEventListener('drop', e => {
+    e.preventDefault();
+    dz.classList.remove('drag');
+    if (e.dataTransfer.files[0]) handleFile(e.dataTransfer.files[0]);
+  });
+
+  function handleFile(file) {
+    if (!file) return;
+    dz.classList.add('has-file');
+    document.getElementById(nameId).textContent = file.name;
+    document.getElementById(sizeId).textContent = formatBytes(file.size);
+    document.getElementById(infoId).classList.add('show');
+    const reader = new FileReader();
+    reader.onload = e => onLoad(e.target.result);
+    reader.readAsText(file, 'utf-8');
+  }
+}
+
+setupDropzone('dropzoneXml', 'fileXml', 'fileXmlInfo', 'fileXmlName', 'fileXmlSize', content => { fileXmlContent = content; });
+setupDropzone('dropzoneJson', 'fileJson', 'fileJsonInfo', 'fileJsonName', 'fileJsonSize', content => { fileJsonContent = content; });
+
+function clearFile(type) {
+  if (type === 'xml') {
+    fileXmlContent = null;
+    document.getElementById('fileXml').value = '';
+    document.getElementById('fileXmlInfo').classList.remove('show');
+    document.getElementById('dropzoneXml').classList.remove('has-file');
+  } else {
+    fileJsonContent = null;
+    document.getElementById('fileJson').value = '';
+    document.getElementById('fileJsonInfo').classList.remove('show');
+    document.getElementById('dropzoneJson').classList.remove('has-file');
+  }
+}
+
+// ── Queue Rows ────────────────────────────────────────────────────────────────
+function addQueueRow(nodeId = '', typebotId = '') {
+  const rowId = 'qr_' + Date.now();
+  const table = document.getElementById('queueTable');
+  const row = document.createElement('div');
+  row.className = 'queue-row';
+  row.id = rowId;
+  row.innerHTML = `
+    <input type="text" placeholder="ID do nó no DrawIO" data-role="node" value="${nodeId}" />
+    <input type="text" placeholder="Typebot ID da fila"  data-role="typebot" value="${typebotId}" />
+    <button class="btn-icon" onclick="document.getElementById('${rowId}').remove()" title="Remover">✕</button>
+  `;
+  table.appendChild(row);
+}
+
+function getQueueIds() {
+  const result = {};
+  document.querySelectorAll('.queue-row').forEach(row => {
+    const nodeId = row.querySelector('[data-role=node]').value.trim();
+    const tbId   = row.querySelector('[data-role=typebot]').value.trim();
+    if (nodeId && tbId) result[nodeId] = tbId;
+  });
+  return result;
+}
+
+// ── Conversão XML → Typebot ───────────────────────────────────────────────────
+async function convertXmlToTypebot() {
+  if (!fileXmlContent) { toast('Selecione um arquivo XML primeiro.', 'error'); return; }
+
+  const btn = document.getElementById('btnXmlToTypebot');
+  setLoading(btn, true);
+
+  try {
+    const flowName = document.getElementById('flowName').value.trim() || 'Novo Fluxo';
+    const formData = new FormData();
+    formData.append('xml', fileXmlContent);
+    formData.append('tokenWhatsapp', document.getElementById('tokenWhatsapp').value.trim());
+    formData.append('flowName', flowName);
+    formData.append('workspaceId', document.getElementById('workspaceId').value.trim());
+    formData.append('folderId', document.getElementById('folderId').value.trim());
+    formData.append('queueIds', JSON.stringify(getQueueIds()));
+
+    const res  = await fetch('/api/xml-to-typebot', { method: 'POST', body: formData });
+    const data = await res.json();
+
+    const box     = document.getElementById('resultXmlToTypebot');
+    const preview = document.getElementById('resultXmlToTypebotData');
+    const dot     = document.getElementById('dotXmlToTypebot');
+    const label   = document.getElementById('statusXmlToTypebot');
+    const stats   = document.getElementById('statsXmlToTypebot');
+
+    // força reflow para animar de novo se já estava visível
+    box.classList.remove('show');
+    void box.offsetWidth;
+    box.classList.add('show');
+
+    if (data.success) {
+      const json = JSON.stringify(data.typebot, null, 2);
+      preview.classList.remove('error-text');
+      preview.textContent = json;
+
+      dot.className   = 'status-dot ok';
+      const groups    = data.typebot.groups?.length ?? 0;
+      const blocks    = (data.typebot.groups ?? []).reduce((s, g) => s + (g.blocks?.length ?? 0), 0);
+      const edges     = data.typebot.edges?.length ?? 0;
+      label.textContent = `✅ Conversão concluída`;
+
+      // stats
+      stats.style.display = 'flex';
+      stats.innerHTML = `
+        <span class="stat-chip">Grupos: <span class="val">${groups}</span></span>
+        <span class="stat-chip">Blocos: <span class="val">${blocks}</span></span>
+        <span class="stat-chip">Edges: <span class="val">${edges}</span></span>
+        <span class="stat-chip">Tamanho: <span class="val">${formatBytes(json.length)}</span></span>
+      `;
+
+      // guardar resultado para download manual
+      lastJsonResult   = json;
+      lastJsonFilename = (flowName.replace(/[^a-z0-9_-]/gi, '_') || 'typebot') + '.json';
+
+      toast(`JSON gerado com sucesso — ${groups} grupos`, 'success');
+    } else {
+      preview.classList.add('error-text');
+      preview.textContent = data.error;
+      preview.dataset.raw = data.error;
+      stats.style.display = 'none';
+      dot.className = 'status-dot err';
+      label.textContent = 'Erro na conversão';
+      toast('Erro: ' + data.error, 'error', 5000);
+    }
+  } catch (err) {
+    toast('Erro inesperado: ' + err.message, 'error', 5000);
+  } finally {
+    setLoading(btn, false);
+  }
+}
+
+// ── Conversão Typebot → XML ───────────────────────────────────────────────────
+async function convertTypebotToXml() {
+  if (!fileJsonContent) { toast('Selecione um arquivo JSON primeiro.', 'error'); return; }
+
+  const btn = document.getElementById('btnTypebotToXml');
+  setLoading(btn, true);
+
+  try {
+    const formData = new FormData();
+    formData.append('typebot', fileJsonContent);
+
+    const res  = await fetch('/api/typebot-to-xml', { method: 'POST', body: formData });
+    const data = await res.json();
+
+    const box     = document.getElementById('resultTypebotToXml');
+    const preview = document.getElementById('resultTypebotToXmlData');
+    const dot     = document.getElementById('dotTypebotToXml');
+    const label   = document.getElementById('statusTypebotToXml');
+
+    box.classList.remove('show');
+    void box.offsetWidth;
+    box.classList.add('show');
+
+    if (data.success) {
+      preview.classList.remove('error-text');
+      preview.textContent = data.xml;
+      dot.className = 'status-dot ok';
+      label.textContent = '✅ XML gerado com sucesso';
+
+      // guardar resultado para download manual
+      lastXmlResult = data.xml;
+
+      toast('XML gerado com sucesso!', 'success');
+    } else {
+      preview.classList.add('error-text');
+      preview.textContent = data.error;
+      preview.dataset.raw = data.error;
+      dot.className = 'status-dot err';
+      label.textContent = 'Erro na conversão';
+      toast('Erro: ' + data.error, 'error', 5000);
+    }
+  } catch (err) {
+    toast('Erro inesperado: ' + err.message, 'error', 5000);
+  } finally {
+    setLoading(btn, false);
+  }
+}
+
+// ── Helpers ───────────────────────────────────────────────────────────────────
+function setLoading(btn, on) {
+  btn.disabled = on;
+  btn.classList.toggle('loading', on);
+}
+
+function triggerDownload(text, filename, mime) {
+  const blob = new Blob([text], { type: mime });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(a.href);
+}
+
+function downloadResult(elId, filename, mime) {
+  const el = document.getElementById(elId);
+  const content = el.textContent;
+  if (!content || !content.trim()) { toast('Faça a conversão primeiro.', 'error'); return; }
+  triggerDownload(content, filename, mime);
+}
+
+function downloadJson() {
+  if (!lastJsonResult) { toast('Faça a conversão primeiro.', 'error'); return; }
+  triggerDownload(lastJsonResult, lastJsonFilename, 'application/json');
+}
+
+function downloadXml() {
+  if (!lastXmlResult) { toast('Faça a conversão primeiro.', 'error'); return; }
+  triggerDownload(lastXmlResult, lastXmlFilename, 'application/xml');
+}
+
+function copyResult(elId, btn) {
+  const el = document.getElementById(elId);
+  navigator.clipboard.writeText(el.dataset.raw || el.textContent).then(() => {
+    const orig = btn.innerHTML;
+    btn.innerHTML = '✅ Copiado!';
+    setTimeout(() => { btn.innerHTML = orig; }, 1800);
+    toast('Conteúdo copiado!', 'success', 2000);
+  });
+}
+
+function formatBytes(bytes) {
+  if (bytes < 1024) return bytes + ' B';
+  if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
+  return (bytes / (1024 * 1024)).toFixed(2) + ' MB';
+}
+</script>
+</body>
+</html>

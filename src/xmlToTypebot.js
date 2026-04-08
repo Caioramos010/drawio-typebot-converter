@@ -126,36 +126,48 @@ async function xmlToTypebot(xmlString, options = {}) {
     await enrichWithAI(needsAI, nodeContent, openaiClient);
   }
 
+  // 6b. Interpretação semântica com IA — identifica mainMenu e mapeamento opção→nó
+  // Esta é a fonte primária de verdade quando a IA está disponível.
+  let flowMap = null;
+  if (openaiClient) {
+    try {
+      flowMap = await interpretFlowWithAI(nodeContent, adjacency, vertices, openaiClient);
+    } catch (e) {
+      console.warn('[xmlToTypebot] IA não pôde interpretar o fluxo, usando heurística:', e.message);
+    }
+  }
+
   // 7. Identificar o menu principal usando BFS de acessibilidade:
   //    O menu raiz é o menu candidato que NÃO pode ser alcançado a partir de nenhum outro candidato.
   let mainNodeId = null;
 
-  // Candidatos: nós com >= 3 itens numerados
-  const menuCandidates = vertices.filter(v => detectMenuItems(nodeContent[v.$.id].text).length >= 3);
-  const menuCandidateIds = new Set(menuCandidates.map(v => v.$.id));
-
-  // BFS a partir de cada candidato — descobre quais outros candidatos são alcançáveis
-  const reachableAsMC = new Set();
-  for (const src of menuCandidates) {
-    const visited = new Set();
-    const queue = [src.$.id];
-    while (queue.length > 0) {
-      const curr = queue.shift();
-      if (visited.has(curr)) continue;
-      visited.add(curr);
-      for (const next of (adjacency[curr] || [])) {
-        if (!visited.has(next)) {
-          if (menuCandidateIds.has(next)) reachableAsMC.add(next); // marcado como "filho" de src
-          queue.push(next);
+  if (flowMap?.mainMenuNodeId && nodeContent[flowMap.mainMenuNodeId]) {
+    // IA identificou o menu principal diretamente
+    mainNodeId = flowMap.mainMenuNodeId;
+  } else {
+    // Fallback heurístico: candidatos com >= 3 itens numerados
+    const menuCandidates = vertices.filter(v => detectMenuItems(nodeContent[v.$.id].text).length >= 3);
+    const menuCandidateIds = new Set(menuCandidates.map(v => v.$.id));
+    const reachableAsMC = new Set();
+    for (const src of menuCandidates) {
+      const visited = new Set();
+      const queue = [src.$.id];
+      while (queue.length > 0) {
+        const curr = queue.shift();
+        if (visited.has(curr)) continue;
+        visited.add(curr);
+        for (const next of (adjacency[curr] || [])) {
+          if (!visited.has(next)) {
+            if (menuCandidateIds.has(next)) reachableAsMC.add(next);
+            queue.push(next);
+          }
         }
       }
     }
+    const rootCandidates = menuCandidates.filter(v => !reachableAsMC.has(v.$.id));
+    rootCandidates.sort((a, b) => (outDegree[b.$.id] || 0) - (outDegree[a.$.id] || 0));
+    mainNodeId = rootCandidates[0]?.$.id ?? sortedByOut[0]?.$.id;
   }
-
-  // Raiz = candidatos que nenhum outro candidato consegue alcançar
-  const rootCandidates = menuCandidates.filter(v => !reachableAsMC.has(v.$.id));
-  rootCandidates.sort((a, b) => (outDegree[b.$.id] || 0) - (outDegree[a.$.id] || 0));
-  mainNodeId = rootCandidates[0]?.$.id ?? sortedByOut[0]?.$.id;
 
   // Reparar arestas quebradas: para nós sem filhos válidos, encontrar nó órfão próximo
   if (brokenEdgeSources.size > 0) {
@@ -254,30 +266,35 @@ async function xmlToTypebot(xmlString, options = {}) {
   const bCondMain = generateId();
   const mainInvalidEdge = generateId();
 
-  // Condition items — emparelha item de menu com a aresta correspondente
-  // As arestas saem na ordem do drawio; tentamos associar pela ordem numérica
   const condItems = [];
   const condEdges = [];
 
-  // Ordena os targets pela posição Y do vértice (ordem visual de cima para baixo)
-  const sortedTargets = [...mainTargets].sort((a, b) => {
-    const va = vertices.find(v => v.$.id === a);
-    const vb = vertices.find(v => v.$.id === b);
-    const ya = va?.mxGeometry?.[0]?.$.y ? parseFloat(va.mxGeometry[0].$.y) : 0;
-    const yb = vb?.mxGeometry?.[0]?.$.y ? parseFloat(vb.mxGeometry[0].$.y) : 0;
-    return ya - yb;
-  });
+  // Constrói mapeamento opção→nó: usa IA quando disponível, senão Y-sort heurístico
+  let optionMappings; // Array de { number, targetNodeId, isSubmenu, subOptions }
+  if (flowMap?.options?.length > 0) {
+    optionMappings = flowMap.options
+      .filter(opt => opt.targetNodeId && nodeContent[opt.targetNodeId])
+      .sort((a, b) => a.number - b.number);
+  } else {
+    const sortedTargets = [...mainTargets].sort((a, b) => {
+      const va = vertices.find(v => v.$.id === a);
+      const vb = vertices.find(v => v.$.id === b);
+      const ya = va?.mxGeometry?.[0]?.$.y ? parseFloat(va.mxGeometry[0].$.y) : 0;
+      const yb = vb?.mxGeometry?.[0]?.$.y ? parseFloat(vb.mxGeometry[0].$.y) : 0;
+      return ya - yb;
+    });
+    optionMappings = sortedTargets.map((id, i) => ({ number: i + 1, targetNodeId: id, isSubmenu: false, subOptions: null }));
+  }
 
-  for (let i = 0; i < sortedTargets.length; i++) {
-    const targetId = sortedTargets[i];
+  for (const opt of optionMappings) {
     const itemId = generateId();
     const edgeId = generateId();
     condItems.push({
       id: itemId,
       outgoingEdgeId: edgeId,
-      content: { comparisons: [{ id: generateId(), variableId: varMenu, comparisonOperator: 'Equal to', value: String(i + 1) }] },
+      content: { comparisons: [{ id: generateId(), variableId: varMenu, comparisonOperator: 'Equal to', value: String(opt.number) }] },
     });
-    condEdges.push({ edgeId, targetId });
+    condEdges.push({ edgeId, targetId: opt.targetNodeId, itemId, isSubmenu: opt.isSubmenu || false, subOptions: opt.subOptions || null });
   }
 
   groups.push({
@@ -309,15 +326,10 @@ async function xmlToTypebot(xmlString, options = {}) {
   // ─── Grupos de resposta (filhos do menu principal) ─────────────────────────
   let responseY = LAYOUT.responseBaseX;
 
-  for (let i = 0; i < sortedTargets.length; i++) {
-    const targetId = sortedTargets[i];
-    const { edgeId } = condEdges[i];
+  for (let i = 0; i < condEdges.length; i++) {
+    const { edgeId, targetId, itemId, isSubmenu: aiIsSubmenu, subOptions } = condEdges[i];
 
     // Resolve "pass-through": segue encadeamentos de nós intermediários com exatamente 1 filho.
-    // Cobre dois casos:
-    //   a) nó label-only → menu candidato (ex: "1. Equipe de Saúde da Família" → submenu)
-    //   b) nó label-only → leaf de resposta (ex: "2. Saúde Bucal" → nó com texto real)
-    // Itera até encontrar um nó com 0 ou ≥2 filhos, ou cujo texto seja substantivo (>40 chars).
     let effectiveTargetId = targetId;
     {
       const visited = new Set([targetId]);
@@ -325,11 +337,10 @@ async function xmlToTypebot(xmlString, options = {}) {
         const current = nodeContent[effectiveTargetId];
         const currentText = (current && current.text || '').trim();
         const directChildren = (adjacency[effectiveTargetId] || []).filter(c => c && c !== 'undefined');
-        // Pára se: sem filhos, múltiplos filhos, ou texto já é substantivo (>40 chars)
         if (directChildren.length !== 1) break;
         if (currentText.length > 40 && !detectMenuItems(currentText).length) break;
         const nextId = directChildren[0];
-        if (visited.has(nextId)) break; // evita ciclos
+        if (visited.has(nextId)) break;
         visited.add(nextId);
         effectiveTargetId = nextId;
       }
@@ -337,16 +348,19 @@ async function xmlToTypebot(xmlString, options = {}) {
 
     const { text, raw } = nodeContent[effectiveTargetId] || { text: '', raw: '' };
     const groupId = generateId();
-    const children = adjacency[effectiveTargetId] || [];
 
-    // Detecta se esse nó tem sub-opções numeradas (submenu)
+    // Filhos: usa sub-opções da IA quando disponíveis, senão adjacency
+    const children = subOptions
+      ? subOptions.filter(s => s.targetNodeId).map(s => s.targetNodeId)
+      : (adjacency[effectiveTargetId] || []);
+
+    // Detecta submenu: IA sinalizou OU texto tem itens numerados e há filhos suficientes
     const subItems = detectMenuItems(text);
-    const isSubmenu = subItems.length >= 2 && children.length >= 2;
+    const isSubmenu = aiIsSubmenu || (subItems.length >= 2 && children.length >= 2);
 
-    edgesOut.push({ id: edgeId, from: { blockId: bCondMain, itemId: condItems[i].id }, to: { groupId } });
+    edgesOut.push({ id: edgeId, from: { blockId: bCondMain, itemId }, to: { groupId } });
 
     if (isSubmenu) {
-      // Monta submenu recursivo
       buildSubmenuGroup(
         targetId, text, groupId, children, vertices, nodeContent,
         adjacency, edgesOut, groups, waitGroupId, variables,
@@ -354,7 +368,6 @@ async function xmlToTypebot(xmlString, options = {}) {
       );
       responseY += LAYOUT.responseStepY * (children.length + 1);
     } else {
-      // Resposta final simples — limpa texto de artefatos de diagrama
       const cleanText = cleanResponseText(text);
       const bResp = generateId();
       const respToWaitEdge = generateId();
@@ -558,6 +571,51 @@ function textToRichText(text) {
     type: 'p',
     children: [{ text: line }],
   }));
+}
+
+/** Interpreta a estrutura do fluxo com IA — identifica menu principal e mapeamento opção→nó */
+async function interpretFlowWithAI(nodeContent, adjacency, vertices, openaiClient) {
+  const nodes = vertices
+    .map(v => ({ id: v.$.id, text: (nodeContent[v.$.id]?.text || '').substring(0, 400) }))
+    .filter(n => n.text.replace(/\s/g, '').length > 10);
+
+  const edgeList = [];
+  for (const [src, targets] of Object.entries(adjacency)) {
+    for (const tgt of (targets || [])) edgeList.push(`${src} → ${tgt}`);
+  }
+
+  const prompt = `Analise este diagrama DrawIO de chatbot e retorne um JSON descrevendo a estrutura de menus.
+
+NODOS:
+${nodes.map(n => `[${n.id}]\n${n.text}`).join('\n\n')}
+
+ARESTAS:
+${edgeList.join('\n') || '(nenhuma aresta encontrada)'}
+
+Retorne um JSON com esta estrutura:
+{
+  "mainMenuNodeId": "id do nó que contém o menu principal com opções numeradas",
+  "options": [
+    { "number": 1, "targetNodeId": "id do nó de resposta para opção 1" },
+    { "number": 2, "targetNodeId": "id do nó de resposta para opção 2" }
+  ]
+}
+
+Regras:
+- O menu principal é o nó com lista de opções numeradas (1. / 1️⃣ / 1* / etc.)
+- Cada "targetNodeId" deve ser um ID válido da lista de nós acima
+- Se um nó filho também tem sub-opções numeradas, adicione "isSubmenu": true e "subOptions": [{"number":1,"targetNodeId":"..."},...]
+- Use apenas IDs existentes na lista de nós acima`;
+
+  const response = await openaiClient.chat.completions.create({
+    model: 'gpt-4o',
+    messages: [{ role: 'user', content: prompt }],
+    temperature: 0,
+    response_format: { type: 'json_object' },
+    max_tokens: 2000,
+  });
+
+  return JSON.parse(response.choices[0].message.content);
 }
 
 /** Chama IA apenas para nós com HTML ilegível — minimiza tokens */

@@ -25,8 +25,8 @@ function stripHtml(html) {
     .replace(/<(div|p|li|tr|h[1-6]|blockquote|pre)[^>]*>/gi, '\n')
     // Converte fechamento de tags de bloco em quebra de linha
     .replace(/<\/(div|p|li|tr|h[1-6]|blockquote|pre)>/gi, '\n')
-    // <br> vira quebra
-    .replace(/<br\s*\/?>/gi, '\n')
+    // <br> vira quebra (com ou sem atributos: <br>, <br/>, <br data-start="1">)
+    .replace(/<br(?:\s[^>]*)?\s*\/?>/gi, '\n')
     // Remove todas as demais tags restantes
     .replace(/<[^>]*>/g, '')
     // Decodifica entidades HTML comuns

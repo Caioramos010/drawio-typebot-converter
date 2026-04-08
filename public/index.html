@@ -702,9 +702,10 @@ async function convertXmlToTypebot() {
         <span class="stat-chip">Tamanho: <span class="val">${formatBytes(json.length)}</span></span>
       `;
 
-      // guardar resultado para download manual
+      // guardar e baixar automaticamente
       lastJsonResult   = json;
       lastJsonFilename = (flowName.replace(/[^a-z0-9_-]/gi, '_') || 'typebot') + '.json';
+      triggerDownload(lastJsonResult, lastJsonFilename, 'application/json');
 
       toast(`JSON gerado com sucesso — ${groups} grupos`, 'success');
     } else {

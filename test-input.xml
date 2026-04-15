@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Página-1" id="M6ZSiPr_9KUDGSFY8jFW">
+    <mxGraphModel dx="1049" dy="1684" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-1" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Zj-whqz9mNZbiH2NHCfn-26">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="95" y="590" />
+              <mxPoint x="95" y="590" />
+            </Array>
+            <mxPoint x="70" y="1060" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-2" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Zj-whqz9mNZbiH2NHCfn-74" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="113" y="-440" />
+              <mxPoint x="113" y="-440" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-3" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="120" y="-440" />
+              <mxPoint x="120" y="-440" />
+            </Array>
+            <mxPoint x="120" y="309.27268288352275" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-4" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="70" y="2092" />
+            </Array>
+            <mxPoint x="70" y="2090" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-5" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="Zj-whqz9mNZbiH2NHCfn-61" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="50" y="2540" />
+            </Array>
+            <mxPoint x="40" y="2540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-6" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="140" y="-390" />
+              <mxPoint x="140" y="-390" />
+            </Array>
+            <mxPoint x="140" y="3267.2727272727275" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Olá, seja bem vindo&amp;nbsp;(a) ao atendimento virtual do &lt;b&gt;Centro de Saúde Abraão&lt;/b&gt;. Por este canal você poderá entrar em contato com a equipe de saúde&lt;b&gt;&lt;i&gt;.&lt;/i&gt;&lt;/b&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Você também pode ter seu atendimento através do Alô Saúde pelo telefone &lt;b&gt;0800 333 3233.&lt;/b&gt;&lt;br&gt;Para prosseguir &lt;b&gt;digite uma das opções numéricas &lt;/b&gt;abaixo:&amp;nbsp;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;1. Realização ou atualização de cadastro/endereço&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;2. Equipe de Saúde da Família&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;3. Equipe de Saúde Bucal&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;4.&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Marcação de exames e consultas especializadas&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;5. Farmácia&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;6. Vacina&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;7. Dúvidas gerais&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="290" width="370" x="60" y="-1100" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-8" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Zj-whqz9mNZbiH2NHCfn-14" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="2.&amp;nbsp; Equipe de saúde da família" vertex="1">
+          <mxGeometry height="60" width="150" x="20" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-10" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="Zj-whqz9mNZbiH2NHCfn-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-11" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Zj-whqz9mNZbiH2NHCfn-18">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="460" y="350" />
+            </Array>
+            <mxPoint x="480" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-12" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="Zj-whqz9mNZbiH2NHCfn-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-13" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="Zj-whqz9mNZbiH2NHCfn-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-family: Arial; font-size: 10pt; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp; &amp;nbsp;Para prosseguir digite a opção numérica da sua equipe de Saúde da Família:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-family: Arial; font-size: 10pt; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;span style=&quot;font-size:10pt;font-family:Arial;font-style:normal;&quot; data-sheets-root=&quot;1&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 10pt; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;1. Não sei qual é a minha equipe&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 10pt; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;2. Equipe 570 - Verde&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 10pt; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;3. Equipe 571 - Laranja&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 10pt; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;4. Equipe 572 - Azul&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 10pt; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;5. Retornar ao menu principal&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="160" width="220" x="200" y="270" as="geometry" />
+        </mxCell>
+        <UserObject label="1. Acesse o link a seguir, coloque seu endereço e descobrirá a sua equipe.&lt;div&gt;&lt;br&gt;https://www.google.com/maps/d/u/2/viewer?mid=1r7fncVf4XlPC2V6ovlhoVms27xuA5Xg&amp;amp;ll=-27.609831947883517%2C-48.4906934&amp;amp;z=11&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Digite 1 para finalizar o atendimento ou 0 para retornar ao menu anterior&lt;/div&gt;&lt;/div&gt;" link="Acesse o link a seguir, coloque seu endereço e descobrirá a sua equipe.&#xa;&#xa;&#xa;https://www.google.com/maps/d/u/2/viewer?mid=1r7fncVf4XlPC2V6ovlhoVms27xuA5Xg&amp;ll=-27.609831947883517%2C-48.4906934&amp;z=11" id="Zj-whqz9mNZbiH2NHCfn-15">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1">
+            <mxGeometry height="110" width="510" x="480" y="-190" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-16" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1120" y="120" />
+              <mxPoint x="1120" y="-500" />
+            </Array>
+            <mxPoint x="1091" y="120" as="sourcePoint" />
+            <mxPoint x="1176" y="-500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-17" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="Zj-whqz9mNZbiH2NHCfn-78">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-18" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&amp;nbsp;&lt;span style=&quot;background-color: transparent;&quot;&gt;2. Olá, seja bem vindo (a) ao atendimento virtual da Equipe 570 VERDE. Se você está com qualquer sinal de gravidade, entre em contato com o SAMU (192) ou Corpo de Bombeiros (193) ou procure atendimento presencial no Centro de Saúde ou em algum serviço de pronto-atendimento.&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&amp;nbsp;Em caso de dúvidas, entre em contato com o Alô Saúde no número 0800 333 3233.&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Selecione uma das opções numéricas a seguir para prosseguir:&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;1. Profissionais e horários das equipes&amp;nbsp;&lt;/div&gt;&lt;div&gt;2. Agendamentos&amp;nbsp;&lt;/div&gt;&lt;div&gt;3. Renovação de receitas&amp;nbsp;&amp;nbsp;&lt;/div&gt;&lt;div&gt;4. Retornar ao menu anterior&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="190" width="610" x="481" y="57" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-19" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="Zj-whqz9mNZbiH2NHCfn-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-20" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" target="Zj-whqz9mNZbiH2NHCfn-89">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1130" y="500" />
+              <mxPoint x="1130" y="48" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-21" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="3. Olá, seja bem vindo&amp;nbsp;(a) ao atendimento virtual da Equipe 571 LARANJA. Se você está com qualquer sinal de gravidade, entre em contato com o SAMU (192) ou Corpo de Bombeiros (193) ou procure atendimento presencial no Centro de Saúde ou em algum serviço de pronto-atendimento.&amp;nbsp;&lt;span style=&quot;background-color: transparent;&quot;&gt;&amp;nbsp;Em caso de dúvidas, entre em contato com o Alô Saúde no número 0800 333 3233.&amp;nbsp;&lt;/span&gt;&lt;div&gt;&lt;br&gt;&lt;br&gt;Selecione uma das opções numéricas a seguir para prosseguir:&amp;nbsp;&lt;br&gt;1. Profissionais e horários das equipes&amp;nbsp;&lt;br&gt;2. Agendamentos&amp;nbsp;&lt;br&gt;3. Renovação de receitas&amp;nbsp;&lt;br&gt;4. Retornar ao menu anterior&lt;/div&gt;" vertex="1">
+          <mxGeometry height="180" width="610" x="480" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-22" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" target="Zj-whqz9mNZbiH2NHCfn-99">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-23" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="Zj-whqz9mNZbiH2NHCfn-101">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-24" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&lt;div&gt;4. Olá, seja bem vindo (a) ao atendimento virtual da Equipe 572 AZUL. Se você está com qualquer sinal de gravidade, entre em contato com o SAMU (192) ou Corpo de Bombeiros (193) ou procure atendimento presencial no Centro de Saúde ou em algum serviço de pronto-atendimento.&lt;span style=&quot;background-color: transparent;&quot;&gt;&amp;nbsp;Em caso de dúvidas, entre em contato com o Alô Saúde no número 0800 333 3233.&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Selecione uma das opções numéricas a seguir para prosseguir:&amp;nbsp;&lt;/div&gt;&lt;div&gt;1. Profissionais e horários das equipes&amp;nbsp;&lt;/div&gt;&lt;div&gt;2. Agendamentos&amp;nbsp;&lt;/div&gt;&lt;div&gt;3. Renovação de receitas / fórmulas infantis&amp;nbsp;&lt;/div&gt;&lt;div&gt;4. Mostrar exames&lt;/div&gt;&lt;div&gt;5. Retornar ao menu anterior&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="610" x="478" y="656" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-25" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Zj-whqz9mNZbiH2NHCfn-28">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="280" y="1030" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-26" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="3. Equipe de Saúde Bucal" vertex="1">
+          <mxGeometry height="60" width="155" x="35" y="1010" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-27" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="Zj-whqz9mNZbiH2NHCfn-110">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="965" />
+              <mxPoint x="440" y="900" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-28" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&lt;br&gt;&lt;span style=&quot;font-family: Arial; font-style: normal;&quot; data-sheets-root=&quot;1&quot;&gt;&lt;span style=&quot;font-family: Arial; font-style: normal;&quot;&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;Olá, seja bem vindo&amp;nbsp;(a)&amp;nbsp; ao atendimento virtual da Equipe de Saúde Bucal. &lt;br&gt;Para prosseguir escolha uma das opções numéricas abaixo: &lt;br&gt;1. Profissionais e Horários&lt;br&gt;2. Atendimentos&lt;br&gt;&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-style: normal;&quot; data-sheets-root=&quot;1&quot;&gt;&lt;span style=&quot;font-style: normal;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;3. Resultados de exames&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-style: normal;&quot; data-sheets-root=&quot;1&quot;&gt;&lt;span style=&quot;font-style: normal;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;4. Retornar ao menu principal&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="160" width="190" x="230" y="900" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-29" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-116" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Zj-whqz9mNZbiH2NHCfn-34" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-30" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Zj-whqz9mNZbiH2NHCfn-35" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-31" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Zj-whqz9mNZbiH2NHCfn-36">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="730" y="1330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-32" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Zj-whqz9mNZbiH2NHCfn-37">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="670" y="1245" />
+            </Array>
+            <mxPoint x="670" y="1390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-33" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="Zj-whqz9mNZbiH2NHCfn-38">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="670" y="1245" />
+            </Array>
+            <mxPoint x="680" y="1700" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-34" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;" value="Escolha uma das opções numéricas a seguir para continuar:&amp;nbsp;&lt;br&gt;1. Horário de funcionamento&amp;nbsp;&lt;br&gt;2. Disponibilidade de medicamentos e insumos&lt;br&gt;3. Medicamentos anti-retrovirais&lt;div&gt;4. Medicamentos controlados&lt;/div&gt;&lt;div&gt;5. Retornar ao menu principal&lt;/div&gt;" vertex="1">
+          <mxGeometry height="110" width="272.5" x="327.5" y="1190" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-35" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;" value="&amp;nbsp;&lt;br&gt;1. Horário de funcionamento&amp;nbsp;&lt;div&gt;&lt;font style=&quot;color: rgb(153, 0, 0);&quot;&gt;LINK identificação CS&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(153, 0, 0);&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;A mudança de horario desde serviço pode ocorrer sem aviso prévio, para confirmar o horário de atendimento da farmácia você pode ligar no alô saúde 0800 333 3233&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;text-align: center;&quot;&gt;Digite 1&lt;/b&gt;&lt;span style=&quot;text-align: center;&quot;&gt;&amp;nbsp;para finalizar o atendimento ou&lt;/span&gt;&lt;b style=&quot;text-align: center;&quot;&gt;&amp;nbsp;0&lt;/b&gt;&lt;span style=&quot;text-align: center;&quot;&gt;&amp;nbsp;para retornar ao menu anterior&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(153, 0, 0);&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="110" width="490" x="750" y="1090" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-36" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;" value="2. Disponibilidade de medicamentos e insumos:&lt;br&gt;Envie sua dúvida, o nome do medicamento ou foto da receita e aguarde o contato da equipe em até 72h úteis. Ou digite 0 para retornar ao menu anterior" vertex="1">
+          <mxGeometry height="70" width="490" x="750" y="1230" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-37" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=center;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;3. Locais mais próximos para a retirada dos medicamentos para tratamento do HIV:&lt;br&gt;&lt;br&gt;CONTINENTE&lt;br&gt;Policlínica Continente&lt;br&gt;Rua Heitor Blum, 521 - Estreito&lt;br&gt;Tel.: 48 3271-1716&lt;br&gt;&lt;br&gt;CENTRO&lt;br&gt;Policlínica Centro&lt;br&gt;Av. Rio Branco, 90 - Centro&lt;br&gt;Tel.: 48 3952-0103/ 3952-0102&lt;br&gt;&lt;br&gt;Confirme o horário de funcionamento através dos telefones.&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;b style=&quot;&quot;&gt;Digite 1&lt;/b&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;para finalizar o atendimento ou&lt;/span&gt;&lt;b style=&quot;&quot;&gt;&amp;nbsp;0&lt;/b&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;para retornar ao menu anterior&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="259" width="508" x="752" y="1341" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-38" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;" value="4. Locais mais próximos para a retirada dos medicamentos Controlados:&lt;br&gt;&lt;br&gt;CONTINENTE&lt;br&gt;Policlínica Continente&lt;br&gt;Rua Heitor Blum, 521 - Estreito&lt;br&gt;Tel.: 48 3271-1716&lt;br&gt;&lt;br&gt;CENTRO&lt;br&gt;Policlínica Centro&lt;br&gt;Av. Rio Branco, 90 - Centro&lt;br&gt;Tel.: 48 3952-0103/ 3952-0102&lt;br&gt;&lt;br&gt;Confirme o horário de funcionamento através dos telefones.&lt;div&gt;&lt;br&gt;&lt;div&gt;&lt;b style=&quot;text-align: center;&quot;&gt;Digite 1&lt;/b&gt;&lt;span style=&quot;text-align: center;&quot;&gt;&amp;nbsp;para finalizar o atendimento ou&lt;/span&gt;&lt;b style=&quot;text-align: center;&quot;&gt;&amp;nbsp;0&lt;/b&gt;&lt;span style=&quot;text-align: center;&quot;&gt;&amp;nbsp;para retornar ao menu anterior&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="300" width="640" x="650" y="1692" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-39" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Zj-whqz9mNZbiH2NHCfn-44" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-40" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="6. Vacina" vertex="1">
+          <mxGeometry height="60" width="100" x="62.5" y="2100" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-41" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Zj-whqz9mNZbiH2NHCfn-47">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="640" y="2050" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-42" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="Zj-whqz9mNZbiH2NHCfn-52">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="620" y="2190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-43" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="Zj-whqz9mNZbiH2NHCfn-57">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="610" y="2130" />
+            </Array>
+            <mxPoint x="620" y="2320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-44" parent="1" style="whiteSpace=wrap;html=1;rounded=1;align=left;" value="Escolha uma das opções numéricas a seguir para prosseguir:&lt;br&gt;1. Horário de Funcionamento&amp;nbsp;&lt;br&gt;2. Certificado escola/creche ou segunda via caderneta de vacinas&lt;br&gt;3. Certificado Internacional Febre Amarela&lt;div&gt;4. Retornar ao menu principal&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="240" x="330" y="2080" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-45" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1170" y="2050" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-46" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1170" y="2110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-47" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="1. Horário de funcionamento:&amp;nbsp;&lt;br&gt;Para informações de horário de funcionamento dos serviços do Centro de Saúde, consulte n&lt;font style=&quot;color: rgb(153, 0, 0);&quot;&gt;o link&amp;nbsp;&lt;/font&gt;&amp;nbsp;&lt;div&gt;A mudança de horario desde serviço pode ocorrer sem aviso prévio, para confirmar o horário de atendimento da sala, você pode ligar no alô saúde 0800 333 3233&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="455" x="655" y="2030" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-48" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;" value="&lt;div&gt;&lt;font style=&quot;color: rgb(153, 0, 0);&quot;&gt;1. Finalizar&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="70" x="1170" y="2030" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-49" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;direction=south;" value="&lt;div&gt;&lt;font style=&quot;color: rgb(153, 0, 0);&quot;&gt;2. retornar ao menu inicial&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="60" x="1170" y="2080" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-50" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1170" y="2205" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-51" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1170" y="2250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-52" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="2. Certificado escola/creche ou segunda via da caderneta de vacinas&lt;div&gt;&lt;br&gt;O certificado para escola/creche é emitido para as crianças/adolescentes que estejam com a vacinação em dia. Caso tenha alguma vacina em atraso, é necessário que a criança/adolescente esteja presente para realização da vacina e emissão do certificado&amp;nbsp;&lt;br&gt;&lt;br&gt;Envie o nome completo, data de nascimento e aguarde o contato da equipe em até 72h úteis.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="130" width="455" x="655" y="2150" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-53" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;" value="&lt;div&gt;&lt;font style=&quot;color: rgb(153, 0, 0);&quot;&gt;1. Finalizar&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="70" x="1171" y="2190" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-54" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;direction=south;" value="&lt;div&gt;&lt;font style=&quot;color: rgb(153, 0, 0);&quot;&gt;2. retornar ao menu inicial&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="60" x="1170" y="2230" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-55" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Zj-whqz9mNZbiH2NHCfn-58">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1170" y="2370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-56" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1180" y="2420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <UserObject label="3. Certificado Internacional da Febre Amarela. Por determinação da ANVISA, o Certificado de Vacinação contra a Febre Amarela (CIVP) será emitido exclusivamente através do site GOV.BR. Para solicitar o certificado acesse: https://www.gov.br/pt-br/servicos/obter-o-certificado-internacional-de-vacinacao-e-profilaxia&amp;nbsp;&lt;div&gt;Dúvidas? Entre em contato com a ANVISA 0800 642 9782&lt;/div&gt;" link="3. Certificado Internacional da Febre Amarela) Por determinação da ANVISA, o Certificado de Vacinação contra a febre Amarela (CIVP) será emitido exclusivamente através do site GOV.BR. Para solicitar o Certificado acesse: https://www.gov.br/pt-br/servicos/obter-o-certificado-internacional-de-vacinacao-e-profilaxia Dúvidas? Entre em contato com a ANVISA 0800 642 9782" id="Zj-whqz9mNZbiH2NHCfn-57">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="130" width="480" x="650" y="2320" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-58" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Finalizar" vertex="1">
+          <mxGeometry height="30" width="70" x="1170" y="2330" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-59" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;direction=south;" value="&lt;div&gt;&lt;font style=&quot;color: rgb(153, 0, 0);&quot;&gt;2. retornar ao menu inicial&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="60" x="1176" y="2380" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-60" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-61" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Zj-whqz9mNZbiH2NHCfn-66">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="270" y="2540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-61" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="4. Marcação de exames e consultas especializadas" vertex="1">
+          <mxGeometry height="60" width="120" x="60" y="2510" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-62" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Zj-whqz9mNZbiH2NHCfn-67">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="680" y="2530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-63" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="Zj-whqz9mNZbiH2NHCfn-68">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="650" y="2580" />
+            </Array>
+            <mxPoint x="650" y="2750" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-64" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="Zj-whqz9mNZbiH2NHCfn-69">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="650" y="2580" />
+              <mxPoint x="650" y="2893" />
+            </Array>
+            <mxPoint x="650" y="2950" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-65" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="Zj-whqz9mNZbiH2NHCfn-71">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="610" y="2580" />
+              <mxPoint x="650" y="2580" />
+              <mxPoint x="650" y="3065" />
+            </Array>
+            <mxPoint x="640" y="3172" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-66" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Este setor é responsável pelo agendamentos de exames e consultas especializadas. Para continuar selecione uma das opções numéricas a seguir:&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;1. Agendamentos (Inclusão de encaminhamentos no sistema)&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;2. Cancelamento de consultas e exames&amp;nbsp;&lt;/span&gt;&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;3. Segunda via da guia de agendamento&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;4.&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Consulte as listas de espera&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;5. Outros motivos&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;6. Retornar ao menu principal&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="160" width="350" x="260" y="2510" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-67" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;" value="&lt;div&gt;&lt;div&gt;1.&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Agendamentos (inclusão de encaminhamentos no sistema). O agendamento de exames e consultas com especialistas são realizados a partir de um encaminhamento de profissionais do SUS. Para que ele possa ser efetuado é necessário que esteja de acordo com os protocolos municipais vigentes.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;text-align: center;&quot;&gt;&amp;nbsp;Para inclusão de uma solicitação de exame ou consulta especializada na fila de espera, encaminhe uma foto do seu documento pessoal, foto do encaminhamento realizado pelo profissional de saúde e aguarde o contato da equipe em até 72h úteis.&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: center;&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: center;&quot;&gt;&lt;b&gt;Ou digite 1&lt;/b&gt;&amp;nbsp;para finalizar o atendimento ou&lt;b&gt;&amp;nbsp;0&lt;/b&gt;&amp;nbsp;para retornar ao menu anterior&lt;/div&gt;" vertex="1">
+          <mxGeometry height="170" width="460" x="690" y="2480" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-68" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&lt;span data-sheets-root=&quot;1&quot; style=&quot;font-size: 10pt; font-family: Arial;&quot;&gt;2. Caso você não possa comparecer no dia e hora agendados para sua consulta e/ou exame, nos informe com até 72 horas de antecedência, assim podemos utilizar a vaga para outra pessoa. Informe seu nome completo, CPF, data de nascimento e exame/ consulta especializada que havia sido agendada e aguarde o retorno da equipe em até 72h úteis.&lt;/span&gt;&lt;div&gt;&lt;span data-sheets-root=&quot;1&quot; style=&quot;font-size: 10pt; font-family: Arial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span data-sheets-root=&quot;1&quot; style=&quot;font-size: 10pt; font-family: Arial;&quot;&gt;&lt;b style=&quot;font-family: Helvetica; font-size: 12px; text-align: center;&quot;&gt;Ou digite 1&lt;/b&gt;&lt;span style=&quot;font-family: Helvetica; font-size: 12px; text-align: center;&quot;&gt;&amp;nbsp;para finalizar o atendimento ou&lt;/span&gt;&lt;b style=&quot;font-family: Helvetica; font-size: 12px; text-align: center;&quot;&gt;&amp;nbsp;0&lt;/b&gt;&lt;span style=&quot;font-family: Helvetica; font-size: 12px; text-align: center;&quot;&gt;&amp;nbsp;para retornar ao menu anterior&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="130" width="440" x="690" y="2670" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-69" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&lt;div&gt;3. Consulte as listas de espera estaduais e municipais nos links abaixo, onde você pode pesquisar com seu CPF.&lt;/div&gt;&lt;div&gt;LISTA MUNICIPAL: florianopolis.celk.com.br/lista-espera&amp;nbsp;&lt;/div&gt;&lt;div&gt;LISTA ESTADUAL: listadeespera.saude.sc.gov.br&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Para conhecer dados gerais sobre as filas e tempo de espera, acesse: https://lookerstudio.google.com/u/0/reporting/51343ece-82e6-477e-8fb9-863ce1743878/page/p_sj997kqgoc&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;text-align: center;&quot;&gt;Digite 1&lt;/b&gt;&lt;span style=&quot;text-align: center;&quot;&gt;&amp;nbsp;para finalizar o atendimento ou&lt;/span&gt;&lt;b style=&quot;text-align: center;&quot;&gt;&amp;nbsp;0&lt;/b&gt;&lt;span style=&quot;text-align: center;&quot;&gt;&amp;nbsp;para retornar ao menu anterior&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="170" width="470" x="690" y="2820" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-70" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;div style=&quot;color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;1. &lt;b&gt;Profissionais e horários das equipes&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;A Equipe de Saúde da Família é responsável pela coordenação do cuidado&lt;/div&gt;&lt;div style=&quot;color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;dos moradores de um território delimitado. Ela é composta por médico, enfermeiro, técnico de enfermagem e agente comunitário de saúde. Para mais detalhes sobre o nome dos profissionais da sua equipe e/ou horário de funcionamento dos nossos serviços, consulte o link a seguir.&lt;/div&gt;&lt;div style=&quot;color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;http://bit.ly/3NJqVSD&lt;/div&gt;&lt;div style=&quot;color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;b&gt;Digite 1&lt;/b&gt;&amp;nbsp;para finalizar o atendimento ou&lt;b&gt;&amp;nbsp;0&lt;/b&gt;&amp;nbsp;para retornar ao menu anterior&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="180" width="429" x="1180.5" y="-630" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-71" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="4. Para segunda via da guia de agendamento de um exame ou consulta com especialista já agendada, encaminhe uma foto do seu documento pessoal, e informe referente qual solicitação é necessária a emissão da segunda via e aguarde o contato do setor de marcação em até 72h úteis.&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Ou digite 1&lt;/b&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;para finalizar o atendimento ou&lt;/span&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;0&lt;/b&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;para retornar ao menu anterior&lt;/span&gt;&amp;nbsp;&amp;nbsp;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="450" x="685" y="3020" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-72" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="7. &lt;b&gt;Dúvidas Gerais&lt;/b&gt;. Informe meu nome completo, data de nascimento e sua dúvida. A equipe responderá em até 72h úteis, caso precise de mais agilidade faça uma ligação normal para a recepção do Centro de Saúde (48) 3249-5844 ou para o Alô Saúde 0800-3333233&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Ou digite 1&lt;/b&gt;&amp;nbsp;para finalizar o atendimento ou&lt;b&gt;&amp;nbsp;0&lt;/b&gt;&amp;nbsp;para retornar ao menu anterior&lt;/div&gt;" vertex="1">
+          <mxGeometry height="150" width="310" x="80" y="3270" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-73" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-74" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="-355" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-74" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&lt;span style=&quot;text-align: left;&quot;&gt;1. Realização ou atualização de cadastro/endereço&lt;/span&gt;" vertex="1">
+          <mxGeometry height="50" width="142.5" x="41.25" y="-380" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-75" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;p&gt;Para realizar &lt;strong&gt;novo cadastro&lt;/strong&gt; ou &lt;strong&gt;atualização cadastral&lt;/strong&gt; (como atualização de dados pessoais ou mudança de endereço), envie:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;Foto do&amp;nbsp;&lt;strong&gt;documento de identificação&lt;/strong&gt;;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;Foto do &lt;strong&gt;comprovante de residência atualizado&lt;/strong&gt;;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;Os&amp;nbsp;&lt;strong&gt;contatos telefônicos&lt;/strong&gt; e &lt;strong&gt;e-mail&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Após o envio, aguarde o contato da equipe em até 72h úteis para confirmação.&lt;/p&gt;&lt;p&gt;Se preferir, compareça ao Centro de Saúde para que possamos auxiliá-lo(a) com o cadastro e conferência dos documentos.&lt;/p&gt;&lt;p&gt;Digite &lt;strong&gt;0&lt;/strong&gt; para retornar ao menu principal.&lt;/p&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="300" width="370" x="430" y="-560" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-76" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-78" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="Zj-whqz9mNZbiH2NHCfn-83">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-77" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-78" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="Zj-whqz9mNZbiH2NHCfn-91">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-78" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;br&gt;&lt;div&gt;2. Para agendamento digite uma das opções numéricas a seguir:&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;1. Consulta com a equipe&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;2.Preventivo de colo uterino&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;3.Visita Domiciliar&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;4. Teste rápido/ PEP&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;5. Retornar ao menu anterior&lt;/div&gt;" vertex="1">
+          <mxGeometry height="160" width="210" x="1200" y="-440" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-79" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="1. O agendamento de consultas por este canal destina-se as gestantes, puérperas (mulheres até 45 dias após o parto), criança menor de dois anos, conforme disponibilidade e avaliação da equipe. Nosso tempo de resposta é de até 72 horas úteis. Caso não possa esperar, compareça ao centro de saúde.&amp;nbsp;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp;Para agendamento de consulta, &lt;b&gt;preencha o link a seguir e aguarde o contato da sua equipe&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;span data-sheets-root=&quot;1&quot; style=&quot;text-align: start; text-decoration-line: underline; font-size: 10pt; font-family: Arial; text-decoration-skip-ink: none; color: rgb(17, 85, 204);&quot;&gt;&lt;a class=&quot;in-cell-link&quot; href=&quot;https://forms.gle/mMkqEMfmJ4dnuLaC7&quot; target=&quot;_blank&quot;&gt;https://forms.gle/mMkqEMfmJ4dnuLaC7&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Digite 1&lt;/b&gt; para finalizar o atendimento ou&lt;b&gt; 0&lt;/b&gt; para retornar ao menu anterior&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="614" x="1906" y="-1150" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-80" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;p&gt;2. A coleta de exame preventivo do colo uterino (papanicolau) é realizada em pessoas com vagina e útero de 25 a 64 anos, Para realização do preventivo é necessário não está menstruada, não está em uso de pomada ginecológica e sem relação sexual nas últimas 48h que antecede o exame.&lt;/p&gt;&lt;p&gt;Se você atende a esses critérios, preencha o formulário no link abaixo e aguarde o contato da sua equipe de saúde em até 72 horas úteis&amp;nbsp; para confirmação do agendamento.&lt;/p&gt;&lt;div&gt;&lt;span data-sheets-root=&quot;1&quot; style=&quot;text-align: start; text-decoration-line: underline; font-size: 10pt; font-family: Arial; text-decoration-skip-ink: none; color: rgb(17, 85, 204);&quot;&gt;&lt;a class=&quot;in-cell-link&quot; href=&quot;https://forms.gle/mMkqEMfmJ4dnuLaC7&quot; target=&quot;_blank&quot;&gt;https://forms.gle/mMkqEMfmJ4dnuLaC7&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(31, 31, 31); font-variant-ligatures: no-contextual; text-align: start; background-color: rgb(255, 255, 255);&quot;&gt;Ou se preferir compareça via demanda espontânea, no início do turno, no horário de atendimento da enfermeira da equipe&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Digite 1&lt;/b&gt;&amp;nbsp;para finalizar o atendimento ou&lt;b&gt;&amp;nbsp;0&lt;/b&gt;&amp;nbsp;para retornar ao menu anterior&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="190" width="624" x="1906" y="-910" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-81" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-78" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.4;entryDx=0;entryDy=0;entryPerimeter=0;" target="Zj-whqz9mNZbiH2NHCfn-79">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-82" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-78" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="Zj-whqz9mNZbiH2NHCfn-80">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1658" y="-360" />
+              <mxPoint x="1658" y="-815" />
+            </Array>
+            <mxPoint x="1460" y="-130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-83" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;p data-start=&quot;0&quot; data-end=&quot;326&quot;&gt;3. A visita domiciliar é destinada à pacientes acamados (restritos ao leito) e/ou com dificuldade de locomoção de acordo com a avaliação e programação da equipe. Este canal não destina-se a casos de urgência.&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Nesses casos, ligue imediatamente para o &lt;/span&gt;&lt;span class=&quot;hover:entity-accent entity-underline inline cursor-pointer align-baseline&quot; style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Serviço de Atendimento Móvel de Urgência (SAMU)&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;, pelo número &lt;/span&gt;&lt;strong data-start=&quot;515&quot; data-end=&quot;522&quot; style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;192&lt;/strong&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;p data-start=&quot;0&quot; data-end=&quot;326&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Caso você esteja dentro desses critérios, preencha o formulário no link a seguir e aguarde o contato da sua equipe de saúde em até 72 horas úteis para confirmação do agendamento.&lt;/span&gt;&lt;/p&gt;&lt;div&gt;&lt;span data-sheets-root=&quot;1&quot; style=&quot;text-align: start; text-decoration-line: underline; font-size: 10pt; font-family: Arial; text-decoration-skip-ink: none; color: rgb(17, 85, 204);&quot;&gt;&lt;a class=&quot;in-cell-link&quot; href=&quot;https://forms.gle/mMkqEMfmJ4dnuLaC7&quot; target=&quot;_blank&quot;&gt;https://forms.gle/mMkqEMfmJ4dnuLaC7&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Digite 1&lt;/b&gt;&amp;nbsp;para finalizar o atendimento ou&lt;b&gt;&amp;nbsp;0&lt;/b&gt;&amp;nbsp;para retornar ao menu anterior&lt;/div&gt;" vertex="1">
+          <mxGeometry height="190" width="615" x="1906" y="-710" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-84" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-87" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Zj-whqz9mNZbiH2NHCfn-88">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1530" y="395" />
+              <mxPoint x="1530" y="29" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-85" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1360" y="390" />
+              <mxPoint x="1530" y="390" />
+              <mxPoint x="1530" y="155" />
+            </Array>
+            <mxPoint x="1360" y="375" as="sourcePoint" />
+            <mxPoint x="1906" y="155" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-86" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-87" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="Zj-whqz9mNZbiH2NHCfn-97">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-87" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;div&gt;2. Para agendamento digite uma das opções numéricas a seguir:&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;1. Consulta com a equipe&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;2.Preventivo de colo uterino&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;3.Visita Domiciliar&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;4. Teste rápido/ PEP&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;5. Retornar ao menu anterior&lt;/div&gt;" vertex="1">
+          <mxGeometry height="150" width="220" x="1250" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-88" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="1. O agendamento de consultas por este canal destina-se as gestantes, puérperas (mulheres até 45 dias após o parto), criança menor de dois anos, conforme disponibilidade e avaliação da equipe. Nosso tempo de resposta é de até 72 horas úteis. Caso não possa esperar e não pertença a nenhum dos grupos citados, compareça ao centro de saúde para atendimento com a equipe.&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp;Para agendamento de consulta,&amp;nbsp;&lt;b&gt;preencha o link a seguir e aguarde o contato da sua equipe:&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(31, 31, 31); font-variant-ligatures: no-contextual; text-align: start; background-color: rgb(255, 255, 255);&quot;&gt;https://forms.gle/ypMBYnJf1FgfeU677&lt;/span&gt;&amp;nbsp;&lt;b&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Digite 1&lt;/b&gt;&amp;nbsp;para finalizar o atendimento ou&lt;b&gt;&amp;nbsp;0&lt;/b&gt;&amp;nbsp;para retornar ao menu anterior&lt;/div&gt;" vertex="1">
+          <mxGeometry height="157" width="685" x="1915" y="-110" as="geometry" />
+        </mxCell>
+        <UserObject label="&#xa;&lt;font data-mx-given-colors=&quot;{&amp;quot;color&amp;quot;:&amp;quot;rgb(0, 0, 0)&amp;quot;}&quot; style=&quot;forced-color-adjust: none; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;div style=&quot;forced-color-adjust: none; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;1.&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;b style=&quot;forced-color-adjust: none;&quot;&gt;Profissionais e horários das equipes&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;&lt;br style=&quot;forced-color-adjust: none;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;A Equipe de Saúde da Família é responsável pela coordenação do cuidado&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;dos moradores de um território delimitado. Ela é composta por médico, enfermeiro, técnico de enfermagem e agente comunitário de saúde. Para mais detalhes sobre o nome dos profissionais da sua equipe e/ou horário de funcionamento dos nossos serviços, consulte o link a seguir.&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;&lt;br style=&quot;forced-color-adjust: none;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none;&quot;&gt;http://bit.ly/3NJqVSD&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;&lt;br style=&quot;forced-color-adjust: none;&quot;&gt;&lt;/div&gt;&lt;/font&gt;&lt;div style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;font data-mx-given-colors=&quot;{&amp;quot;color&amp;quot;:&amp;quot;rgb(0, 0, 0)&amp;quot;}&quot; style=&quot;forced-color-adjust: none; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;&lt;b style=&quot;forced-color-adjust: none;&quot;&gt;Digite 1&lt;/b&gt;&amp;nbsp;para finalizar o atendimento ou&lt;b style=&quot;forced-color-adjust: none;&quot;&gt;&amp;nbsp;0&lt;/b&gt;&amp;nbsp;para retornar ao menu anterior&lt;/font&gt;&lt;/div&gt;&#xa;&#xa;" link="&#xa;&lt;font data-mx-given-colors=&quot;{&amp;quot;color&amp;quot;:&amp;quot;rgb(0, 0, 0)&amp;quot;}&quot; style=&quot;forced-color-adjust: none; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;div style=&quot;forced-color-adjust: none; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;1.&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;b style=&quot;forced-color-adjust: none;&quot;&gt;Profissionais e horários das equipes&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;&lt;br style=&quot;forced-color-adjust: none;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;A Equipe de Saúde da Família é responsável pela coordenação do cuidado&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;dos moradores de um território delimitado. Ela é composta por médico, enfermeiro, técnico de enfermagem e agente comunitário de saúde. Para mais detalhes sobre o nome dos profissionais da sua equipe e/ou horário de funcionamento dos nossos serviços, consulte o link a seguir.&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;&lt;br style=&quot;forced-color-adjust: none;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none;&quot;&gt;http://bit.ly/3NJqVSD&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;&lt;br style=&quot;forced-color-adjust: none;&quot;&gt;&lt;/div&gt;&lt;/font&gt;&lt;div style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;font data-mx-given-colors=&quot;{&amp;quot;color&amp;quot;:&amp;quot;rgb(0, 0, 0)&amp;quot;}&quot; style=&quot;forced-color-adjust: none; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;&lt;b style=&quot;forced-color-adjust: none;&quot;&gt;Digite 1&lt;/b&gt;&amp;nbsp;para finalizar o atendimento ou&lt;b style=&quot;forced-color-adjust: none;&quot;&gt;&amp;nbsp;0&lt;/b&gt;&amp;nbsp;para retornar ao menu anterior&lt;/font&gt;&lt;/div&gt;&#xa;&#xa;" id="Zj-whqz9mNZbiH2NHCfn-89">
+          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="230" width="330" x="1190" y="-10" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-90" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="3.Para sua renovação de receita, preencha o link a seguir.&lt;div&gt;&lt;a class=&quot;in-cell-link&quot; href=&quot;https://forms.gle/mMkqEMfmJ4dnuLaC7&quot; target=&quot;_blank&quot; style=&quot;font-family: Arial; font-size: 13.3333px; text-align: start;&quot;&gt;https://forms.gle/mMkqEMfmJ4dnuLaC7&lt;/a&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;p&gt;O prazo para renovação é de até &lt;strong&gt;5 dias úteis&lt;/strong&gt;. No entanto, a equipe de saúde poderá avaliar a necessidade de &lt;strong&gt;atendimento presencial&lt;/strong&gt;, caso julgue necessário.&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Recomendamos que &lt;/span&gt;&lt;strong style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;não aguarde o término do seu medicamento&lt;/strong&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt; para realizar uma nova solicitação, evitando a interrupção do tratamento.&lt;/span&gt;&lt;/p&gt;&lt;div&gt;&lt;div&gt;&amp;nbsp;&lt;b&gt;Digite 1&lt;/b&gt;&amp;nbsp;para finalizar o atendimento ou&lt;b&gt;&amp;nbsp;0&lt;/b&gt;&amp;nbsp;para retornar ao menu anterior&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="250" width="270" x="1180.5" y="-270" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-91" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;4. A Profilaxia de Pós-Exposição ao HIV (PEP) é um tratamento com medicamentos antirretrovirais que pode evitar a infecção pelo HIV, o tratamento deve ser iniciado até 72h após o possível contato com o vírus. A PEP é indicada quando você tem uma relação sexual desprotegida ou a camisinha se rompe, quando há violência sexual, quando há compartilhamentos de agulhas ou seringas ou quando há algum acidente com materiais que furam ou cortam. Para iniciar o tratamento é necessário buscar atendimento da equipe de saúde da família de forma presencial em até 72 horas, para que possa ser utilizada a PEP. Este serviço também ofertado nas UPAs 24h. Caso a relação sexual desprotegida tenha mais de 72 horas, não é possível utilizar a profilaxia. Neste caso o atendimento com a sua equipe pode ser programado.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp;&lt;b&gt;Compareça presencialmente ao Centro de Saúde e&amp;nbsp; fale com a sua equipe.&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Digite 1&lt;/b&gt;&amp;nbsp;para finalizar o atendimento ou&lt;b&gt;&amp;nbsp;0&lt;/b&gt;&amp;nbsp;para retornar ao menu anterior&lt;b&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="170" width="690" x="1910" y="-480" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-92" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;p&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;3.Para sua renovação de receita, preencha o link a seguir.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;font face=&quot;Helvetica&quot; style=&quot;font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(31, 31, 31); font-variant-ligatures: no-contextual; text-align: start; background-color: rgb(255, 255, 255);&quot;&gt;&amp;nbsp;https://forms.gle/ypMBYnJf1FgfeU677&lt;/span&gt;&amp;nbsp;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;div&gt;&lt;p&gt;&lt;font face=&quot;Helvetica&quot; style=&quot;font-size: 12px;&quot;&gt;O prazo para renovação é de até&amp;nbsp;&lt;strong style=&quot;&quot;&gt;5 dias úteis&lt;/strong&gt;. No entanto, a equipe de saúde poderá avaliar a necessidade de&amp;nbsp;&lt;strong style=&quot;&quot;&gt;atendimento presencial&lt;/strong&gt;, caso julgue necessário.&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Recomendamos que&amp;nbsp;&lt;/span&gt;&lt;strong style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;não aguarde o término do seu medicamento&lt;/strong&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;para realizar uma nova solicitação, evitando a interrupção do tratamento.&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Digite 1&lt;/b&gt;&amp;nbsp;para finalizar o atendimento ou&lt;b&gt;&amp;nbsp;0&lt;/b&gt;&amp;nbsp;para retornar ao menu anterior&lt;font face=&quot;Helvetica&quot; style=&quot;font-size: 12px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="210" width="340" x="1190" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-93" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1130" y="580" />
+              <mxPoint x="1130" y="340" />
+            </Array>
+            <mxPoint x="1240" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-94" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-92" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="Zj-whqz9mNZbiH2NHCfn-92">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-95" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;p&gt;2. A coleta de exame preventivo do colo uterino (papanicolau) é realizada em pessoas com vagina e útero de 25 a 64 anos, Para realização do preventivo é necessário não está menstruada, não está em uso de pomada ginecológica e sem relação sexual nas últimas 48h que antecede o exame.&lt;/p&gt;&lt;p&gt;Se você atende a esses critérios, &lt;b&gt;preencha o formulário no link abaixo e aguarde o contato da sua equipe de saúde em até 72 horas úteis&amp;nbsp;&lt;/b&gt; para confirmação do agendamento.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(31, 31, 31); font-variant-ligatures: no-contextual; text-align: start; background-color: rgb(255, 255, 255);&quot;&gt;https://forms.gle/ypMBYnJf1FgfeU677&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(31, 31, 31); font-variant-ligatures: no-contextual; text-align: start; background-color: rgb(255, 255, 255);&quot;&gt;Ou se preferir compareça via demanda espontânea, no início do turno, no horário de atendimento da enfermeira da equipe.&lt;/span&gt;&lt;/p&gt;&lt;div&gt;&lt;b&gt;Digite 1&lt;/b&gt;&amp;nbsp;para finalizar o atendimento ou&lt;b&gt;&amp;nbsp;0&lt;/b&gt;&amp;nbsp;para retornar ao menu anterior&lt;/div&gt;" vertex="1">
+          <mxGeometry height="180" width="690" x="1906" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-96" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;p data-start=&quot;0&quot; data-end=&quot;326&quot;&gt;3. A visita domiciliar é destinada à pacientes acamados (restritos ao leito) e/ou com dificuldade de locomoção de acordo com a avaliação e programação da equipe. Este canal não destina-se a casos de urgência.&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Nesses casos, ligue imediatamente para o&amp;nbsp;&lt;/span&gt;&lt;span class=&quot;hover:entity-accent entity-underline inline cursor-pointer align-baseline&quot; style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Serviço de Atendimento Móvel de Urgência (SAMU)&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;, pelo número&amp;nbsp;&lt;/span&gt;&lt;strong data-start=&quot;515&quot; data-end=&quot;522&quot; style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;192&lt;/strong&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;p data-start=&quot;0&quot; data-end=&quot;326&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&amp;nbsp;Caso esteja dentro dos critérios, encaminhe seus dados pessoais (nome completo, data de nascimento e endereço), o motivo da Visita Domiciliar e aguarde o contato da sua equipe&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;em até 72h úteis.&lt;/span&gt;&lt;/p&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Digite 1&lt;/b&gt;&amp;nbsp;para finalizar o atendimento ou&lt;b&gt;&amp;nbsp;0&lt;/b&gt;&amp;nbsp;para retornar ao menu anterior&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="690" x="1910" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-97" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;4.. A Profilaxia de Pós-Exposição ao HIV (PEP) é um tratamento com medicamentos antirretrovirais que pode evitar a infecção pelo HIV, o tratamento deve ser iniciado até 72h após o possível contato com o vírus. A PEP é indicada quando você tem uma relação sexual desprotegida ou a camisinha se rompe, quando há violência sexual, quando há compartilhamentos de agulhas ou seringas ou quando há algum acidente com materiais que furam ou cortam. Para iniciar o tratamento é necessário buscar atendimento da equipe de saúde da família de forma presencial em até 72 horas, para que possa ser utilizada a PEP. Este serviço é ofertado nas UPAs 24h. Caso a relação sexual desprotegida tenha mais de 72 horas, não é possível utilizar a profilaxia. Neste caso o atendimento com a sua equipe pode ser programado.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp;&lt;b&gt;Compareça no Centro de Saúde preferencialmente no início dos turnos e fale com a sua equipe.&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Digite 1&lt;/b&gt;&amp;nbsp;para finalizar o atendimento ou&lt;b&gt;&amp;nbsp;0&lt;/b&gt;&amp;nbsp;para retornar ao menu anterior&lt;b&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="185" width="720" x="1915" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-98" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.005;entryY=0.725;entryDx=0;entryDy=0;entryPerimeter=0;" target="Zj-whqz9mNZbiH2NHCfn-92">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="&#xa;&lt;font data-mx-given-colors=&quot;{&amp;quot;color&amp;quot;:&amp;quot;rgb(0, 0, 0)&amp;quot;}&quot; style=&quot;forced-color-adjust: none; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;div style=&quot;forced-color-adjust: none; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;1.&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;b style=&quot;forced-color-adjust: none;&quot;&gt;Profissionais e horários das equipes&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;&lt;br style=&quot;forced-color-adjust: none;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;A Equipe de Saúde da Família é responsável pela coordenação do cuidado&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;dos moradores de um território delimitado. Ela é composta por médico, enfermeiro, técnico de enfermagem e agente comunitário de saúde. Para mais detalhes sobre o nome dos profissionais da sua equipe e/ou horário de funcionamento dos nossos serviços, consulte o link a seguir.&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;&lt;br style=&quot;forced-color-adjust: none;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none;&quot;&gt;http://bit.ly/3NJqVSD&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;&lt;br style=&quot;forced-color-adjust: none;&quot;&gt;&lt;/div&gt;&lt;/font&gt;&lt;div style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;font data-mx-given-colors=&quot;{&amp;quot;color&amp;quot;:&amp;quot;rgb(0, 0, 0)&amp;quot;}&quot; style=&quot;forced-color-adjust: none; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;&lt;b style=&quot;forced-color-adjust: none;&quot;&gt;Digite 1&lt;/b&gt;&amp;nbsp;para finalizar o atendimento ou&lt;b style=&quot;forced-color-adjust: none;&quot;&gt;&amp;nbsp;0&lt;/b&gt;&amp;nbsp;para retornar ao menu anterior&lt;/font&gt;&lt;/div&gt;&#xa;&#xa;" link="&#xa;&lt;font data-mx-given-colors=&quot;{&amp;quot;color&amp;quot;:&amp;quot;rgb(0, 0, 0)&amp;quot;}&quot; style=&quot;forced-color-adjust: none; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;div style=&quot;forced-color-adjust: none; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;1.&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;b style=&quot;forced-color-adjust: none;&quot;&gt;Profissionais e horários das equipes&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;&lt;br style=&quot;forced-color-adjust: none;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;A Equipe de Saúde da Família é responsável pela coordenação do cuidado&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;dos moradores de um território delimitado. Ela é composta por médico, enfermeiro, técnico de enfermagem e agente comunitário de saúde. Para mais detalhes sobre o nome dos profissionais da sua equipe e/ou horário de funcionamento dos nossos serviços, consulte o link a seguir.&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;&lt;br style=&quot;forced-color-adjust: none;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none;&quot;&gt;http://bit.ly/3NJqVSD&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;&lt;br style=&quot;forced-color-adjust: none;&quot;&gt;&lt;/div&gt;&lt;/font&gt;&lt;div style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;font data-mx-given-colors=&quot;{&amp;quot;color&amp;quot;:&amp;quot;rgb(0, 0, 0)&amp;quot;}&quot; style=&quot;forced-color-adjust: none; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;&lt;b style=&quot;forced-color-adjust: none;&quot;&gt;Digite 1&lt;/b&gt;&amp;nbsp;para finalizar o atendimento ou&lt;b style=&quot;forced-color-adjust: none;&quot;&gt;&amp;nbsp;0&lt;/b&gt;&amp;nbsp;para retornar ao menu anterior&lt;/font&gt;&lt;/div&gt;&#xa;&#xa;" id="Zj-whqz9mNZbiH2NHCfn-99">
+          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;" vertex="1">
+            <mxGeometry height="180" width="510" x="1160" y="610" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-100" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;div&gt;2. Para agendamento, digite uma das opções numéricas a seguir&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;1. Consulta com a equipe&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;2.Preventivo de colo uterino&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;3.Visita Domiciliar&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;4. Retornar ao menu anterior&lt;/div&gt;" vertex="1">
+          <mxGeometry height="130" width="340" x="1170" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-101" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=center;" value="&lt;p&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;3.Para sua renovação de receita, preencha o link a seguir.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;&quot;&gt;&lt;font face=&quot;Helvetica&quot;&gt;&lt;span style=&quot;color: rgb(31, 31, 31); font-variant-ligatures: no-contextual; background-color: rgb(255, 255, 255);&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(31, 31, 31); font-variant-ligatures: no-contextual;&quot;&gt;&lt;font face=&quot;Helvetica&quot; style=&quot;font-size: 12px;&quot;&gt;https://forms.gle/xm5LPTLe77xgEMhM8&lt;/font&gt;&lt;/span&gt;&lt;font face=&quot;Helvetica&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;div&gt;&lt;p style=&quot;&quot;&gt;&lt;font face=&quot;Helvetica&quot;&gt;O prazo para renovação é de até&amp;nbsp;&lt;strong&gt;5 dias úteis&lt;/strong&gt;. No entanto, a equipe de saúde poderá avaliar a necessidade de&amp;nbsp;&lt;strong&gt;atendimento presencial&lt;/strong&gt;, caso julgue necessário.&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Recomendamos que&amp;nbsp;&lt;/span&gt;&lt;strong style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;não aguarde o término do seu medicamento&lt;/strong&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;para realizar uma nova solicitação, evitando a interrupção do tratamento.&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;&quot;&gt;&lt;b&gt;Digite 1&lt;/b&gt;&amp;nbsp;para finalizar o atendimento ou&lt;b&gt;&amp;nbsp;0&lt;/b&gt;&amp;nbsp;para retornar ao menu anterior&lt;/p&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="160" width="470" x="1160" y="920" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-102" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.002;entryY=0.62;entryDx=0;entryDy=0;entryPerimeter=0;" target="Zj-whqz9mNZbiH2NHCfn-100">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-103" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-87" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.575;entryDx=0;entryDy=0;entryPerimeter=0;" target="Zj-whqz9mNZbiH2NHCfn-96">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-104" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="1. O agendamento de consultas por este canal destina-se as gestantes, puérperas (mulheres até 45 dias após o parto), criança menor de dois anos, conforme disponibilidade e avaliação da equipe. Nosso tempo de resposta é de até 72 horas úteis. Caso não possa esperar e não pertença a nenhum dos grupos citados, compareça ao centro de saúde para atendimento com a equipe.&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp;Para agendamento de consulta,&amp;nbsp;&lt;b&gt;preencha o link a seguir e aguarde o contato da sua equipe:&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Helvetica&quot;&gt;&lt;span style=&quot;color: rgb(31, 31, 31); font-variant-ligatures: no-contextual; background-color: rgb(255, 255, 255);&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(31, 31, 31); font-variant-ligatures: no-contextual;&quot;&gt;&lt;font face=&quot;Helvetica&quot;&gt;https://forms.gle/xm5LPTLe77xgEMhM8&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Digite 1&lt;/b&gt;&amp;nbsp;para finalizar o atendimento ou&lt;b&gt;&amp;nbsp;0&lt;/b&gt;&amp;nbsp;para retornar ao menu anterior&lt;/div&gt;" vertex="1">
+          <mxGeometry height="160" width="706" x="1920" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-105" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;p&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;2. A coleta de exame preventivo do colo uterino (papanicolau) é realizada em pessoas com vagina e útero de 25 a 64 anos, Para realização do preventivo é necessário não está menstruada, não está em uso de pomada ginecológica e sem relação sexual nas últimas 48h que antecede o exame.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Se você atende a esses critérios,&amp;nbsp;&lt;b&gt;preencha o formulário no link abaixo e aguarde o contato da sua equipe de saúde em até 72 horas úteis&amp;nbsp;&lt;/b&gt;&amp;nbsp;para confirmação do agendamento:&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(31, 31, 31); font-variant-ligatures: no-contextual; background-color: rgb(255, 255, 255);&quot;&gt;https://forms.gle/xm5LPTLe77xgEMhM8&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(31, 31, 31); font-variant-ligatures: no-contextual; background-color: rgb(255, 255, 255);&quot;&gt;&lt;span style=&quot;text-align: start;&quot;&gt;Ou se preferir compareça via demanda espontânea, no início do turno, no horário de atendimento da enfermeira da equipe.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;div&gt;&lt;b&gt;Digite 1&lt;/b&gt;&amp;nbsp;para finalizar o atendimento ou&lt;b&gt;&amp;nbsp;0&lt;/b&gt;&amp;nbsp;para retornar ao menu anterior&lt;/div&gt;" vertex="1">
+          <mxGeometry height="190" width="710" x="1920" y="1060" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-106" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;p data-start=&quot;0&quot; data-end=&quot;326&quot;&gt;3. A visita domiciliar é destinada a pacientes acamados (restritos ao leito) e/ou com dificuldade de locomoção de acordo com a avaliação e programação da equipe. Este canal não se destina a casos de urgência.&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Nesses casos, ligue imediatamente para o&amp;nbsp;&lt;/span&gt;&lt;span class=&quot;hover:entity-accent entity-underline inline cursor-pointer align-baseline&quot; style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Serviço de Atendimento Móvel de Urgência (SAMU)&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;, pelo número&amp;nbsp;&lt;/span&gt;&lt;strong data-start=&quot;515&quot; data-end=&quot;522&quot; style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;192&lt;/strong&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;p data-start=&quot;0&quot; data-end=&quot;326&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&amp;nbsp;Caso esteja dentro dos critérios, encaminhe seus dados pessoais (nome completo, data de nascimento e endereço), o motivo da Visita Domiciliar e aguarde o contato da sua equipe em até 72h úteis.&lt;/span&gt;&lt;/p&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Digite 1&lt;/b&gt;&amp;nbsp;para finalizar o atendimento ou&lt;b&gt;&amp;nbsp;0&lt;/b&gt;&amp;nbsp;para retornar ao menu anterior&lt;/div&gt;" vertex="1">
+          <mxGeometry height="160" width="710" x="1920" y="1280" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-107" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1670" y="840" />
+              <mxPoint x="1670" y="1171" />
+              <mxPoint x="1920" y="1171" />
+              <mxPoint x="1920" y="1170" />
+            </Array>
+            <mxPoint x="1510" y="840" as="sourcePoint" />
+            <mxPoint x="1930" y="1170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-108" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-106" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Zj-whqz9mNZbiH2NHCfn-106">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-109" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.669;entryDx=0;entryDy=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1660" y="850" />
+              <mxPoint x="1660" y="1392" />
+            </Array>
+            <mxPoint x="1510" y="850" as="sourcePoint" />
+            <mxPoint x="1920" y="1392.04" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-110" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="1. link da planilha.&amp;nbsp;&amp;nbsp;&lt;div&gt;&lt;b&gt;Digite 1&lt;/b&gt;&amp;nbsp;para finalizar o atendimento ou&lt;b&gt;&amp;nbsp;0&lt;/b&gt;&amp;nbsp;para retornar ao menu anterior&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="330" x="470" y="880" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-111" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;2. Atendimento. Favor informar seu nome completo, data de nascimento, endereço completo para verificarmos a sua equipe de saúde bucal que responderá em até 72h úteis. Em caso de urgência, você pode procurar diretamente a Unidade de Saúde ou UPA.&amp;nbsp; Ou digite 0 para retornar ao menu anterior.&lt;/font&gt;" vertex="1">
+          <mxGeometry height="75" width="330" x="470" y="935" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-112" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;3. Resultados de Exames.&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Este canal destina-se a informações sobre resultados de exames como radiografia e exames Laboratoriais solicitados pelo cirurgião-dentista. Para que possamos analisar seus exames, encaminhe seus dados pessoais (nome completo, data de nascimento e endereço) e os seus exames aqui na mensagem e aguarde o contato da equipe de saúde bucal em até 72h úteis.&amp;nbsp;&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;font-size: 11px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Ou digite 0 para retornar ao menu anterior.&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="520" x="450" y="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-113" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.4;entryDx=0;entryDy=0;entryPerimeter=0;" target="Zj-whqz9mNZbiH2NHCfn-111">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-114" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.003;entryY=0.409;entryDx=0;entryDy=0;entryPerimeter=0;" target="Zj-whqz9mNZbiH2NHCfn-112">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-115" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" target="Zj-whqz9mNZbiH2NHCfn-116" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="20" y="-460" />
+              <mxPoint x="20" y="1245" />
+            </Array>
+            <mxPoint x="113" y="-460" as="sourcePoint" />
+            <mxPoint x="150" y="3742" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-116" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="5. Farmácia" vertex="1">
+          <mxGeometry height="60" width="115" x="37.5" y="1215" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-117" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="5. Outros motivos: informe o motivo do contato, seu nome completo e data de nascimento, aguarde o retorno da equipe em até 72h úteis.&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Ou digite 1&lt;/b&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;para finalizar o atendimento ou&lt;/span&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;0&lt;/b&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;para retornar ao menu anterior.&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="450" x="680" y="3150" as="geometry" />
+        </mxCell>
+        <mxCell id="Zj-whqz9mNZbiH2NHCfn-118" edge="1" parent="1" source="Zj-whqz9mNZbiH2NHCfn-66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.59;entryDx=0;entryDy=0;entryPerimeter=0;" target="Zj-whqz9mNZbiH2NHCfn-117">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,6619 @@
+{
+  "version": "6.1",
+  "id": "37a2a57313dd41d2a4a74a",
+  "name": "CS Ingleses",
+  "events": [
+    {
+      "id": "f5a6115eaa8244f881c5fe",
+      "outgoingEdgeId": "fb5588f8c71f4b6bac8b11",
+      "graphCoordinates": {
+        "x": -38.51,
+        "y": 171.84
+      },
+      "type": "start"
+    }
+  ],
+  "groups": [
+    {
+      "id": "f353756b1c5b4dec9b77b4",
+      "title": "Variáveis iniciais",
+      "graphCoordinates": {
+        "x": 307.68,
+        "y": -5.36
+      },
+      "blocks": [
+        {
+          "id": "55fcaf36698843b79b1b04",
+          "type": "Set variable",
+          "options": {
+            "variableId": "a35299e2c5b94f4c876e69",
+            "expressionToEvaluate": "SEU_TOKEN_AQUI",
+            "isCode": false
+          }
+        },
+        {
+          "id": "11beb54ee26c45079bc287",
+          "type": "Set variable",
+          "options": {
+            "variableId": "40c3d10539754eff84868e",
+            "expressionToEvaluate": "{{contactName}}",
+            "isCode": true
+          }
+        },
+        {
+          "id": "e46f148b7db845df90dd31",
+          "type": "Set variable",
+          "options": {
+            "variableId": "e9bea68cb6ba42f9a041a5",
+            "expressionToEvaluate": "{{contactNumber}}",
+            "isCode": true
+          }
+        },
+        {
+          "id": "e27aac56f3e9415b9c51d3",
+          "type": "Set variable",
+          "options": {
+            "variableId": "d0294db85ed74f24875f9b",
+            "expressionToEvaluate": "{{ticketId}}",
+            "isCode": true
+          }
+        },
+        {
+          "id": "3ba8afad46c047f481e33f",
+          "outgoingEdgeId": "70931ae3f2874cb9a3c2d6",
+          "type": "Set variable",
+          "options": {
+            "variableId": "636bb0200aad46c7aeac10",
+            "expressionToEvaluate": "{{protocol}}",
+            "isCode": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "c666bd65694049519db912",
+      "title": "Menu Principal",
+      "graphCoordinates": {
+        "x": 716.54,
+        "y": -1.86
+      },
+      "blocks": [
+        {
+          "id": "edfcac7b71fa4c7fb5e11b",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Olá, seja bem vindo (a) ao atendimento virtual do *Centro de Saúde Abraão*. Por este canal você poderá entrar em contato com a equipe de saúde*_._*"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Você também pode ter seu atendimento através do Alô Saúde pelo telefone *0800 333 3233.*"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Para prosseguir *digite uma das opções numéricas *abaixo:"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "1. Realização ou atualização de cadastro/endereço"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "2. Equipe de Saúde da Família"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "3. Equipe de Saúde Bucal"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "4. Marcação de exames e consultas especializadas"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "5. Farmácia"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "6. Vacina"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "7. Dúvidas gerais"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "867557eade6d484c8dff09",
+          "type": "text input",
+          "options": {
+            "variableId": "49cbf60eba444b619309b5"
+          }
+        },
+        {
+          "id": "4461aa84481a4737a14390",
+          "outgoingEdgeId": "3b1d29e8433340a7b43d8d",
+          "type": "Condition",
+          "items": [
+            {
+              "id": "7d3c875c5e214e8c85d39d",
+              "outgoingEdgeId": "35dd716a7bb94f61abf39b",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "f1c0213144b145918b036f",
+                    "variableId": "49cbf60eba444b619309b5",
+                    "comparisonOperator": "Equal to",
+                    "value": "1"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "bd61a42eef3f4cf7a4c6a8",
+              "outgoingEdgeId": "ed94474b875549e4af79cc",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "9e3b5363929a4fc79e1280",
+                    "variableId": "49cbf60eba444b619309b5",
+                    "comparisonOperator": "Equal to",
+                    "value": "2"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "2dd8eb3df84c4e36b3f4fe",
+              "outgoingEdgeId": "f8253c480a664ea78ba61f",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "67eed2b49cea46758cabcb",
+                    "variableId": "49cbf60eba444b619309b5",
+                    "comparisonOperator": "Equal to",
+                    "value": "3"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "187bd09679a14bcc912814",
+              "outgoingEdgeId": "7ae3d482c1a24afb9c6577",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "a96b609e3d4d4fd9be01f8",
+                    "variableId": "49cbf60eba444b619309b5",
+                    "comparisonOperator": "Equal to",
+                    "value": "4"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "708ca5a6cad24feda84424",
+              "outgoingEdgeId": "284ff99e51eb44eab523fc",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "46967412fb6b41928c171c",
+                    "variableId": "49cbf60eba444b619309b5",
+                    "comparisonOperator": "Equal to",
+                    "value": "5"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "e1ab59030d164f0fb6368b",
+              "outgoingEdgeId": "4f26bd370b344493aff92d",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "e8c5cf921e3045c18dd828",
+                    "variableId": "49cbf60eba444b619309b5",
+                    "comparisonOperator": "Equal to",
+                    "value": "6"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "0e7343913cff4f60bab381",
+              "outgoingEdgeId": "5dd5702ebae445e09748fa",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "f3fc0a305fe04de2a5adef",
+                    "variableId": "49cbf60eba444b619309b5",
+                    "comparisonOperator": "Equal to",
+                    "value": "7"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3bc387d6e99a435d8ca3ae",
+      "title": "Opção inválida",
+      "graphCoordinates": {
+        "x": 716.54,
+        "y": 598.14
+      },
+      "blocks": [
+        {
+          "id": "63e6a9a4332140afbf3b3d",
+          "outgoingEdgeId": "05f0d67eb5764ac88ecb43",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Não entendemos sua resposta. Por favor, digite apenas o número de uma das opções disponíveis."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "f35bd3e677e8469dae61c3",
+      "title": "Para realizar *novo cadastro* ou *atualização cada",
+      "graphCoordinates": {
+        "x": 1124.75,
+        "y": 1124.75
+      },
+      "blocks": [
+        {
+          "id": "c94cc46d4918459f9140db",
+          "outgoingEdgeId": "b17569a884df44649f9de7",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Para realizar *novo cadastro* ou *atualização cadastral* (como atualização de dados pessoais ou mudança de endereço), envie:"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Foto do *documento de identificação*;"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Foto do *comprovante de residência atualizado*;"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Os *contatos telefônicos* e *e-mail*."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Após o envio, aguarde o contato da equipe em até 72h úteis para confirmação."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Se preferir, compareça ao Centro de Saúde para que possamos auxiliá-lo(a) com o cadastro e conferência dos documentos."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Digite *0* para retornar ao menu principal."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "d695a8ad53b9473d8319fa",
+      "title": "Para prosseguir digite a opção numérica da sua equ",
+      "graphCoordinates": {
+        "x": 1124.75,
+        "y": 1524.75
+      },
+      "blocks": [
+        {
+          "id": "b1047c7870d4408a9803d8",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Para prosseguir digite a opção numérica da sua equipe de Saúde da Família:"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "1. Não sei qual é a minha equipe"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "2. Equipe 570 - Verde"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "3. Equipe 571 - Laranja"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "4. Equipe 572 - Azul"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "5. Retornar ao menu principal"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "811913d1c4bd403b97bf93",
+          "type": "text input",
+          "options": {
+            "variableId": "73f3187097e240f882b72f"
+          }
+        },
+        {
+          "id": "c82068e567ca486f85874b",
+          "outgoingEdgeId": "cd3addcfef5e42a8a947ac",
+          "type": "Condition",
+          "items": [
+            {
+              "id": "d2bdd0ae1f5a4be9bd448d",
+              "outgoingEdgeId": "58a4427a0fe74f648ab2ba",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "e8ce6d30906742cc9d8549",
+                    "variableId": "73f3187097e240f882b72f",
+                    "comparisonOperator": "Equal to",
+                    "value": "0"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "31db8f70bbaf4d6c90637c",
+              "outgoingEdgeId": "b4ae12a94acf4c739cdc1b",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "095e6a3b6e77478caef9ff",
+                    "variableId": "73f3187097e240f882b72f",
+                    "comparisonOperator": "Equal to",
+                    "value": "1"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "dc0437add4934bf7be3f55",
+              "outgoingEdgeId": "3ecec63c38854008b87338",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "4e9dc5756dd14666bfd649",
+                    "variableId": "73f3187097e240f882b72f",
+                    "comparisonOperator": "Equal to",
+                    "value": "2"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "bf19bcc7316a465d8178f9",
+              "outgoingEdgeId": "dfe316dd45864075801f8c",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "67de7d8b80bd44fb994672",
+                    "variableId": "73f3187097e240f882b72f",
+                    "comparisonOperator": "Equal to",
+                    "value": "3"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "1e6e65d1f94b4e4aa5da3b",
+              "outgoingEdgeId": "b881f74d672642cea50f07",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "98b613fc73864882b56b46",
+                    "variableId": "73f3187097e240f882b72f",
+                    "comparisonOperator": "Equal to",
+                    "value": "4"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "857a7ef4830a4a54a62f26",
+              "outgoingEdgeId": "0a4c376528bd4cae9a6185",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "93cbd129aaf64a7a9c0819",
+                    "variableId": "73f3187097e240f882b72f",
+                    "comparisonOperator": "Equal to",
+                    "value": "5"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8538d60a83ce47c29da3cc",
+      "title": "Opção inválida - Submenu",
+      "graphCoordinates": {
+        "x": 1124.75,
+        "y": 2124.75
+      },
+      "blocks": [
+        {
+          "id": "c83e2efd662f405fb401f7",
+          "outgoingEdgeId": "953c5177743f40de82b657",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Não entendemos sua resposta. Por favor, tente novamente."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "74bc3cdbe62f4e2fbc63e4",
+      "title": "Acesse o link a seguir, coloque seu endereço e des",
+      "graphCoordinates": {
+        "x": 1724.75,
+        "y": 1924.75
+      },
+      "blocks": [
+        {
+          "id": "9df027fc78194562904048",
+          "outgoingEdgeId": "966c240dd840485db743e6",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Acesse o link a seguir, coloque seu endereço e descobrirá a sua equipe."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "https://www.google.com/maps/d/u/2/viewer?mid=1r7fncVf4XlPC2V6ovlhoVms27xuA5Xg&ll=-27.609831947883517%2C-48.4906934&z=11"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "51f6e25533a64e0eb4b49e",
+      "title": "Olá, seja bem vindo (a) ao atendimento virtual da ",
+      "graphCoordinates": {
+        "x": 1724.75,
+        "y": 2324.75
+      },
+      "blocks": [
+        {
+          "id": "679cdd2010994726a999b7",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Olá, seja bem vindo (a) ao atendimento virtual da Equipe 570 VERDE. Se você está com qualquer sinal de gravidade, entre em contato com o SAMU (192) ou Corpo de Bombeiros (193) ou procure atendimento presencial no Centro de Saúde ou em algum serviço de pronto-atendimento. Em caso de dúvidas, entre em contato com o Alô Saúde no número 0800 333 3233."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Selecione uma das opções numéricas a seguir para prosseguir:"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "1. Profissionais e horários das equipes"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "2. Agendamentos"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "3. Renovação de receitas"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "4. Retornar ao menu anterior"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "d61bacc82bd34c6ebf82c6",
+          "type": "text input",
+          "options": {
+            "variableId": "a493a329c9114cb1b3ad89"
+          }
+        },
+        {
+          "id": "e116047de9904a398f65b2",
+          "outgoingEdgeId": "0e067a74622a4e3aa97bb3",
+          "type": "Condition",
+          "items": [
+            {
+              "id": "3b71796acb9f4e8c88d993",
+              "outgoingEdgeId": "40e101fa65134fff89e99a",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "0e92fbe38c004ca4b77158",
+                    "variableId": "a493a329c9114cb1b3ad89",
+                    "comparisonOperator": "Equal to",
+                    "value": "0"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "3117f3333ef6402ba8aeda",
+              "outgoingEdgeId": "9d4170124fdc4480b1f6cf",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "4c197224e2664690b223da",
+                    "variableId": "a493a329c9114cb1b3ad89",
+                    "comparisonOperator": "Equal to",
+                    "value": "1"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "040b3439140546eab7d5e3",
+              "outgoingEdgeId": "ae4e61d1b2a94541805db7",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "945df3a5d7444b7eb804dd",
+                    "variableId": "a493a329c9114cb1b3ad89",
+                    "comparisonOperator": "Equal to",
+                    "value": "2"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "0ba364e9d1f94f19ab90e6",
+              "outgoingEdgeId": "637633440fac42cea5b7e4",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "2da84e8b662e4eb9bf0cf6",
+                    "variableId": "a493a329c9114cb1b3ad89",
+                    "comparisonOperator": "Equal to",
+                    "value": "3"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "b7cd9e3bad8e4874984a8e",
+              "outgoingEdgeId": "ae3a6ba66b324cf2843b04",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "5d09db11d4174f8b997f8e",
+                    "variableId": "a493a329c9114cb1b3ad89",
+                    "comparisonOperator": "Equal to",
+                    "value": "4"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ef983e646b23493aaba566",
+      "title": "Opção inválida - Submenu",
+      "graphCoordinates": {
+        "x": 1724.75,
+        "y": 2924.75
+      },
+      "blocks": [
+        {
+          "id": "fb313242345043bbb6d2e3",
+          "outgoingEdgeId": "9ff8052959364606b2a70b",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Não entendemos sua resposta. Por favor, tente novamente."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "051397bba9bd4aef950706",
+      "title": "*Profissionais e horários das equipes\n\nA Equipe de",
+      "graphCoordinates": {
+        "x": 2324.75,
+        "y": 2724.75
+      },
+      "blocks": [
+        {
+          "id": "19dcc8aeac8d4eb381c1a0",
+          "outgoingEdgeId": "187eda601ef342afa2887a",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "*Profissionais e horários das equipes"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "A Equipe de Saúde da Família é responsável pela coordenação do cuidado"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "dos moradores de um território delimitado. Ela é composta por médico, enfermeiro, técnico de enfermagem e agente comunitário de saúde. Para mais detalhes sobre o nome dos profissionais da sua equipe e/ou horário de funcionamento dos nossos serviços, consulte o link a seguir."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "http://bit.ly/3NJqVSD"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "*Digite 1* para finalizar o atendimento ou* 0* para retornar ao menu anterior"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "512de1835cac4e40ad65df",
+      "title": "Para agendamento digite uma das opções numéricas a",
+      "graphCoordinates": {
+        "x": 2324.75,
+        "y": 3124.75
+      },
+      "blocks": [
+        {
+          "id": "83a002c39a1f4b059eb7ab",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Para agendamento digite uma das opções numéricas a seguir:"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "1. Consulta com a equipe"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "2.Preventivo de colo uterino"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "3.Visita Domiciliar"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "4. Teste rápido/ PEP"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "5. Retornar ao menu anterior"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "873363b6a4c046ab91dd76",
+          "type": "text input",
+          "options": {
+            "variableId": "b343592937b1477589cd36"
+          }
+        },
+        {
+          "id": "6bda9aee49344edc85687f",
+          "outgoingEdgeId": "c9801ae09ca94193a34414",
+          "type": "Condition",
+          "items": [
+            {
+              "id": "d602724e65894bf99bc01a",
+              "outgoingEdgeId": "fef8dc6be8404e1abf7635",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "78f09a17f26940f5870d1c",
+                    "variableId": "b343592937b1477589cd36",
+                    "comparisonOperator": "Equal to",
+                    "value": "0"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "756dc20e5058453b935527",
+              "outgoingEdgeId": "b40c577bc54d42ca8f75bb",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "52341ea7812a46fbab566f",
+                    "variableId": "b343592937b1477589cd36",
+                    "comparisonOperator": "Equal to",
+                    "value": "1"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "bf23b60ec49e478ea0641b",
+              "outgoingEdgeId": "979e01cd185148228db057",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "6bd4cadb8004418d953f22",
+                    "variableId": "b343592937b1477589cd36",
+                    "comparisonOperator": "Equal to",
+                    "value": "2"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "c6e566ee04a1468da12490",
+              "outgoingEdgeId": "eff58b6fff7b4cea98aefb",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "67ebd9b297a14442a9f739",
+                    "variableId": "b343592937b1477589cd36",
+                    "comparisonOperator": "Equal to",
+                    "value": "3"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "28c8c9b7e2c1440c89514a",
+              "outgoingEdgeId": "663d1817297d4625be9523",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "4e1e404d45b2473b8b09a3",
+                    "variableId": "b343592937b1477589cd36",
+                    "comparisonOperator": "Equal to",
+                    "value": "4"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "fd0ee74ede0f46bc8400ec",
+              "outgoingEdgeId": "d5a002d48c3c4f25a7e578",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "62ef1484fc9644f08dc4d2",
+                    "variableId": "b343592937b1477589cd36",
+                    "comparisonOperator": "Equal to",
+                    "value": "5"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4276a0a8a8b945b8b52508",
+      "title": "Opção inválida - Submenu",
+      "graphCoordinates": {
+        "x": 2324.75,
+        "y": 3724.75
+      },
+      "blocks": [
+        {
+          "id": "02cd372119c14d6ea893e0",
+          "outgoingEdgeId": "3364900e801446cea80a39",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Não entendemos sua resposta. Por favor, tente novamente."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "2cfd08f36bc6478f9b9cbd",
+      "title": "O agendamento de consultas por este canal destina-",
+      "graphCoordinates": {
+        "x": 2924.75,
+        "y": 3524.75
+      },
+      "blocks": [
+        {
+          "id": "5ff424d5363c44db9380b7",
+          "outgoingEdgeId": "deeb456a4c2a4aa4bdc4d9",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "O agendamento de consultas por este canal destina-se as gestantes, puérperas (mulheres até 45 dias após o parto), criança menor de dois anos, conforme disponibilidade e avaliação da equipe. Nosso tempo de resposta é de até 72 horas úteis. Caso não possa esperar, compareça ao centro de saúde."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Para agendamento de consulta, *preencha o link a seguir e aguarde o contato da sua equipe*"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "https://forms.gle/mMkqEMfmJ4dnuLaC7"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "*Digite 1* para finalizar o atendimento ou* 0* para retornar ao menu anterior"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "c6f82a635d2f41ec89ef85",
+      "title": "A coleta de exame preventivo do colo uterino (papa",
+      "graphCoordinates": {
+        "x": 2924.75,
+        "y": 3924.75
+      },
+      "blocks": [
+        {
+          "id": "e5c878a4b8314596a45916",
+          "outgoingEdgeId": "6307dc5bf6a64ce396cad7",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "A coleta de exame preventivo do colo uterino (papanicolau) é realizada em pessoas com vagina e útero de 25 a 64 anos, Para realização do preventivo é necessário não está menstruada, não está em uso de pomada ginecológica e sem relação sexual nas últimas 48h que antecede o exame."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Se você atende a esses critérios, preencha o formulário no link abaixo e aguarde o contato da sua equipe de saúde em até 72 horas úteis para confirmação do agendamento."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "https://forms.gle/mMkqEMfmJ4dnuLaC7"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Ou se preferir compareça via demanda espontânea, no início do turno, no horário de atendimento da enfermeira da equipe"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "*Digite 1* para finalizar o atendimento ou* 0* para retornar ao menu anterior"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "bd99c773d7cc49229109bd",
+      "title": "A visita domiciliar é destinada à pacientes acamad",
+      "graphCoordinates": {
+        "x": 2924.75,
+        "y": 4324.75
+      },
+      "blocks": [
+        {
+          "id": "5c75ed494586434095cb82",
+          "outgoingEdgeId": "601028c500ef4e5e88fb50",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "A visita domiciliar é destinada à pacientes acamados (restritos ao leito) e/ou com dificuldade de locomoção de acordo com a avaliação e programação da equipe. Este canal não destina-se a casos de urgência. Nesses casos, ligue imediatamente para o Serviço de Atendimento Móvel de Urgência (SAMU), pelo número *192*."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Caso você esteja dentro desses critérios, preencha o formulário no link a seguir e aguarde o contato da sua equipe de saúde em até 72 horas úteis para confirmação do agendamento."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "https://forms.gle/mMkqEMfmJ4dnuLaC7"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "*Digite 1* para finalizar o atendimento ou* 0* para retornar ao menu anterior"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "445d6184d839481b810c45",
+      "title": "A Profilaxia de Pós-Exposição ao HIV (PEP) é um tr",
+      "graphCoordinates": {
+        "x": 2924.75,
+        "y": 4724.75
+      },
+      "blocks": [
+        {
+          "id": "11b3c1a7077047c6a3c75b",
+          "outgoingEdgeId": "d2b13d2bbbcc4806bb585f",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "A Profilaxia de Pós-Exposição ao HIV (PEP) é um tratamento com medicamentos antirretrovirais que pode evitar a infecção pelo HIV, o tratamento deve ser iniciado até 72h após o possível contato com o vírus. A PEP é indicada quando você tem uma relação sexual desprotegida ou a camisinha se rompe, quando há violência sexual, quando há compartilhamentos de agulhas ou seringas ou quando há algum acidente com materiais que furam ou cortam. Para iniciar o tratamento é necessário buscar atendimento da equipe de saúde da família de forma presencial em até 72 horas, para que possa ser utilizada a PEP. Este serviço também ofertado nas UPAs 24h. Caso a relação sexual desprotegida tenha mais de 72 horas, não é possível utilizar a profilaxia. Neste caso o atendimento com a sua equipe pode ser programado."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "*Compareça presencialmente ao Centro de Saúde e fale com a sua equipe.*"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "*"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "*"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "*Digite 1* para finalizar o atendimento ou* 0* para retornar ao menu anterior*"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "8178eee1706d457894e567",
+      "title": "3.Para sua renovação de receita, preencha o link a",
+      "graphCoordinates": {
+        "x": 2324.75,
+        "y": 5524.75
+      },
+      "blocks": [
+        {
+          "id": "5dc2a93e471b4980a2488c",
+          "outgoingEdgeId": "e285cfee305e4c3199d6d0",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "3.Para sua renovação de receita, preencha o link a seguir."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "https://forms.gle/mMkqEMfmJ4dnuLaC7"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "O prazo para renovação é de até *5 dias úteis*. No entanto, a equipe de saúde poderá avaliar a necessidade de *atendimento presencial*, caso julgue necessário. Recomendamos que *não aguarde o término do seu medicamento* para realizar uma nova solicitação, evitando a interrupção do tratamento."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "*Digite 1* para finalizar o atendimento ou* 0* para retornar ao menu anterior"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "05129874c319452ebe6893",
+      "title": "Olá, seja bem vindo (a) ao atendimento virtual da ",
+      "graphCoordinates": {
+        "x": 1724.75,
+        "y": 4324.75
+      },
+      "blocks": [
+        {
+          "id": "46916c2207d947e0a2b2ae",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Olá, seja bem vindo (a) ao atendimento virtual da Equipe 571 LARANJA. Se você está com qualquer sinal de gravidade, entre em contato com o SAMU (192) ou Corpo de Bombeiros (193) ou procure atendimento presencial no Centro de Saúde ou em algum serviço de pronto-atendimento. Em caso de dúvidas, entre em contato com o Alô Saúde no número 0800 333 3233."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Selecione uma das opções numéricas a seguir para prosseguir:"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "1. Profissionais e horários das equipes"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "2. Agendamentos"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "3. Renovação de receitas"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "4. Retornar ao menu anterior"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "cee9b09646f245ed8bcdc1",
+          "type": "text input",
+          "options": {
+            "variableId": "678e33fe1be14825a0539e"
+          }
+        },
+        {
+          "id": "2683e9a5eb3e41f1985841",
+          "outgoingEdgeId": "2b88e9cf8be0407da4b71c",
+          "type": "Condition",
+          "items": [
+            {
+              "id": "65fc75835f1946ba9e04dd",
+              "outgoingEdgeId": "cb26e5a0b2f0416391e4f5",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "8798694ce29f48309f3d60",
+                    "variableId": "678e33fe1be14825a0539e",
+                    "comparisonOperator": "Equal to",
+                    "value": "0"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "e2ce6fadbc46488dbcd70b",
+              "outgoingEdgeId": "737e5ed2f0c24144a70755",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "c1e06aa690c1440d95192b",
+                    "variableId": "678e33fe1be14825a0539e",
+                    "comparisonOperator": "Equal to",
+                    "value": "1"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "39541db7eb4a4e4d847b89",
+              "outgoingEdgeId": "56031c8cc28242a486c50f",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "ee1db2b7945c4f4fbcb511",
+                    "variableId": "678e33fe1be14825a0539e",
+                    "comparisonOperator": "Equal to",
+                    "value": "2"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "bba77c80e63a49b0a98c69",
+              "outgoingEdgeId": "545f95562fcd4eab954537",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "60a4ad0b8d674072aeee41",
+                    "variableId": "678e33fe1be14825a0539e",
+                    "comparisonOperator": "Equal to",
+                    "value": "3"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "211f7c8c4481448bbcd67e",
+              "outgoingEdgeId": "b80291c78f8e43fdb50ccb",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "be1612b1b97a40c38b5bff",
+                    "variableId": "678e33fe1be14825a0539e",
+                    "comparisonOperator": "Equal to",
+                    "value": "4"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ed2f37c3eb8d4b4aba8d48",
+      "title": "Opção inválida - Submenu",
+      "graphCoordinates": {
+        "x": 1724.75,
+        "y": 4924.75
+      },
+      "blocks": [
+        {
+          "id": "53bb8b754c4741139cfe0a",
+          "outgoingEdgeId": "61d4980fe23c431487cedd",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Não entendemos sua resposta. Por favor, tente novamente."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "a6804e5cb1a64f55b6b5d4",
+      "title": "*Profissionais e horários das equipes\n\nA Equipe de",
+      "graphCoordinates": {
+        "x": 2324.75,
+        "y": 4724.75
+      },
+      "blocks": [
+        {
+          "id": "201b65603b6a475bbe66a7",
+          "outgoingEdgeId": "56f8caf78c49445a8b6cf1",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "*Profissionais e horários das equipes"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "A Equipe de Saúde da Família é responsável pela coordenação do cuidado"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "dos moradores de um território delimitado. Ela é composta por médico, enfermeiro, técnico de enfermagem e agente comunitário de saúde. Para mais detalhes sobre o nome dos profissionais da sua equipe e/ou horário de funcionamento dos nossos serviços, consulte o link a seguir."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "http://bit.ly/3NJqVSD"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "*Digite 1* para finalizar o atendimento ou* 0* para retornar ao menu anterior"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "dd289b0ea99345fd9f75d4",
+      "title": "Para agendamento digite uma das opções numéricas a",
+      "graphCoordinates": {
+        "x": 2324.75,
+        "y": 5124.75
+      },
+      "blocks": [
+        {
+          "id": "dc3b59f703c4483c8027b0",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Para agendamento digite uma das opções numéricas a seguir:"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "1. Consulta com a equipe"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "2.Preventivo de colo uterino"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "3.Visita Domiciliar"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "4. Teste rápido/ PEP"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "5. Retornar ao menu anterior"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "e8bde05021074602a43417",
+          "type": "text input",
+          "options": {
+            "variableId": "0f27ff4a586b4e18a8b46a"
+          }
+        },
+        {
+          "id": "0af755c53d9646dd8e7f20",
+          "outgoingEdgeId": "a46f1355fee546398e6964",
+          "type": "Condition",
+          "items": [
+            {
+              "id": "66cf82d51bad433caf97f5",
+              "outgoingEdgeId": "5dca85b9d81d4fa584f2f0",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "78e5ee0e2d8b43dbab3669",
+                    "variableId": "0f27ff4a586b4e18a8b46a",
+                    "comparisonOperator": "Equal to",
+                    "value": "0"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "af94cd75ba244499bf3bc1",
+              "outgoingEdgeId": "25f6af36923e426e8d976c",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "d96811bd79bb491ebef2ad",
+                    "variableId": "0f27ff4a586b4e18a8b46a",
+                    "comparisonOperator": "Equal to",
+                    "value": "1"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "a094303df9d94a3195d953",
+              "outgoingEdgeId": "e2f35b7b33134112a7864b",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "3a896be00df04fa49cf5b1",
+                    "variableId": "0f27ff4a586b4e18a8b46a",
+                    "comparisonOperator": "Equal to",
+                    "value": "2"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "502a68837ee44b189a1d31",
+              "outgoingEdgeId": "8fda4d9eab9f475cb05a03",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "122b6f61016d4b59a12587",
+                    "variableId": "0f27ff4a586b4e18a8b46a",
+                    "comparisonOperator": "Equal to",
+                    "value": "3"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "33effd8921af406e936be7",
+              "outgoingEdgeId": "2581037c377d4e83a197c5",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "dd04e0757a07415abb3584",
+                    "variableId": "0f27ff4a586b4e18a8b46a",
+                    "comparisonOperator": "Equal to",
+                    "value": "4"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "adf0dcb0dcab425eb5f858",
+              "outgoingEdgeId": "502c7b25e759488ba713ae",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "f6d8b33899fb4984a98ad0",
+                    "variableId": "0f27ff4a586b4e18a8b46a",
+                    "comparisonOperator": "Equal to",
+                    "value": "5"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "61c7063c94b74662ae5636",
+      "title": "Opção inválida - Submenu",
+      "graphCoordinates": {
+        "x": 2324.75,
+        "y": 5724.75
+      },
+      "blocks": [
+        {
+          "id": "f40dd8a4f4ce47b2b0cfaa",
+          "outgoingEdgeId": "7af82e787d8244a5b87cfc",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Não entendemos sua resposta. Por favor, tente novamente."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "8ea16823167647fab02b34",
+      "title": "O agendamento de consultas por este canal destina-",
+      "graphCoordinates": {
+        "x": 2924.75,
+        "y": 5524.75
+      },
+      "blocks": [
+        {
+          "id": "bfa7a607cab6491c8913bc",
+          "outgoingEdgeId": "22ce46b15a164eae832aa3",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "O agendamento de consultas por este canal destina-se as gestantes, puérperas (mulheres até 45 dias após o parto), criança menor de dois anos, conforme disponibilidade e avaliação da equipe. Nosso tempo de resposta é de até 72 horas úteis. Caso não possa esperar e não pertença a nenhum dos grupos citados, compareça ao centro de saúde para atendimento com a equipe."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Para agendamento de consulta, *preencha o link a seguir e aguarde o contato da sua equipe:*"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "*"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "*"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "https://forms.gle/ypMBYnJf1FgfeU677 *"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "*Digite 1* para finalizar o atendimento ou* 0* para retornar ao menu anterior"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "668aa12447ab45e59452f6",
+      "title": "A coleta de exame preventivo do colo uterino (papa",
+      "graphCoordinates": {
+        "x": 2924.75,
+        "y": 5924.75
+      },
+      "blocks": [
+        {
+          "id": "62de5be848bd4685a26384",
+          "outgoingEdgeId": "5d70265d4a6e48249162cb",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "A coleta de exame preventivo do colo uterino (papanicolau) é realizada em pessoas com vagina e útero de 25 a 64 anos, Para realização do preventivo é necessário não está menstruada, não está em uso de pomada ginecológica e sem relação sexual nas últimas 48h que antecede o exame."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Se você atende a esses critérios, *preencha o formulário no link abaixo e aguarde o contato da sua equipe de saúde em até 72 horas úteis * para confirmação do agendamento."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "https://forms.gle/ypMBYnJf1FgfeU677"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Ou se preferir compareça via demanda espontânea, no início do turno, no horário de atendimento da enfermeira da equipe."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "*Digite 1* para finalizar o atendimento ou* 0* para retornar ao menu anterior"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "5248bf11ed094e2fa108d5",
+      "title": "A visita domiciliar é destinada à pacientes acamad",
+      "graphCoordinates": {
+        "x": 2924.75,
+        "y": 6324.75
+      },
+      "blocks": [
+        {
+          "id": "29abd4a85c0649c7847582",
+          "outgoingEdgeId": "6f2118ded65742808ec3d2",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "A visita domiciliar é destinada à pacientes acamados (restritos ao leito) e/ou com dificuldade de locomoção de acordo com a avaliação e programação da equipe. Este canal não destina-se a casos de urgência. Nesses casos, ligue imediatamente para o Serviço de Atendimento Móvel de Urgência (SAMU), pelo número *192*."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Caso esteja dentro dos critérios, encaminhe seus dados pessoais (nome completo, data de nascimento e endereço), o motivo da Visita Domiciliar e aguarde o contato da sua equipe em até 72h úteis."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "*Digite 1* para finalizar o atendimento ou* 0* para retornar ao menu anterior"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "b94b81e6c90c450c8024e2",
+      "title": "4.. A Profilaxia de Pós-Exposição ao HIV (PEP) é u",
+      "graphCoordinates": {
+        "x": 2924.75,
+        "y": 6724.75
+      },
+      "blocks": [
+        {
+          "id": "b6328b498a8345949c0a1e",
+          "outgoingEdgeId": "e78b558828b3469c86fa2d",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "4.. A Profilaxia de Pós-Exposição ao HIV (PEP) é um tratamento com medicamentos antirretrovirais que pode evitar a infecção pelo HIV, o tratamento deve ser iniciado até 72h após o possível contato com o vírus. A PEP é indicada quando você tem uma relação sexual desprotegida ou a camisinha se rompe, quando há violência sexual, quando há compartilhamentos de agulhas ou seringas ou quando há algum acidente com materiais que furam ou cortam. Para iniciar o tratamento é necessário buscar atendimento da equipe de saúde da família de forma presencial em até 72 horas, para que possa ser utilizada a PEP. Este serviço é ofertado nas UPAs 24h. Caso a relação sexual desprotegida tenha mais de 72 horas, não é possível utilizar a profilaxia. Neste caso o atendimento com a sua equipe pode ser programado."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "*Compareça no Centro de Saúde preferencialmente no início dos turnos e fale com a sua equipe.*"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "*"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "*"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "*Digite 1* para finalizar o atendimento ou* 0* para retornar ao menu anterior*"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "780334e94c714c8a9db6d2",
+      "title": "3.Para sua renovação de receita, preencha o link a",
+      "graphCoordinates": {
+        "x": 2324.75,
+        "y": 7524.75
+      },
+      "blocks": [
+        {
+          "id": "e7ad2ff7cc9747d6b407c4",
+          "outgoingEdgeId": "aa55fc4334ec431c82d1a9",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "3.Para sua renovação de receita, preencha o link a seguir."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "https://forms.gle/ypMBYnJf1FgfeU677"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "O prazo para renovação é de até *5 dias úteis*. No entanto, a equipe de saúde poderá avaliar a necessidade de *atendimento presencial*, caso julgue necessário. Recomendamos que *não aguarde o término do seu medicamento* para realizar uma nova solicitação, evitando a interrupção do tratamento."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "*Digite 1* para finalizar o atendimento ou* 0* para retornar ao menu anterior"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "2a569a9a2e4149399b55ac",
+      "title": "Olá, seja bem vindo (a) ao atendimento virtual da ",
+      "graphCoordinates": {
+        "x": 1724.75,
+        "y": 6324.75
+      },
+      "blocks": [
+        {
+          "id": "ecbc2df050ba4ac2a8c336",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Olá, seja bem vindo (a) ao atendimento virtual da Equipe 572 AZUL. Se você está com qualquer sinal de gravidade, entre em contato com o SAMU (192) ou Corpo de Bombeiros (193) ou procure atendimento presencial no Centro de Saúde ou em algum serviço de pronto-atendimento. Em caso de dúvidas, entre em contato com o Alô Saúde no número 0800 333 3233."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Selecione uma das opções numéricas a seguir para prosseguir:"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "1. Profissionais e horários das equipes"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "2. Agendamentos"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "3. Renovação de receitas / fórmulas infantis"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "4. Mostrar exames"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "5. Retornar ao menu anterior"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "3132e99c069f4ec787b37b",
+          "type": "text input",
+          "options": {
+            "variableId": "980489c1f86a40298b62f0"
+          }
+        },
+        {
+          "id": "530c68efbba244e0955dca",
+          "outgoingEdgeId": "4bc330bb9a4f4018b1bed5",
+          "type": "Condition",
+          "items": [
+            {
+              "id": "b610f31220e54d4fbea063",
+              "outgoingEdgeId": "04c3646fd48a4035939576",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "cb580b274ff94095aa1cda",
+                    "variableId": "980489c1f86a40298b62f0",
+                    "comparisonOperator": "Equal to",
+                    "value": "0"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "d351dac04a164f5fa02d23",
+              "outgoingEdgeId": "ab9c2a524a564a3282129b",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "b2a4cdb5ef8141ce8afc40",
+                    "variableId": "980489c1f86a40298b62f0",
+                    "comparisonOperator": "Equal to",
+                    "value": "1"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "030e40db8e1d41a6a55603",
+              "outgoingEdgeId": "4a1400bdc25f4635b29e07",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "e3c203ae3f9547bab67801",
+                    "variableId": "980489c1f86a40298b62f0",
+                    "comparisonOperator": "Equal to",
+                    "value": "2"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "d654177116b84413a4c906",
+              "outgoingEdgeId": "7c6249511eac4a6dbc3f0c",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "c15ca599840c4b9f8adaf0",
+                    "variableId": "980489c1f86a40298b62f0",
+                    "comparisonOperator": "Equal to",
+                    "value": "3"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "e7a0e096aab547578e1368",
+              "outgoingEdgeId": "daff9371f081478abd20a9",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "ec259dde254b401fb382f4",
+                    "variableId": "980489c1f86a40298b62f0",
+                    "comparisonOperator": "Equal to",
+                    "value": "5"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "662a885d132c4b29ab5ba6",
+      "title": "Opção inválida - Submenu",
+      "graphCoordinates": {
+        "x": 1724.75,
+        "y": 6924.75
+      },
+      "blocks": [
+        {
+          "id": "3925f3a222274285ba4cc3",
+          "outgoingEdgeId": "1c56207145ff43589b381f",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Não entendemos sua resposta. Por favor, tente novamente."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "f11f1325eb1f42e09b189f",
+      "title": "*Profissionais e horários das equipes\n\nA Equipe de",
+      "graphCoordinates": {
+        "x": 2324.75,
+        "y": 6724.75
+      },
+      "blocks": [
+        {
+          "id": "15bb6ba5ff7e449a99e3a0",
+          "outgoingEdgeId": "ac1739bcafe048dd814988",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "*Profissionais e horários das equipes"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "A Equipe de Saúde da Família é responsável pela coordenação do cuidado"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "dos moradores de um território delimitado. Ela é composta por médico, enfermeiro, técnico de enfermagem e agente comunitário de saúde. Para mais detalhes sobre o nome dos profissionais da sua equipe e/ou horário de funcionamento dos nossos serviços, consulte o link a seguir."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "http://bit.ly/3NJqVSD"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "*Digite 1* para finalizar o atendimento ou* 0* para retornar ao menu anterior"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "e9912e3128714db2ac261d",
+      "title": "Para agendamento, digite uma das opções numéricas ",
+      "graphCoordinates": {
+        "x": 2324.75,
+        "y": 7124.75
+      },
+      "blocks": [
+        {
+          "id": "975c81ef6df644b78b73d2",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Para agendamento, digite uma das opções numéricas a seguir"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "1. Consulta com a equipe"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "2.Preventivo de colo uterino"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "3.Visita Domiciliar"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "4. Retornar ao menu anterior"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "8cc34a59673c4ac48610a0",
+          "type": "text input",
+          "options": {
+            "variableId": "23fe7b161a2c4a968b628d"
+          }
+        },
+        {
+          "id": "632817a381974d8ca9b297",
+          "outgoingEdgeId": "3bd6a09906254aab893d47",
+          "type": "Condition",
+          "items": [
+            {
+              "id": "2100c5fa4552491ab9774c",
+              "outgoingEdgeId": "8a710ab583c348908e9535",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "1044e88c2e684495a64067",
+                    "variableId": "23fe7b161a2c4a968b628d",
+                    "comparisonOperator": "Equal to",
+                    "value": "0"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "7f2205d1465946209593e8",
+              "outgoingEdgeId": "30c34da5952d4a8589a3ec",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "73f6293c96f24e169fb002",
+                    "variableId": "23fe7b161a2c4a968b628d",
+                    "comparisonOperator": "Equal to",
+                    "value": "1"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "f45c1206051d40a0b2d730",
+              "outgoingEdgeId": "88dd061314dd4d95a07554",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "96c60e3db31e4705872dcc",
+                    "variableId": "23fe7b161a2c4a968b628d",
+                    "comparisonOperator": "Equal to",
+                    "value": "2"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "716e9620e79c4766afd616",
+              "outgoingEdgeId": "93ae7779ddb346c5b1e169",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "6aacfc918aba40b5af9501",
+                    "variableId": "23fe7b161a2c4a968b628d",
+                    "comparisonOperator": "Equal to",
+                    "value": "3"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "8afbcf12e97049fdb0c1fd",
+              "outgoingEdgeId": "33467a8528c54b9ba9595b",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "9c71aa843101482687a982",
+                    "variableId": "23fe7b161a2c4a968b628d",
+                    "comparisonOperator": "Equal to",
+                    "value": "4"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "de7b2bda10494e63b44974",
+      "title": "Opção inválida - Submenu",
+      "graphCoordinates": {
+        "x": 2324.75,
+        "y": 7724.75
+      },
+      "blocks": [
+        {
+          "id": "4fe154ea20d540868cab3a",
+          "outgoingEdgeId": "af770ea09c134eefaeecd1",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Não entendemos sua resposta. Por favor, tente novamente."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "51ef95afcc8046cf9ad141",
+      "title": "O agendamento de consultas por este canal destina-",
+      "graphCoordinates": {
+        "x": 2924.75,
+        "y": 7524.75
+      },
+      "blocks": [
+        {
+          "id": "dcb7238b29a540e5856473",
+          "outgoingEdgeId": "92df0425643a4429abb5ef",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "O agendamento de consultas por este canal destina-se as gestantes, puérperas (mulheres até 45 dias após o parto), criança menor de dois anos, conforme disponibilidade e avaliação da equipe. Nosso tempo de resposta é de até 72 horas úteis. Caso não possa esperar e não pertença a nenhum dos grupos citados, compareça ao centro de saúde para atendimento com a equipe."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Para agendamento de consulta, *preencha o link a seguir e aguarde o contato da sua equipe:*"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "*"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "*"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "https://forms.gle/xm5LPTLe77xgEMhM8"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "*Digite 1* para finalizar o atendimento ou* 0* para retornar ao menu anterior"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "b6ffe4d4a1bb45faa2f7ff",
+      "title": "A coleta de exame preventivo do colo uterino (papa",
+      "graphCoordinates": {
+        "x": 2924.75,
+        "y": 7924.75
+      },
+      "blocks": [
+        {
+          "id": "831b69431ea144258395b3",
+          "outgoingEdgeId": "afd1ffc17384488db163a7",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "A coleta de exame preventivo do colo uterino (papanicolau) é realizada em pessoas com vagina e útero de 25 a 64 anos, Para realização do preventivo é necessário não está menstruada, não está em uso de pomada ginecológica e sem relação sexual nas últimas 48h que antecede o exame."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Se você atende a esses critérios, *preencha o formulário no link abaixo e aguarde o contato da sua equipe de saúde em até 72 horas úteis * para confirmação do agendamento:"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "https://forms.gle/xm5LPTLe77xgEMhM8"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Ou se preferir compareça via demanda espontânea, no início do turno, no horário de atendimento da enfermeira da equipe."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "*Digite 1* para finalizar o atendimento ou* 0* para retornar ao menu anterior"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "6978eb6d57bf40f0940130",
+      "title": "A visita domiciliar é destinada a pacientes acamad",
+      "graphCoordinates": {
+        "x": 2924.75,
+        "y": 8324.75
+      },
+      "blocks": [
+        {
+          "id": "bc3c9ec12960442fa5cedf",
+          "outgoingEdgeId": "66b3294233304bb89fa2fe",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "A visita domiciliar é destinada a pacientes acamados (restritos ao leito) e/ou com dificuldade de locomoção de acordo com a avaliação e programação da equipe. Este canal não se destina a casos de urgência. Nesses casos, ligue imediatamente para o Serviço de Atendimento Móvel de Urgência (SAMU), pelo número *192*."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Caso esteja dentro dos critérios, encaminhe seus dados pessoais (nome completo, data de nascimento e endereço), o motivo da Visita Domiciliar e aguarde o contato da sua equipe em até 72h úteis."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "*Digite 1* para finalizar o atendimento ou* 0* para retornar ao menu anterior"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "3f5af6fd81ad44be9f3100",
+      "title": "3.Para sua renovação de receita, preencha o link a",
+      "graphCoordinates": {
+        "x": 2324.75,
+        "y": 9124.75
+      },
+      "blocks": [
+        {
+          "id": "f8456f49e918491b80af7f",
+          "outgoingEdgeId": "dfcfe2ddeff84f28ac69cd",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "3.Para sua renovação de receita, preencha o link a seguir."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "https://forms.gle/xm5LPTLe77xgEMhM8"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "O prazo para renovação é de até *5 dias úteis*. No entanto, a equipe de saúde poderá avaliar a necessidade de *atendimento presencial*, caso julgue necessário. Recomendamos que *não aguarde o término do seu medicamento* para realizar uma nova solicitação, evitando a interrupção do tratamento."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "*Digite 1* para finalizar o atendimento ou* 0* para retornar ao menu anterior"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "e2cf558e56954012bfde46",
+      "title": "Olá, seja bem vindo (a) ao atendimento virtual da ",
+      "graphCoordinates": {
+        "x": 1124.75,
+        "y": 3524.75
+      },
+      "blocks": [
+        {
+          "id": "b7eb358e2b9242989a17d4",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Olá, seja bem vindo (a) ao atendimento virtual da Equipe de Saúde Bucal."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Para prosseguir escolha uma das opções numéricas abaixo:"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "1. Profissionais e Horários"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "2. Atendimentos"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "3. Resultados de exames"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "4. Retornar ao menu principal"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "265b3af811764145ad6e6a",
+          "type": "text input",
+          "options": {
+            "variableId": "e8741e4eadaf4e5b955934"
+          }
+        },
+        {
+          "id": "30e955e9c12c454283e863",
+          "outgoingEdgeId": "970c0984025d4972a371f4",
+          "type": "Condition",
+          "items": [
+            {
+              "id": "8d5f16dc89074670b6d64e",
+              "outgoingEdgeId": "2317b951623244d997ce9d",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "fdb1edf6a645403aaf6e6c",
+                    "variableId": "e8741e4eadaf4e5b955934",
+                    "comparisonOperator": "Equal to",
+                    "value": "0"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "0a65f7583e1249f79820e8",
+              "outgoingEdgeId": "c6437502ed1840109d4b2a",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "2d99d021ef054c41a78a0a",
+                    "variableId": "e8741e4eadaf4e5b955934",
+                    "comparisonOperator": "Equal to",
+                    "value": "1"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "e49ed0b8a5124870aaa46d",
+              "outgoingEdgeId": "e669e888434247709ca599",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "f48afb95a0df48808cfb36",
+                    "variableId": "e8741e4eadaf4e5b955934",
+                    "comparisonOperator": "Equal to",
+                    "value": "2"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "4130351b6d0a4daaadfa45",
+              "outgoingEdgeId": "82ba0f07cd27491791a841",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "dd7739d0ac9748269dfbf7",
+                    "variableId": "e8741e4eadaf4e5b955934",
+                    "comparisonOperator": "Equal to",
+                    "value": "3"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "43118d4648084c5a86e20e",
+              "outgoingEdgeId": "e0d3503b11fc4ba9bd0b9e",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "409ccf2cb2434cd384e092",
+                    "variableId": "e8741e4eadaf4e5b955934",
+                    "comparisonOperator": "Equal to",
+                    "value": "4"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "909afbaa1a5e467dae6496",
+      "title": "Opção inválida - Submenu",
+      "graphCoordinates": {
+        "x": 1124.75,
+        "y": 4124.75
+      },
+      "blocks": [
+        {
+          "id": "c49d88455d9744e39a9c17",
+          "outgoingEdgeId": "0010bf85fcd14dc1a5ce88",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Não entendemos sua resposta. Por favor, tente novamente."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "cd4b9911896e48a69f0f87",
+      "title": "link da planilha.\n*Digite 1* para finalizar o aten",
+      "graphCoordinates": {
+        "x": 1724.75,
+        "y": 3924.75
+      },
+      "blocks": [
+        {
+          "id": "52fef87990b9460aaa6887",
+          "outgoingEdgeId": "cb252f3904834ccebbb70c",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "link da planilha."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "*Digite 1* para finalizar o atendimento ou* 0* para retornar ao menu anterior"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "d2034a4d37714fa8a37414",
+      "title": "Atendimento. Favor informar seu nome completo, dat",
+      "graphCoordinates": {
+        "x": 1724.75,
+        "y": 4324.75
+      },
+      "blocks": [
+        {
+          "id": "b3cab54521204d58b36879",
+          "outgoingEdgeId": "4013f79b56624b54ae9219",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Atendimento. Favor informar seu nome completo, data de nascimento, endereço completo para verificarmos a sua equipe de saúde bucal que responderá em até 72h úteis. Em caso de urgência, você pode procurar diretamente a Unidade de Saúde ou UPA."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "b872a08d6b5c47428132ab",
+      "title": "Resultados de Exames. Este canal destina-se a info",
+      "graphCoordinates": {
+        "x": 1724.75,
+        "y": 4724.75
+      },
+      "blocks": [
+        {
+          "id": "a31058572ede4b6ca27940",
+          "outgoingEdgeId": "4d259652011f4b099caa3f",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Resultados de Exames. Este canal destina-se a informações sobre resultados de exames como radiografia e exames Laboratoriais solicitados pelo cirurgião-dentista. Para que possamos analisar seus exames, encaminhe seus dados pessoais (nome completo, data de nascimento e endereço) e os seus exames aqui na mensagem e aguarde o contato da equipe de saúde bucal em até 72h úteis."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "d79c4b7f2ce943adb2b8d2",
+      "title": "Escolha uma das opções numéricas a seguir para con",
+      "graphCoordinates": {
+        "x": 1124.75,
+        "y": 5124.75
+      },
+      "blocks": [
+        {
+          "id": "8bccb0b76fec4ba29cf007",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Escolha uma das opções numéricas a seguir para continuar:"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "1. Horário de funcionamento"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "2. Disponibilidade de medicamentos e insumos"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "3. Medicamentos anti-retrovirais"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "4. Medicamentos controlados"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "5. Retornar ao menu principal"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "dfe7514b5b1c47fcb6667e",
+          "type": "text input",
+          "options": {
+            "variableId": "2b97919ccaad4542913dfa"
+          }
+        },
+        {
+          "id": "477ff54d99494123bf2eda",
+          "outgoingEdgeId": "d442ec6787c246bd888b9d",
+          "type": "Condition",
+          "items": [
+            {
+              "id": "3102b996c29141358a3f81",
+              "outgoingEdgeId": "2e8681fe63224f5198b83d",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "eb26006f1ae142d192ca69",
+                    "variableId": "2b97919ccaad4542913dfa",
+                    "comparisonOperator": "Equal to",
+                    "value": "0"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "6cab3d96d9d44e0c8f8f93",
+              "outgoingEdgeId": "f6d91de6c53f4d6c9c9b32",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "aad483686275489da3f743",
+                    "variableId": "2b97919ccaad4542913dfa",
+                    "comparisonOperator": "Equal to",
+                    "value": "1"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "4a015387b16a4650acf1cf",
+              "outgoingEdgeId": "30bb36293469464092ae17",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "f61065b59ead43e9bf9253",
+                    "variableId": "2b97919ccaad4542913dfa",
+                    "comparisonOperator": "Equal to",
+                    "value": "2"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "1dc775e618124b1d86d54f",
+              "outgoingEdgeId": "c3c846c72ba7421d894534",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "833fa2c9c18f4048a5dd25",
+                    "variableId": "2b97919ccaad4542913dfa",
+                    "comparisonOperator": "Equal to",
+                    "value": "3"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "e9f7f63541ef4e83a1903d",
+              "outgoingEdgeId": "713ea06f6df8407c9619e5",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "4079fe35f9c24be19b4e01",
+                    "variableId": "2b97919ccaad4542913dfa",
+                    "comparisonOperator": "Equal to",
+                    "value": "4"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "5e742146e06142ec91501b",
+              "outgoingEdgeId": "d182bbe8145a4a83a6095a",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "98eacc8df65c4e46b86ad2",
+                    "variableId": "2b97919ccaad4542913dfa",
+                    "comparisonOperator": "Equal to",
+                    "value": "5"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6a17cc1fbb7540bebafba1",
+      "title": "Opção inválida - Submenu",
+      "graphCoordinates": {
+        "x": 1124.75,
+        "y": 5724.75
+      },
+      "blocks": [
+        {
+          "id": "45b990d6759648be986f19",
+          "outgoingEdgeId": "1fb234dc6d844dba914bd1",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Não entendemos sua resposta. Por favor, tente novamente."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "d614537ace8c41fd8e51f8",
+      "title": "Horário de funcionamento\nLINK identificação CS\n\nA ",
+      "graphCoordinates": {
+        "x": 1724.75,
+        "y": 5524.75
+      },
+      "blocks": [
+        {
+          "id": "23ee7f0cda2b45339f8a36",
+          "outgoingEdgeId": "3dd0a102e6c748c89f740c",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Horário de funcionamento"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "LINK identificação CS"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "A mudança de horario desde serviço pode ocorrer sem aviso prévio, para confirmar o horário de atendimento da farmácia você pode ligar no alô saúde 0800 333 3233"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "*Digite 1* para finalizar o atendimento ou* 0* para retornar ao menu anterior"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "cb3ae1a185bc4c938e3010",
+      "title": "Disponibilidade de medicamentos e insumos:\nEnvie s",
+      "graphCoordinates": {
+        "x": 1724.75,
+        "y": 5924.75
+      },
+      "blocks": [
+        {
+          "id": "1a7c353952a54410a1564c",
+          "outgoingEdgeId": "14de0aedb3054c2c942c5b",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Disponibilidade de medicamentos e insumos:"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Envie sua dúvida, o nome do medicamento ou foto da receita e aguarde o contato da equipe em até 72h úteis."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "0ce0f4d8482d4eb29eb58a",
+      "title": "Locais mais próximos para a retirada dos medicamen",
+      "graphCoordinates": {
+        "x": 1724.75,
+        "y": 6324.75
+      },
+      "blocks": [
+        {
+          "id": "65c53404752545849fcfa3",
+          "outgoingEdgeId": "d3413348a6134322848873",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Locais mais próximos para a retirada dos medicamentos para tratamento do HIV:"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "CONTINENTE"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Policlínica Continente"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Rua Heitor Blum, 521 - Estreito"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Tel.: 48 3271-1716"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "CENTRO"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Policlínica Centro"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Av. Rio Branco, 90 - Centro"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Tel.: 48 3952-0103/ 3952-0102"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Confirme o horário de funcionamento através dos telefones."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "*Digite 1* para finalizar o atendimento ou* 0* para retornar ao menu anterior"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "31a3438eb2a240f5ac848a",
+      "title": "Locais mais próximos para a retirada dos medicamen",
+      "graphCoordinates": {
+        "x": 1724.75,
+        "y": 6724.75
+      },
+      "blocks": [
+        {
+          "id": "2a7cd9b854c8483baf4885",
+          "outgoingEdgeId": "621157fb5def47dcbf3011",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Locais mais próximos para a retirada dos medicamentos Controlados:"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "CONTINENTE"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Policlínica Continente"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Rua Heitor Blum, 521 - Estreito"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Tel.: 48 3271-1716"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "CENTRO"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Policlínica Centro"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Av. Rio Branco, 90 - Centro"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Tel.: 48 3952-0103/ 3952-0102"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Confirme o horário de funcionamento através dos telefones."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "*Digite 1* para finalizar o atendimento ou* 0* para retornar ao menu anterior"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "15c2246509d249358ee901",
+      "title": "Escolha uma das opções numéricas a seguir para pro",
+      "graphCoordinates": {
+        "x": 1124.75,
+        "y": 7124.75
+      },
+      "blocks": [
+        {
+          "id": "584a51654a7c48e291c027",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Escolha uma das opções numéricas a seguir para prosseguir:"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "1. Horário de Funcionamento"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "2. Certificado escola/creche ou segunda via caderneta de vacinas"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "3. Certificado Internacional Febre Amarela"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "4. Retornar ao menu principal"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "ad39ec3de1b54ba5b123c8",
+          "type": "text input",
+          "options": {
+            "variableId": "035e5461ea5247acb1881a"
+          }
+        },
+        {
+          "id": "613bf1bfe0364d71a6c6a7",
+          "outgoingEdgeId": "6940bf48dbd24088939475",
+          "type": "Condition",
+          "items": [
+            {
+              "id": "0f1abd8b5ab248ac89ff96",
+              "outgoingEdgeId": "0242fb8afd4641aeb85861",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "b3ced2f4bc9c4c1fbb605b",
+                    "variableId": "035e5461ea5247acb1881a",
+                    "comparisonOperator": "Equal to",
+                    "value": "0"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "12a5c1c3b2e74a41a8ba3f",
+              "outgoingEdgeId": "9e5d815617704a7c897abf",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "8d512db2d9c4435f93995e",
+                    "variableId": "035e5461ea5247acb1881a",
+                    "comparisonOperator": "Equal to",
+                    "value": "1"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "a7a9a11c0d7d4eea8491c1",
+              "outgoingEdgeId": "f62f2687841d4418a79564",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "64fc2b6cb45546c18ec17e",
+                    "variableId": "035e5461ea5247acb1881a",
+                    "comparisonOperator": "Equal to",
+                    "value": "2"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "a68c9fe968064ba5bea81e",
+              "outgoingEdgeId": "4c38427141ff4a99b31fd3",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "34bf7f1cda64481cb4c347",
+                    "variableId": "035e5461ea5247acb1881a",
+                    "comparisonOperator": "Equal to",
+                    "value": "3"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "60968575f77e45d0b9b120",
+              "outgoingEdgeId": "d9e498a9e2e14f5baca7aa",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "12616b5fc7c0454088c7ca",
+                    "variableId": "035e5461ea5247acb1881a",
+                    "comparisonOperator": "Equal to",
+                    "value": "4"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c241e9f490a2428d9351f4",
+      "title": "Opção inválida - Submenu",
+      "graphCoordinates": {
+        "x": 1124.75,
+        "y": 7724.75
+      },
+      "blocks": [
+        {
+          "id": "34fc387ba3ef430abaa475",
+          "outgoingEdgeId": "bb192e1665734a9dbeca26",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Não entendemos sua resposta. Por favor, tente novamente."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "cf6d42a468974918b16b6c",
+      "title": "Horário de funcionamento:\nPara informações de horá",
+      "graphCoordinates": {
+        "x": 1724.75,
+        "y": 7524.75
+      },
+      "blocks": [
+        {
+          "id": "141c64efe6f6447497071a",
+          "outgoingEdgeId": "1ec4625bc0c849c18304d0",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Horário de funcionamento:"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Para informações de horário de funcionamento dos serviços do Centro de Saúde, consulte no link"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "A mudança de horario desde serviço pode ocorrer sem aviso prévio, para confirmar o horário de atendimento da sala, você pode ligar no alô saúde 0800 333 3233"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "8c7dc2a1610443aa93416f",
+      "title": "Certificado escola/creche ou segunda via da cadern",
+      "graphCoordinates": {
+        "x": 1724.75,
+        "y": 7924.75
+      },
+      "blocks": [
+        {
+          "id": "1a27946236dc409d81641d",
+          "outgoingEdgeId": "e394b8ddc08c4cb29a10c8",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Certificado escola/creche ou segunda via da caderneta de vacinas"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "O certificado para escola/creche é emitido para as crianças/adolescentes que estejam com a vacinação em dia. Caso tenha alguma vacina em atraso, é necessário que a criança/adolescente esteja presente para realização da vacina e emissão do certificado"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Envie o nome completo, data de nascimento e aguarde o contato da equipe em até 72h úteis."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "e9206e3d3f134463a3e559",
+      "title": "Certificado Internacional da Febre Amarela) Por de",
+      "graphCoordinates": {
+        "x": 1724.75,
+        "y": 8324.75
+      },
+      "blocks": [
+        {
+          "id": "4284155d36c64400a1af2d",
+          "outgoingEdgeId": "92181f13257f4e3ea4a52b",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Certificado Internacional da Febre Amarela) Por determinação da ANVISA, o Certificado de Vacinação contra a febre Amarela (CIVP) será emitido exclusivamente através do site GOV.BR. Para solicitar o Certificado acesse: https://www.gov.br/pt-br/servicos/obter-o-certificado-internacional-de-vacinacao-e-profilaxia Dúvidas? Entre em contato com a ANVISA 0800 642 9782"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "6a00cfcc27fd4189a0e945",
+      "title": "Este setor é responsável pelo agendamentos de exam",
+      "graphCoordinates": {
+        "x": 1124.75,
+        "y": 8724.75
+      },
+      "blocks": [
+        {
+          "id": "a2bbc10588b04b05927537",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Este setor é responsável pelo agendamentos de exames e consultas especializadas. Para continuar selecione uma das opções numéricas a seguir:"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "1. Agendamentos (Inclusão de encaminhamentos no sistema)"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "2. Cancelamento de consultas e exames"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "3. Segunda via da guia de agendamento"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "4. Consulte as listas de espera"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "5. Outros motivos"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "6. Retornar ao menu principal"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "6c3cfa581c1244448c12b1",
+          "type": "text input",
+          "options": {
+            "variableId": "43015af5696a4b9fa10675"
+          }
+        },
+        {
+          "id": "fc9238352f9c4b06b20e50",
+          "outgoingEdgeId": "dd2f3d0d7e514cbc807cc4",
+          "type": "Condition",
+          "items": [
+            {
+              "id": "ee4a795533ab4eaa8eaf12",
+              "outgoingEdgeId": "feff14f843b848959f4d94",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "84fb7a31d2344a6d91fa1c",
+                    "variableId": "43015af5696a4b9fa10675",
+                    "comparisonOperator": "Equal to",
+                    "value": "0"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "987b3b4a68614184a13245",
+              "outgoingEdgeId": "3d98d3f6fd7d4be4a7fa9a",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "c2425693884e4442b50278",
+                    "variableId": "43015af5696a4b9fa10675",
+                    "comparisonOperator": "Equal to",
+                    "value": "1"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "31b86024c77b432692854a",
+              "outgoingEdgeId": "29f2ec71c96e4041b48d59",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "582b921a94054b8daaddb5",
+                    "variableId": "43015af5696a4b9fa10675",
+                    "comparisonOperator": "Equal to",
+                    "value": "2"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "d9ad3bfd544c44be88a429",
+              "outgoingEdgeId": "fbbb64660c9a4fd0baa30f",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "383f0d3a4f9448bc813813",
+                    "variableId": "43015af5696a4b9fa10675",
+                    "comparisonOperator": "Equal to",
+                    "value": "3"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "85e7ad41c49a45d999b3b8",
+              "outgoingEdgeId": "b4f5571f66cf4cc5a4e1d8",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "22f34918876d43259e3986",
+                    "variableId": "43015af5696a4b9fa10675",
+                    "comparisonOperator": "Equal to",
+                    "value": "4"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "f786ef352d3d4ffcb22ac4",
+              "outgoingEdgeId": "74f113538fa146179c4066",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "43dc3ad256254dea99d6f6",
+                    "variableId": "43015af5696a4b9fa10675",
+                    "comparisonOperator": "Equal to",
+                    "value": "5"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "744869ce58554b68926602",
+              "outgoingEdgeId": "9bceb714a4124b11b5a714",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "7a5fc3dc738849fea39609",
+                    "variableId": "43015af5696a4b9fa10675",
+                    "comparisonOperator": "Equal to",
+                    "value": "6"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "81d956ad82e343aa9ff213",
+      "title": "Opção inválida - Submenu",
+      "graphCoordinates": {
+        "x": 1124.75,
+        "y": 9324.75
+      },
+      "blocks": [
+        {
+          "id": "bc0e2e42a9004708ac1748",
+          "outgoingEdgeId": "9c3b4a02e2294e5ca5852e",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Não entendemos sua resposta. Por favor, tente novamente."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "ab195abe372e443bb68a75",
+      "title": "Agendamentos (inclusão de encaminhamentos no siste",
+      "graphCoordinates": {
+        "x": 1724.75,
+        "y": 9124.75
+      },
+      "blocks": [
+        {
+          "id": "e3d1715408b14f25a83d39",
+          "outgoingEdgeId": "4645a22fec8d43b0ae2b61",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Agendamentos (inclusão de encaminhamentos no sistema). O agendamento de exames e consultas com especialistas são realizados a partir de um encaminhamento de profissionais do SUS. Para que ele possa ser efetuado é necessário que esteja de acordo com os protocolos municipais vigentes."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Para inclusão de uma solicitação de exame ou consulta especializada na fila de espera, encaminhe uma foto do seu documento pessoal, foto do encaminhamento realizado pelo profissional de saúde e aguarde o contato da equipe em até 72h úteis."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "*"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "*"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "*Ou digite 1* para finalizar o atendimento ou* 0* para retornar ao menu anterior"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "237e6fd3fb5649369323e2",
+      "title": "Caso você não possa comparecer no dia e hora agend",
+      "graphCoordinates": {
+        "x": 1724.75,
+        "y": 9524.75
+      },
+      "blocks": [
+        {
+          "id": "b524c05580d3411eb26968",
+          "outgoingEdgeId": "ae83eec6dd26444eac835f",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Caso você não possa comparecer no dia e hora agendados para sua consulta e/ou exame, nos informe com até 72 horas de antecedência, assim podemos utilizar a vaga para outra pessoa. Informe seu nome completo, CPF, data de nascimento e exame/ consulta especializada que havia sido agendada e aguarde o retorno da equipe em até 72h úteis."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "*Ou digite 1* para finalizar o atendimento ou* 0* para retornar ao menu anterior"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "c08d23413be84b5ca4f7b6",
+      "title": "Consulte as listas de espera estaduais e municipai",
+      "graphCoordinates": {
+        "x": 1724.75,
+        "y": 9924.75
+      },
+      "blocks": [
+        {
+          "id": "8ff9943fc7be478c879d6d",
+          "outgoingEdgeId": "e1443d82ed694d928e47d7",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Consulte as listas de espera estaduais e municipais nos links abaixo, onde você pode pesquisar com seu CPF."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "LISTA MUNICIPAL: florianopolis.celk.com.br/lista-espera"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "LISTA ESTADUAL: listadeespera.saude.sc.gov.br"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Para conhecer dados gerais sobre as filas e tempo de espera, acesse: https://lookerstudio.google.com/u/0/reporting/51343ece-82e6-477e-8fb9-863ce1743878/page/psj997kqgoc"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "*Digite 1* para finalizar o atendimento ou* 0* para retornar ao menu anterior"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "ae30288d61bc438e8ed10b",
+      "title": "Para segunda via da guia de agendamento de um exam",
+      "graphCoordinates": {
+        "x": 1724.75,
+        "y": 10324.75
+      },
+      "blocks": [
+        {
+          "id": "ca55dace4b5f46dc87fad4",
+          "outgoingEdgeId": "48c12c98bb0f4c99b3d1ee",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Para segunda via da guia de agendamento de um exame ou consulta com especialista já agendada, encaminhe uma foto do seu documento pessoal, e informe referente qual solicitação é necessária a emissão da segunda via e aguarde o contato do setor de marcação em até 72h úteis."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "*Ou digite 1* para finalizar o atendimento ou* 0* para retornar ao menu anterior"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "64940b3f264c4268b6bea9",
+      "title": "Outros motivos: informe o motivo do contato, seu n",
+      "graphCoordinates": {
+        "x": 1724.75,
+        "y": 10724.75
+      },
+      "blocks": [
+        {
+          "id": "3b0613b662ec4c859e87ae",
+          "outgoingEdgeId": "af6ce2d627cd4131857c2e",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Outros motivos: informe o motivo do contato, seu nome completo e data de nascimento, aguarde o retorno da equipe em até 72h úteis."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "*Ou digite 1* para finalizar o atendimento ou* 0* para retornar ao menu anterior."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "cf362eedfb69419fac7788",
+      "title": "*Dúvidas Gerais*. Informe meu nome completo, data ",
+      "graphCoordinates": {
+        "x": 1124.75,
+        "y": 11124.75
+      },
+      "blocks": [
+        {
+          "id": "3b293468cc7148f6b2d7e7",
+          "outgoingEdgeId": "ffc6aef64b554f6890f5f0",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "*Dúvidas Gerais*. Informe meu nome completo, data de nascimento e sua dúvida. A equipe responderá em até 72h úteis, caso precise de mais agilidade faça uma ligação normal para a recepção do Centro de Saúde (48) 3249-5844 ou para o Alô Saúde 0800-3333233"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "*Ou digite 1* para finalizar o atendimento ou* 0* para retornar ao menu anterior"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "11afcd1fd1ec4a6f8008c5",
+      "title": "Aguardar antes de finalizar",
+      "graphCoordinates": {
+        "x": 2200,
+        "y": 400
+      },
+      "blocks": [
+        {
+          "id": "54c9d08d33144621a97bd9",
+          "outgoingEdgeId": "36925834cd114271981ee8",
+          "type": "Wait",
+          "options": {
+            "secondsToWaitFor": "10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "665a9f38c719444d9199aa",
+      "title": "Finalização",
+      "graphCoordinates": {
+        "x": 2700,
+        "y": 400
+      },
+      "blocks": [
+        {
+          "id": "1438563befef434598a892",
+          "type": "Webhook",
+          "options": {
+            "isCustomBody": true,
+            "webhook": {
+              "headers": [
+                {
+                  "id": "03bd331c7bcd4aa4a22cc9",
+                  "key": "Authorization",
+                  "value": "Bearer {{TOKENWHATSAPP}}"
+                }
+              ],
+              "url": "https://apisavoxpro.sheepcode.com.br/api/messages/send",
+              "body": "{\n  \"number\": \"{{contactNumber}}\",\n  \"body\": \"O atendimento foi encerrado. Se precisar de mais assistência no futuro, não hesite em nos contatar novamente. Tenha um ótimo dia!\",\n  \"closeTicket\": true\n}"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "fb5588f8c71f4b6bac8b11",
+      "from": {
+        "eventId": "f5a6115eaa8244f881c5fe"
+      },
+      "to": {
+        "groupId": "f353756b1c5b4dec9b77b4"
+      }
+    },
+    {
+      "id": "70931ae3f2874cb9a3c2d6",
+      "from": {
+        "blockId": "3ba8afad46c047f481e33f"
+      },
+      "to": {
+        "groupId": "c666bd65694049519db912"
+      }
+    },
+    {
+      "id": "3b1d29e8433340a7b43d8d",
+      "from": {
+        "blockId": "4461aa84481a4737a14390"
+      },
+      "to": {
+        "groupId": "3bc387d6e99a435d8ca3ae"
+      }
+    },
+    {
+      "id": "05f0d67eb5764ac88ecb43",
+      "from": {
+        "blockId": "63e6a9a4332140afbf3b3d"
+      },
+      "to": {
+        "groupId": "c666bd65694049519db912"
+      }
+    },
+    {
+      "id": "35dd716a7bb94f61abf39b",
+      "from": {
+        "blockId": "4461aa84481a4737a14390",
+        "itemId": "7d3c875c5e214e8c85d39d"
+      },
+      "to": {
+        "groupId": "f35bd3e677e8469dae61c3"
+      }
+    },
+    {
+      "id": "b17569a884df44649f9de7",
+      "from": {
+        "blockId": "c94cc46d4918459f9140db"
+      },
+      "to": {
+        "groupId": "11afcd1fd1ec4a6f8008c5"
+      }
+    },
+    {
+      "id": "ed94474b875549e4af79cc",
+      "from": {
+        "blockId": "4461aa84481a4737a14390",
+        "itemId": "bd61a42eef3f4cf7a4c6a8"
+      },
+      "to": {
+        "groupId": "d695a8ad53b9473d8319fa"
+      }
+    },
+    {
+      "id": "0a4c376528bd4cae9a6185",
+      "from": {
+        "blockId": "c82068e567ca486f85874b",
+        "itemId": "857a7ef4830a4a54a62f26"
+      },
+      "to": {
+        "groupId": "c666bd65694049519db912"
+      }
+    },
+    {
+      "id": "cd3addcfef5e42a8a947ac",
+      "from": {
+        "blockId": "c82068e567ca486f85874b"
+      },
+      "to": {
+        "groupId": "8538d60a83ce47c29da3cc"
+      }
+    },
+    {
+      "id": "953c5177743f40de82b657",
+      "from": {
+        "blockId": "c83e2efd662f405fb401f7"
+      },
+      "to": {
+        "groupId": "d695a8ad53b9473d8319fa"
+      }
+    },
+    {
+      "id": "58a4427a0fe74f648ab2ba",
+      "from": {
+        "blockId": "c82068e567ca486f85874b",
+        "itemId": "d2bdd0ae1f5a4be9bd448d"
+      },
+      "to": {
+        "groupId": "c666bd65694049519db912"
+      }
+    },
+    {
+      "id": "b4ae12a94acf4c739cdc1b",
+      "from": {
+        "blockId": "c82068e567ca486f85874b",
+        "itemId": "31db8f70bbaf4d6c90637c"
+      },
+      "to": {
+        "groupId": "74bc3cdbe62f4e2fbc63e4"
+      }
+    },
+    {
+      "id": "966c240dd840485db743e6",
+      "from": {
+        "blockId": "9df027fc78194562904048"
+      },
+      "to": {
+        "groupId": "11afcd1fd1ec4a6f8008c5"
+      }
+    },
+    {
+      "id": "3ecec63c38854008b87338",
+      "from": {
+        "blockId": "c82068e567ca486f85874b",
+        "itemId": "dc0437add4934bf7be3f55"
+      },
+      "to": {
+        "groupId": "51f6e25533a64e0eb4b49e"
+      }
+    },
+    {
+      "id": "ae3a6ba66b324cf2843b04",
+      "from": {
+        "blockId": "e116047de9904a398f65b2",
+        "itemId": "b7cd9e3bad8e4874984a8e"
+      },
+      "to": {
+        "groupId": "d695a8ad53b9473d8319fa"
+      }
+    },
+    {
+      "id": "0e067a74622a4e3aa97bb3",
+      "from": {
+        "blockId": "e116047de9904a398f65b2"
+      },
+      "to": {
+        "groupId": "ef983e646b23493aaba566"
+      }
+    },
+    {
+      "id": "9ff8052959364606b2a70b",
+      "from": {
+        "blockId": "fb313242345043bbb6d2e3"
+      },
+      "to": {
+        "groupId": "51f6e25533a64e0eb4b49e"
+      }
+    },
+    {
+      "id": "40e101fa65134fff89e99a",
+      "from": {
+        "blockId": "e116047de9904a398f65b2",
+        "itemId": "3b71796acb9f4e8c88d993"
+      },
+      "to": {
+        "groupId": "d695a8ad53b9473d8319fa"
+      }
+    },
+    {
+      "id": "9d4170124fdc4480b1f6cf",
+      "from": {
+        "blockId": "e116047de9904a398f65b2",
+        "itemId": "3117f3333ef6402ba8aeda"
+      },
+      "to": {
+        "groupId": "051397bba9bd4aef950706"
+      }
+    },
+    {
+      "id": "187eda601ef342afa2887a",
+      "from": {
+        "blockId": "19dcc8aeac8d4eb381c1a0"
+      },
+      "to": {
+        "groupId": "11afcd1fd1ec4a6f8008c5"
+      }
+    },
+    {
+      "id": "ae4e61d1b2a94541805db7",
+      "from": {
+        "blockId": "e116047de9904a398f65b2",
+        "itemId": "040b3439140546eab7d5e3"
+      },
+      "to": {
+        "groupId": "512de1835cac4e40ad65df"
+      }
+    },
+    {
+      "id": "d5a002d48c3c4f25a7e578",
+      "from": {
+        "blockId": "6bda9aee49344edc85687f",
+        "itemId": "fd0ee74ede0f46bc8400ec"
+      },
+      "to": {
+        "groupId": "51f6e25533a64e0eb4b49e"
+      }
+    },
+    {
+      "id": "c9801ae09ca94193a34414",
+      "from": {
+        "blockId": "6bda9aee49344edc85687f"
+      },
+      "to": {
+        "groupId": "4276a0a8a8b945b8b52508"
+      }
+    },
+    {
+      "id": "3364900e801446cea80a39",
+      "from": {
+        "blockId": "02cd372119c14d6ea893e0"
+      },
+      "to": {
+        "groupId": "512de1835cac4e40ad65df"
+      }
+    },
+    {
+      "id": "fef8dc6be8404e1abf7635",
+      "from": {
+        "blockId": "6bda9aee49344edc85687f",
+        "itemId": "d602724e65894bf99bc01a"
+      },
+      "to": {
+        "groupId": "51f6e25533a64e0eb4b49e"
+      }
+    },
+    {
+      "id": "b40c577bc54d42ca8f75bb",
+      "from": {
+        "blockId": "6bda9aee49344edc85687f",
+        "itemId": "756dc20e5058453b935527"
+      },
+      "to": {
+        "groupId": "2cfd08f36bc6478f9b9cbd"
+      }
+    },
+    {
+      "id": "deeb456a4c2a4aa4bdc4d9",
+      "from": {
+        "blockId": "5ff424d5363c44db9380b7"
+      },
+      "to": {
+        "groupId": "11afcd1fd1ec4a6f8008c5"
+      }
+    },
+    {
+      "id": "979e01cd185148228db057",
+      "from": {
+        "blockId": "6bda9aee49344edc85687f",
+        "itemId": "bf23b60ec49e478ea0641b"
+      },
+      "to": {
+        "groupId": "c6f82a635d2f41ec89ef85"
+      }
+    },
+    {
+      "id": "6307dc5bf6a64ce396cad7",
+      "from": {
+        "blockId": "e5c878a4b8314596a45916"
+      },
+      "to": {
+        "groupId": "11afcd1fd1ec4a6f8008c5"
+      }
+    },
+    {
+      "id": "eff58b6fff7b4cea98aefb",
+      "from": {
+        "blockId": "6bda9aee49344edc85687f",
+        "itemId": "c6e566ee04a1468da12490"
+      },
+      "to": {
+        "groupId": "bd99c773d7cc49229109bd"
+      }
+    },
+    {
+      "id": "601028c500ef4e5e88fb50",
+      "from": {
+        "blockId": "5c75ed494586434095cb82"
+      },
+      "to": {
+        "groupId": "11afcd1fd1ec4a6f8008c5"
+      }
+    },
+    {
+      "id": "663d1817297d4625be9523",
+      "from": {
+        "blockId": "6bda9aee49344edc85687f",
+        "itemId": "28c8c9b7e2c1440c89514a"
+      },
+      "to": {
+        "groupId": "445d6184d839481b810c45"
+      }
+    },
+    {
+      "id": "d2b13d2bbbcc4806bb585f",
+      "from": {
+        "blockId": "11b3c1a7077047c6a3c75b"
+      },
+      "to": {
+        "groupId": "11afcd1fd1ec4a6f8008c5"
+      }
+    },
+    {
+      "id": "637633440fac42cea5b7e4",
+      "from": {
+        "blockId": "e116047de9904a398f65b2",
+        "itemId": "0ba364e9d1f94f19ab90e6"
+      },
+      "to": {
+        "groupId": "8178eee1706d457894e567"
+      }
+    },
+    {
+      "id": "e285cfee305e4c3199d6d0",
+      "from": {
+        "blockId": "5dc2a93e471b4980a2488c"
+      },
+      "to": {
+        "groupId": "11afcd1fd1ec4a6f8008c5"
+      }
+    },
+    {
+      "id": "dfe316dd45864075801f8c",
+      "from": {
+        "blockId": "c82068e567ca486f85874b",
+        "itemId": "bf19bcc7316a465d8178f9"
+      },
+      "to": {
+        "groupId": "05129874c319452ebe6893"
+      }
+    },
+    {
+      "id": "b80291c78f8e43fdb50ccb",
+      "from": {
+        "blockId": "2683e9a5eb3e41f1985841",
+        "itemId": "211f7c8c4481448bbcd67e"
+      },
+      "to": {
+        "groupId": "d695a8ad53b9473d8319fa"
+      }
+    },
+    {
+      "id": "2b88e9cf8be0407da4b71c",
+      "from": {
+        "blockId": "2683e9a5eb3e41f1985841"
+      },
+      "to": {
+        "groupId": "ed2f37c3eb8d4b4aba8d48"
+      }
+    },
+    {
+      "id": "61d4980fe23c431487cedd",
+      "from": {
+        "blockId": "53bb8b754c4741139cfe0a"
+      },
+      "to": {
+        "groupId": "05129874c319452ebe6893"
+      }
+    },
+    {
+      "id": "cb26e5a0b2f0416391e4f5",
+      "from": {
+        "blockId": "2683e9a5eb3e41f1985841",
+        "itemId": "65fc75835f1946ba9e04dd"
+      },
+      "to": {
+        "groupId": "d695a8ad53b9473d8319fa"
+      }
+    },
+    {
+      "id": "737e5ed2f0c24144a70755",
+      "from": {
+        "blockId": "2683e9a5eb3e41f1985841",
+        "itemId": "e2ce6fadbc46488dbcd70b"
+      },
+      "to": {
+        "groupId": "a6804e5cb1a64f55b6b5d4"
+      }
+    },
+    {
+      "id": "56f8caf78c49445a8b6cf1",
+      "from": {
+        "blockId": "201b65603b6a475bbe66a7"
+      },
+      "to": {
+        "groupId": "11afcd1fd1ec4a6f8008c5"
+      }
+    },
+    {
+      "id": "56031c8cc28242a486c50f",
+      "from": {
+        "blockId": "2683e9a5eb3e41f1985841",
+        "itemId": "39541db7eb4a4e4d847b89"
+      },
+      "to": {
+        "groupId": "dd289b0ea99345fd9f75d4"
+      }
+    },
+    {
+      "id": "502c7b25e759488ba713ae",
+      "from": {
+        "blockId": "0af755c53d9646dd8e7f20",
+        "itemId": "adf0dcb0dcab425eb5f858"
+      },
+      "to": {
+        "groupId": "05129874c319452ebe6893"
+      }
+    },
+    {
+      "id": "a46f1355fee546398e6964",
+      "from": {
+        "blockId": "0af755c53d9646dd8e7f20"
+      },
+      "to": {
+        "groupId": "61c7063c94b74662ae5636"
+      }
+    },
+    {
+      "id": "7af82e787d8244a5b87cfc",
+      "from": {
+        "blockId": "f40dd8a4f4ce47b2b0cfaa"
+      },
+      "to": {
+        "groupId": "dd289b0ea99345fd9f75d4"
+      }
+    },
+    {
+      "id": "5dca85b9d81d4fa584f2f0",
+      "from": {
+        "blockId": "0af755c53d9646dd8e7f20",
+        "itemId": "66cf82d51bad433caf97f5"
+      },
+      "to": {
+        "groupId": "05129874c319452ebe6893"
+      }
+    },
+    {
+      "id": "25f6af36923e426e8d976c",
+      "from": {
+        "blockId": "0af755c53d9646dd8e7f20",
+        "itemId": "af94cd75ba244499bf3bc1"
+      },
+      "to": {
+        "groupId": "8ea16823167647fab02b34"
+      }
+    },
+    {
+      "id": "22ce46b15a164eae832aa3",
+      "from": {
+        "blockId": "bfa7a607cab6491c8913bc"
+      },
+      "to": {
+        "groupId": "11afcd1fd1ec4a6f8008c5"
+      }
+    },
+    {
+      "id": "e2f35b7b33134112a7864b",
+      "from": {
+        "blockId": "0af755c53d9646dd8e7f20",
+        "itemId": "a094303df9d94a3195d953"
+      },
+      "to": {
+        "groupId": "668aa12447ab45e59452f6"
+      }
+    },
+    {
+      "id": "5d70265d4a6e48249162cb",
+      "from": {
+        "blockId": "62de5be848bd4685a26384"
+      },
+      "to": {
+        "groupId": "11afcd1fd1ec4a6f8008c5"
+      }
+    },
+    {
+      "id": "8fda4d9eab9f475cb05a03",
+      "from": {
+        "blockId": "0af755c53d9646dd8e7f20",
+        "itemId": "502a68837ee44b189a1d31"
+      },
+      "to": {
+        "groupId": "5248bf11ed094e2fa108d5"
+      }
+    },
+    {
+      "id": "6f2118ded65742808ec3d2",
+      "from": {
+        "blockId": "29abd4a85c0649c7847582"
+      },
+      "to": {
+        "groupId": "11afcd1fd1ec4a6f8008c5"
+      }
+    },
+    {
+      "id": "2581037c377d4e83a197c5",
+      "from": {
+        "blockId": "0af755c53d9646dd8e7f20",
+        "itemId": "33effd8921af406e936be7"
+      },
+      "to": {
+        "groupId": "b94b81e6c90c450c8024e2"
+      }
+    },
+    {
+      "id": "e78b558828b3469c86fa2d",
+      "from": {
+        "blockId": "b6328b498a8345949c0a1e"
+      },
+      "to": {
+        "groupId": "11afcd1fd1ec4a6f8008c5"
+      }
+    },
+    {
+      "id": "545f95562fcd4eab954537",
+      "from": {
+        "blockId": "2683e9a5eb3e41f1985841",
+        "itemId": "bba77c80e63a49b0a98c69"
+      },
+      "to": {
+        "groupId": "780334e94c714c8a9db6d2"
+      }
+    },
+    {
+      "id": "aa55fc4334ec431c82d1a9",
+      "from": {
+        "blockId": "e7ad2ff7cc9747d6b407c4"
+      },
+      "to": {
+        "groupId": "11afcd1fd1ec4a6f8008c5"
+      }
+    },
+    {
+      "id": "b881f74d672642cea50f07",
+      "from": {
+        "blockId": "c82068e567ca486f85874b",
+        "itemId": "1e6e65d1f94b4e4aa5da3b"
+      },
+      "to": {
+        "groupId": "2a569a9a2e4149399b55ac"
+      }
+    },
+    {
+      "id": "daff9371f081478abd20a9",
+      "from": {
+        "blockId": "530c68efbba244e0955dca",
+        "itemId": "e7a0e096aab547578e1368"
+      },
+      "to": {
+        "groupId": "d695a8ad53b9473d8319fa"
+      }
+    },
+    {
+      "id": "4bc330bb9a4f4018b1bed5",
+      "from": {
+        "blockId": "530c68efbba244e0955dca"
+      },
+      "to": {
+        "groupId": "662a885d132c4b29ab5ba6"
+      }
+    },
+    {
+      "id": "1c56207145ff43589b381f",
+      "from": {
+        "blockId": "3925f3a222274285ba4cc3"
+      },
+      "to": {
+        "groupId": "2a569a9a2e4149399b55ac"
+      }
+    },
+    {
+      "id": "04c3646fd48a4035939576",
+      "from": {
+        "blockId": "530c68efbba244e0955dca",
+        "itemId": "b610f31220e54d4fbea063"
+      },
+      "to": {
+        "groupId": "d695a8ad53b9473d8319fa"
+      }
+    },
+    {
+      "id": "ab9c2a524a564a3282129b",
+      "from": {
+        "blockId": "530c68efbba244e0955dca",
+        "itemId": "d351dac04a164f5fa02d23"
+      },
+      "to": {
+        "groupId": "f11f1325eb1f42e09b189f"
+      }
+    },
+    {
+      "id": "ac1739bcafe048dd814988",
+      "from": {
+        "blockId": "15bb6ba5ff7e449a99e3a0"
+      },
+      "to": {
+        "groupId": "11afcd1fd1ec4a6f8008c5"
+      }
+    },
+    {
+      "id": "4a1400bdc25f4635b29e07",
+      "from": {
+        "blockId": "530c68efbba244e0955dca",
+        "itemId": "030e40db8e1d41a6a55603"
+      },
+      "to": {
+        "groupId": "e9912e3128714db2ac261d"
+      }
+    },
+    {
+      "id": "33467a8528c54b9ba9595b",
+      "from": {
+        "blockId": "632817a381974d8ca9b297",
+        "itemId": "8afbcf12e97049fdb0c1fd"
+      },
+      "to": {
+        "groupId": "2a569a9a2e4149399b55ac"
+      }
+    },
+    {
+      "id": "3bd6a09906254aab893d47",
+      "from": {
+        "blockId": "632817a381974d8ca9b297"
+      },
+      "to": {
+        "groupId": "de7b2bda10494e63b44974"
+      }
+    },
+    {
+      "id": "af770ea09c134eefaeecd1",
+      "from": {
+        "blockId": "4fe154ea20d540868cab3a"
+      },
+      "to": {
+        "groupId": "e9912e3128714db2ac261d"
+      }
+    },
+    {
+      "id": "8a710ab583c348908e9535",
+      "from": {
+        "blockId": "632817a381974d8ca9b297",
+        "itemId": "2100c5fa4552491ab9774c"
+      },
+      "to": {
+        "groupId": "2a569a9a2e4149399b55ac"
+      }
+    },
+    {
+      "id": "30c34da5952d4a8589a3ec",
+      "from": {
+        "blockId": "632817a381974d8ca9b297",
+        "itemId": "7f2205d1465946209593e8"
+      },
+      "to": {
+        "groupId": "51ef95afcc8046cf9ad141"
+      }
+    },
+    {
+      "id": "92df0425643a4429abb5ef",
+      "from": {
+        "blockId": "dcb7238b29a540e5856473"
+      },
+      "to": {
+        "groupId": "11afcd1fd1ec4a6f8008c5"
+      }
+    },
+    {
+      "id": "88dd061314dd4d95a07554",
+      "from": {
+        "blockId": "632817a381974d8ca9b297",
+        "itemId": "f45c1206051d40a0b2d730"
+      },
+      "to": {
+        "groupId": "b6ffe4d4a1bb45faa2f7ff"
+      }
+    },
+    {
+      "id": "afd1ffc17384488db163a7",
+      "from": {
+        "blockId": "831b69431ea144258395b3"
+      },
+      "to": {
+        "groupId": "11afcd1fd1ec4a6f8008c5"
+      }
+    },
+    {
+      "id": "93ae7779ddb346c5b1e169",
+      "from": {
+        "blockId": "632817a381974d8ca9b297",
+        "itemId": "716e9620e79c4766afd616"
+      },
+      "to": {
+        "groupId": "6978eb6d57bf40f0940130"
+      }
+    },
+    {
+      "id": "66b3294233304bb89fa2fe",
+      "from": {
+        "blockId": "bc3c9ec12960442fa5cedf"
+      },
+      "to": {
+        "groupId": "11afcd1fd1ec4a6f8008c5"
+      }
+    },
+    {
+      "id": "7c6249511eac4a6dbc3f0c",
+      "from": {
+        "blockId": "530c68efbba244e0955dca",
+        "itemId": "d654177116b84413a4c906"
+      },
+      "to": {
+        "groupId": "3f5af6fd81ad44be9f3100"
+      }
+    },
+    {
+      "id": "dfcfe2ddeff84f28ac69cd",
+      "from": {
+        "blockId": "f8456f49e918491b80af7f"
+      },
+      "to": {
+        "groupId": "11afcd1fd1ec4a6f8008c5"
+      }
+    },
+    {
+      "id": "f8253c480a664ea78ba61f",
+      "from": {
+        "blockId": "4461aa84481a4737a14390",
+        "itemId": "2dd8eb3df84c4e36b3f4fe"
+      },
+      "to": {
+        "groupId": "e2cf558e56954012bfde46"
+      }
+    },
+    {
+      "id": "e0d3503b11fc4ba9bd0b9e",
+      "from": {
+        "blockId": "30e955e9c12c454283e863",
+        "itemId": "43118d4648084c5a86e20e"
+      },
+      "to": {
+        "groupId": "c666bd65694049519db912"
+      }
+    },
+    {
+      "id": "970c0984025d4972a371f4",
+      "from": {
+        "blockId": "30e955e9c12c454283e863"
+      },
+      "to": {
+        "groupId": "909afbaa1a5e467dae6496"
+      }
+    },
+    {
+      "id": "0010bf85fcd14dc1a5ce88",
+      "from": {
+        "blockId": "c49d88455d9744e39a9c17"
+      },
+      "to": {
+        "groupId": "e2cf558e56954012bfde46"
+      }
+    },
+    {
+      "id": "2317b951623244d997ce9d",
+      "from": {
+        "blockId": "30e955e9c12c454283e863",
+        "itemId": "8d5f16dc89074670b6d64e"
+      },
+      "to": {
+        "groupId": "c666bd65694049519db912"
+      }
+    },
+    {
+      "id": "c6437502ed1840109d4b2a",
+      "from": {
+        "blockId": "30e955e9c12c454283e863",
+        "itemId": "0a65f7583e1249f79820e8"
+      },
+      "to": {
+        "groupId": "cd4b9911896e48a69f0f87"
+      }
+    },
+    {
+      "id": "cb252f3904834ccebbb70c",
+      "from": {
+        "blockId": "52fef87990b9460aaa6887"
+      },
+      "to": {
+        "groupId": "11afcd1fd1ec4a6f8008c5"
+      }
+    },
+    {
+      "id": "e669e888434247709ca599",
+      "from": {
+        "blockId": "30e955e9c12c454283e863",
+        "itemId": "e49ed0b8a5124870aaa46d"
+      },
+      "to": {
+        "groupId": "d2034a4d37714fa8a37414"
+      }
+    },
+    {
+      "id": "4013f79b56624b54ae9219",
+      "from": {
+        "blockId": "b3cab54521204d58b36879"
+      },
+      "to": {
+        "groupId": "11afcd1fd1ec4a6f8008c5"
+      }
+    },
+    {
+      "id": "82ba0f07cd27491791a841",
+      "from": {
+        "blockId": "30e955e9c12c454283e863",
+        "itemId": "4130351b6d0a4daaadfa45"
+      },
+      "to": {
+        "groupId": "b872a08d6b5c47428132ab"
+      }
+    },
+    {
+      "id": "4d259652011f4b099caa3f",
+      "from": {
+        "blockId": "a31058572ede4b6ca27940"
+      },
+      "to": {
+        "groupId": "11afcd1fd1ec4a6f8008c5"
+      }
+    },
+    {
+      "id": "7ae3d482c1a24afb9c6577",
+      "from": {
+        "blockId": "4461aa84481a4737a14390",
+        "itemId": "187bd09679a14bcc912814"
+      },
+      "to": {
+        "groupId": "d79c4b7f2ce943adb2b8d2"
+      }
+    },
+    {
+      "id": "d182bbe8145a4a83a6095a",
+      "from": {
+        "blockId": "477ff54d99494123bf2eda",
+        "itemId": "5e742146e06142ec91501b"
+      },
+      "to": {
+        "groupId": "c666bd65694049519db912"
+      }
+    },
+    {
+      "id": "d442ec6787c246bd888b9d",
+      "from": {
+        "blockId": "477ff54d99494123bf2eda"
+      },
+      "to": {
+        "groupId": "6a17cc1fbb7540bebafba1"
+      }
+    },
+    {
+      "id": "1fb234dc6d844dba914bd1",
+      "from": {
+        "blockId": "45b990d6759648be986f19"
+      },
+      "to": {
+        "groupId": "d79c4b7f2ce943adb2b8d2"
+      }
+    },
+    {
+      "id": "2e8681fe63224f5198b83d",
+      "from": {
+        "blockId": "477ff54d99494123bf2eda",
+        "itemId": "3102b996c29141358a3f81"
+      },
+      "to": {
+        "groupId": "c666bd65694049519db912"
+      }
+    },
+    {
+      "id": "f6d91de6c53f4d6c9c9b32",
+      "from": {
+        "blockId": "477ff54d99494123bf2eda",
+        "itemId": "6cab3d96d9d44e0c8f8f93"
+      },
+      "to": {
+        "groupId": "d614537ace8c41fd8e51f8"
+      }
+    },
+    {
+      "id": "3dd0a102e6c748c89f740c",
+      "from": {
+        "blockId": "23ee7f0cda2b45339f8a36"
+      },
+      "to": {
+        "groupId": "11afcd1fd1ec4a6f8008c5"
+      }
+    },
+    {
+      "id": "30bb36293469464092ae17",
+      "from": {
+        "blockId": "477ff54d99494123bf2eda",
+        "itemId": "4a015387b16a4650acf1cf"
+      },
+      "to": {
+        "groupId": "cb3ae1a185bc4c938e3010"
+      }
+    },
+    {
+      "id": "14de0aedb3054c2c942c5b",
+      "from": {
+        "blockId": "1a7c353952a54410a1564c"
+      },
+      "to": {
+        "groupId": "11afcd1fd1ec4a6f8008c5"
+      }
+    },
+    {
+      "id": "c3c846c72ba7421d894534",
+      "from": {
+        "blockId": "477ff54d99494123bf2eda",
+        "itemId": "1dc775e618124b1d86d54f"
+      },
+      "to": {
+        "groupId": "0ce0f4d8482d4eb29eb58a"
+      }
+    },
+    {
+      "id": "d3413348a6134322848873",
+      "from": {
+        "blockId": "65c53404752545849fcfa3"
+      },
+      "to": {
+        "groupId": "11afcd1fd1ec4a6f8008c5"
+      }
+    },
+    {
+      "id": "713ea06f6df8407c9619e5",
+      "from": {
+        "blockId": "477ff54d99494123bf2eda",
+        "itemId": "e9f7f63541ef4e83a1903d"
+      },
+      "to": {
+        "groupId": "31a3438eb2a240f5ac848a"
+      }
+    },
+    {
+      "id": "621157fb5def47dcbf3011",
+      "from": {
+        "blockId": "2a7cd9b854c8483baf4885"
+      },
+      "to": {
+        "groupId": "11afcd1fd1ec4a6f8008c5"
+      }
+    },
+    {
+      "id": "284ff99e51eb44eab523fc",
+      "from": {
+        "blockId": "4461aa84481a4737a14390",
+        "itemId": "708ca5a6cad24feda84424"
+      },
+      "to": {
+        "groupId": "15c2246509d249358ee901"
+      }
+    },
+    {
+      "id": "d9e498a9e2e14f5baca7aa",
+      "from": {
+        "blockId": "613bf1bfe0364d71a6c6a7",
+        "itemId": "60968575f77e45d0b9b120"
+      },
+      "to": {
+        "groupId": "c666bd65694049519db912"
+      }
+    },
+    {
+      "id": "6940bf48dbd24088939475",
+      "from": {
+        "blockId": "613bf1bfe0364d71a6c6a7"
+      },
+      "to": {
+        "groupId": "c241e9f490a2428d9351f4"
+      }
+    },
+    {
+      "id": "bb192e1665734a9dbeca26",
+      "from": {
+        "blockId": "34fc387ba3ef430abaa475"
+      },
+      "to": {
+        "groupId": "15c2246509d249358ee901"
+      }
+    },
+    {
+      "id": "0242fb8afd4641aeb85861",
+      "from": {
+        "blockId": "613bf1bfe0364d71a6c6a7",
+        "itemId": "0f1abd8b5ab248ac89ff96"
+      },
+      "to": {
+        "groupId": "c666bd65694049519db912"
+      }
+    },
+    {
+      "id": "9e5d815617704a7c897abf",
+      "from": {
+        "blockId": "613bf1bfe0364d71a6c6a7",
+        "itemId": "12a5c1c3b2e74a41a8ba3f"
+      },
+      "to": {
+        "groupId": "cf6d42a468974918b16b6c"
+      }
+    },
+    {
+      "id": "1ec4625bc0c849c18304d0",
+      "from": {
+        "blockId": "141c64efe6f6447497071a"
+      },
+      "to": {
+        "groupId": "11afcd1fd1ec4a6f8008c5"
+      }
+    },
+    {
+      "id": "f62f2687841d4418a79564",
+      "from": {
+        "blockId": "613bf1bfe0364d71a6c6a7",
+        "itemId": "a7a9a11c0d7d4eea8491c1"
+      },
+      "to": {
+        "groupId": "8c7dc2a1610443aa93416f"
+      }
+    },
+    {
+      "id": "e394b8ddc08c4cb29a10c8",
+      "from": {
+        "blockId": "1a27946236dc409d81641d"
+      },
+      "to": {
+        "groupId": "11afcd1fd1ec4a6f8008c5"
+      }
+    },
+    {
+      "id": "4c38427141ff4a99b31fd3",
+      "from": {
+        "blockId": "613bf1bfe0364d71a6c6a7",
+        "itemId": "a68c9fe968064ba5bea81e"
+      },
+      "to": {
+        "groupId": "e9206e3d3f134463a3e559"
+      }
+    },
+    {
+      "id": "92181f13257f4e3ea4a52b",
+      "from": {
+        "blockId": "4284155d36c64400a1af2d"
+      },
+      "to": {
+        "groupId": "11afcd1fd1ec4a6f8008c5"
+      }
+    },
+    {
+      "id": "4f26bd370b344493aff92d",
+      "from": {
+        "blockId": "4461aa84481a4737a14390",
+        "itemId": "e1ab59030d164f0fb6368b"
+      },
+      "to": {
+        "groupId": "6a00cfcc27fd4189a0e945"
+      }
+    },
+    {
+      "id": "9bceb714a4124b11b5a714",
+      "from": {
+        "blockId": "fc9238352f9c4b06b20e50",
+        "itemId": "744869ce58554b68926602"
+      },
+      "to": {
+        "groupId": "c666bd65694049519db912"
+      }
+    },
+    {
+      "id": "dd2f3d0d7e514cbc807cc4",
+      "from": {
+        "blockId": "fc9238352f9c4b06b20e50"
+      },
+      "to": {
+        "groupId": "81d956ad82e343aa9ff213"
+      }
+    },
+    {
+      "id": "9c3b4a02e2294e5ca5852e",
+      "from": {
+        "blockId": "bc0e2e42a9004708ac1748"
+      },
+      "to": {
+        "groupId": "6a00cfcc27fd4189a0e945"
+      }
+    },
+    {
+      "id": "feff14f843b848959f4d94",
+      "from": {
+        "blockId": "fc9238352f9c4b06b20e50",
+        "itemId": "ee4a795533ab4eaa8eaf12"
+      },
+      "to": {
+        "groupId": "c666bd65694049519db912"
+      }
+    },
+    {
+      "id": "3d98d3f6fd7d4be4a7fa9a",
+      "from": {
+        "blockId": "fc9238352f9c4b06b20e50",
+        "itemId": "987b3b4a68614184a13245"
+      },
+      "to": {
+        "groupId": "ab195abe372e443bb68a75"
+      }
+    },
+    {
+      "id": "4645a22fec8d43b0ae2b61",
+      "from": {
+        "blockId": "e3d1715408b14f25a83d39"
+      },
+      "to": {
+        "groupId": "11afcd1fd1ec4a6f8008c5"
+      }
+    },
+    {
+      "id": "29f2ec71c96e4041b48d59",
+      "from": {
+        "blockId": "fc9238352f9c4b06b20e50",
+        "itemId": "31b86024c77b432692854a"
+      },
+      "to": {
+        "groupId": "237e6fd3fb5649369323e2"
+      }
+    },
+    {
+      "id": "ae83eec6dd26444eac835f",
+      "from": {
+        "blockId": "b524c05580d3411eb26968"
+      },
+      "to": {
+        "groupId": "11afcd1fd1ec4a6f8008c5"
+      }
+    },
+    {
+      "id": "fbbb64660c9a4fd0baa30f",
+      "from": {
+        "blockId": "fc9238352f9c4b06b20e50",
+        "itemId": "d9ad3bfd544c44be88a429"
+      },
+      "to": {
+        "groupId": "c08d23413be84b5ca4f7b6"
+      }
+    },
+    {
+      "id": "e1443d82ed694d928e47d7",
+      "from": {
+        "blockId": "8ff9943fc7be478c879d6d"
+      },
+      "to": {
+        "groupId": "11afcd1fd1ec4a6f8008c5"
+      }
+    },
+    {
+      "id": "b4f5571f66cf4cc5a4e1d8",
+      "from": {
+        "blockId": "fc9238352f9c4b06b20e50",
+        "itemId": "85e7ad41c49a45d999b3b8"
+      },
+      "to": {
+        "groupId": "ae30288d61bc438e8ed10b"
+      }
+    },
+    {
+      "id": "48c12c98bb0f4c99b3d1ee",
+      "from": {
+        "blockId": "ca55dace4b5f46dc87fad4"
+      },
+      "to": {
+        "groupId": "11afcd1fd1ec4a6f8008c5"
+      }
+    },
+    {
+      "id": "74f113538fa146179c4066",
+      "from": {
+        "blockId": "fc9238352f9c4b06b20e50",
+        "itemId": "f786ef352d3d4ffcb22ac4"
+      },
+      "to": {
+        "groupId": "64940b3f264c4268b6bea9"
+      }
+    },
+    {
+      "id": "af6ce2d627cd4131857c2e",
+      "from": {
+        "blockId": "3b0613b662ec4c859e87ae"
+      },
+      "to": {
+        "groupId": "11afcd1fd1ec4a6f8008c5"
+      }
+    },
+    {
+      "id": "5dd5702ebae445e09748fa",
+      "from": {
+        "blockId": "4461aa84481a4737a14390",
+        "itemId": "0e7343913cff4f60bab381"
+      },
+      "to": {
+        "groupId": "cf362eedfb69419fac7788"
+      }
+    },
+    {
+      "id": "ffc6aef64b554f6890f5f0",
+      "from": {
+        "blockId": "3b293468cc7148f6b2d7e7"
+      },
+      "to": {
+        "groupId": "11afcd1fd1ec4a6f8008c5"
+      }
+    },
+    {
+      "id": "36925834cd114271981ee8",
+      "from": {
+        "blockId": "54c9d08d33144621a97bd9"
+      },
+      "to": {
+        "groupId": "665a9f38c719444d9199aa"
+      }
+    }
+  ],
+  "variables": [
+    {
+      "id": "49cbf60eba444b619309b5",
+      "name": "menuPrincipal",
+      "isSessionVariable": false
+    },
+    {
+      "id": "a35299e2c5b94f4c876e69",
+      "name": "TOKENWHATSAPP",
+      "isSessionVariable": true
+    },
+    {
+      "id": "40c3d10539754eff84868e",
+      "name": "contactName",
+      "isSessionVariable": true
+    },
+    {
+      "id": "e9bea68cb6ba42f9a041a5",
+      "name": "contactNumber",
+      "isSessionVariable": true
+    },
+    {
+      "id": "d0294db85ed74f24875f9b",
+      "name": "ticketId",
+      "isSessionVariable": true
+    },
+    {
+      "id": "636bb0200aad46c7aeac10",
+      "name": "protocolo",
+      "isSessionVariable": true
+    },
+    {
+      "id": "73f3187097e240f882b72f",
+      "name": "subMenu_d695a8",
+      "isSessionVariable": false
+    },
+    {
+      "id": "a493a329c9114cb1b3ad89",
+      "name": "subMenu_51f6e2",
+      "isSessionVariable": false
+    },
+    {
+      "id": "b343592937b1477589cd36",
+      "name": "subMenu_512de1",
+      "isSessionVariable": false
+    },
+    {
+      "id": "678e33fe1be14825a0539e",
+      "name": "subMenu_051298",
+      "isSessionVariable": false
+    },
+    {
+      "id": "0f27ff4a586b4e18a8b46a",
+      "name": "subMenu_dd289b",
+      "isSessionVariable": false
+    },
+    {
+      "id": "980489c1f86a40298b62f0",
+      "name": "subMenu_2a569a",
+      "isSessionVariable": false
+    },
+    {
+      "id": "23fe7b161a2c4a968b628d",
+      "name": "subMenu_e9912e",
+      "isSessionVariable": false
+    },
+    {
+      "id": "e8741e4eadaf4e5b955934",
+      "name": "subMenu_e2cf55",
+      "isSessionVariable": false
+    },
+    {
+      "id": "2b97919ccaad4542913dfa",
+      "name": "subMenu_d79c4b",
+      "isSessionVariable": false
+    },
+    {
+      "id": "035e5461ea5247acb1881a",
+      "name": "subMenu_15c224",
+      "isSessionVariable": false
+    },
+    {
+      "id": "43015af5696a4b9fa10675",
+      "name": "subMenu_6a00cf",
+      "isSessionVariable": false
+    }
+  ],
+  "theme": {},
+  "selectedThemeTemplateId": null,
+  "settings": {},
+  "createdAt": "2026-04-15T14:51:28.878Z",
+  "updatedAt": "2026-04-15T14:51:28.878Z",
+  "icon": null,
+  "folderId": null,
+  "publicId": null,
+  "customDomain": null,
+  "workspaceId": "",
+  "resultsTablePreferences": null,
+  "isArchived": false,
+  "isClosed": false,
+  "whatsAppCredentialsId": null,
+  "riskLevel": null
+}

@@ -267,6 +267,106 @@ async function xmlToTypebot(xmlString, options = {}) {
     }
   }
 
+  // Reparar arestas faltantes: para menus com itens numerados, vincular nós órfãos
+  // que correspondem aos itens não conectados (por prefixo numérico + proximidade espacial)
+  {
+    const validInDegree = {};
+    for (const children of Object.values(adjacency)) {
+      for (const c of children) validInDegree[c] = (validInDegree[c] || 0) + 1;
+    }
+    const orphanSet = new Set(
+      vertices.filter(v => !validInDegree[v.$.id] && v.$.id !== mainNodeId).map(v => v.$.id)
+    );
+
+    // Processa nós-menu por coordenada X decrescente (menus mais profundos primeiro)
+    // Isso evita que menus rasos "roubem" órfãos de submenus mais profundos
+    const menuVertices = vertices
+      .filter(v => detectMenuItems(nodeContent[v.$.id]?.text || '').length >= 2)
+      .sort((a, b) => {
+        const ax = vertexGeo.get(a.$.id)?.cx || 0;
+        const bx = vertexGeo.get(b.$.id)?.cx || 0;
+        return bx - ax; // mais à direita primeiro
+      });
+
+    const MAX_ORPHAN_DIST = 1200; // distância máxima para vincular órfão
+
+    for (const v of menuVertices) {
+      const vid = v.$.id;
+      const text = nodeContent[vid]?.text || '';
+      const items = detectMenuItems(text);
+
+      const currentChildren = adjacency[vid] || [];
+      // Mapeia quais números de item já têm um filho correspondente
+      const linkedNums = new Set();
+      for (const childId of currentChildren) {
+        const childText = (nodeContent[childId]?.text || '').trim();
+        const childMatch = childText.match(/^(\d+)[.\)\-*\s]/);
+        if (childMatch) linkedNums.add(parseInt(childMatch[1], 10));
+      }
+
+      // Para cada item não vinculado, procura órfão com mesmo prefixo numérico
+      const srcGeo = vertexGeo.get(vid);
+      for (const item of items) {
+        if (linkedNums.has(item.number)) continue;
+        // Pula itens de "Retornar" (não têm nó-alvo)
+        if (/retorn|voltar|menu\s+(?:anterior|principal)/i.test(item.label)) continue;
+        // Procura órfão cujo texto começa com esse número
+        let bestOrphan = null;
+        let bestDist = Infinity;
+        for (const oid of orphanSet) {
+          const oText = (nodeContent[oid]?.text || '').trim();
+          const oMatch = oText.match(/^(\d+)[.\)\-*\s]/);
+          if (!oMatch || parseInt(oMatch[1], 10) !== item.number) continue;
+          // Verifica proximidade espacial (à direita do menu, dentro do limite)
+          const oGeo = vertexGeo.get(oid);
+          if (!oGeo || !srcGeo) { bestOrphan = oid; break; }
+          if (oGeo.cx <= srcGeo.cx) continue; // deve estar à direita
+          const dist = Math.hypot(oGeo.cx - srcGeo.cx, oGeo.cy - srcGeo.cy);
+          if (dist > MAX_ORPHAN_DIST) continue; // muito longe
+          if (dist < bestDist) { bestDist = dist; bestOrphan = oid; }
+        }
+        if (bestOrphan) {
+          if (!adjacency[vid]) adjacency[vid] = [];
+          adjacency[vid].push(bestOrphan);
+          orphanSet.delete(bestOrphan);
+          linkedNums.add(item.number);
+        }
+      }
+
+      // Fase 2: vincular órfãos próximos à direita que NÃO têm número no texto detectado
+      // (para menus cujo texto não lista todos os sub-itens)
+      if (srcGeo) {
+        const childCount = (adjacency[vid] || []).length;
+        // Se o menu ainda tem poucos filhos, procura órfãos muito próximos à direita
+        const remainingOrphans = [...orphanSet]
+          .map(oid => {
+            const oGeo = vertexGeo.get(oid);
+            if (!oGeo || oGeo.cx <= srcGeo.cx) return null;
+            const dist = Math.hypot(oGeo.cx - srcGeo.cx, oGeo.cy - srcGeo.cy);
+            if (dist > MAX_ORPHAN_DIST) return null;
+            return { oid, dist };
+          })
+          .filter(Boolean)
+          .sort((a, b) => a.dist - b.dist);
+
+        for (const { oid } of remainingOrphans) {
+          const oText = (nodeContent[oid]?.text || '').trim();
+          // Só vincula se o órfão tem conteúdo substancial
+          if (oText.length < 20) continue;
+          // Não vincula se já foi consumido
+          if (!orphanSet.has(oid)) continue;
+          // Verifica se o texto do órfão começa com um número que já é filho
+          const oMatch = oText.match(/^(\d+)[.\)\-*\s]/);
+          if (oMatch && linkedNums.has(parseInt(oMatch[1], 10))) continue;
+          if (!adjacency[vid]) adjacency[vid] = [];
+          adjacency[vid].push(oid);
+          orphanSet.delete(oid);
+          if (oMatch) linkedNums.add(parseInt(oMatch[1], 10));
+        }
+      }
+    }
+  }
+
   // 8. Montar o Typebot
   const typebotId = generateId();
   const startEvtId = generateId();
@@ -398,6 +498,7 @@ async function xmlToTypebot(xmlString, options = {}) {
 
     // Resolve "pass-through": segue encadeamentos de nós intermediários com exatamente 1 filho.
     // Para em nós com >= 2 itens de menu (são submenus reais, não labels intermediários).
+    // Também para em nós com texto longo sem itens de menu (são conteúdo final).
     let effectiveTargetId = targetId;
     {
       const visited = new Set([targetId]);
@@ -407,7 +508,7 @@ async function xmlToTypebot(xmlString, options = {}) {
         if (detectMenuItems(currentText).length >= 2) break;
         const directChildren = (adjacency[effectiveTargetId] || []).filter(c => c && c !== 'undefined');
         if (directChildren.length !== 1) break;
-        if (currentText.length > 40) break;
+        if (currentText.length > 80 && !detectMenuItems(currentText).length) break;
         const nextId = directChildren[0];
         if (visited.has(nextId)) break;
         visited.add(nextId);
@@ -559,6 +660,12 @@ function buildSubmenuGroup(nodeId, text, groupId, children, vertices, nodeConten
     content: { comparisons: [{ id: generateId(), variableId: varSub.id, comparisonOperator: 'Equal to', value: '0' }] },
   });
 
+  // Detecta item "Retornar" no menu (último item numerado cujo label contém retornar/voltar)
+  const menuItemsDetected = detectMenuItems(text);
+  const retornarItem = [...menuItemsDetected].reverse().find(it =>
+    /retorn|voltar|menu\s+(?:anterior|principal)/i.test(it.label)
+  );
+
   for (let i = 0; i < sortedChildren.length; i++) {
     const childId = sortedChildren[i];
     const itemId = generateId();
@@ -569,6 +676,19 @@ function buildSubmenuGroup(nodeId, text, groupId, children, vertices, nodeConten
       content: { comparisons: [{ id: generateId(), variableId: varSub.id, comparisonOperator: 'Equal to', value: String(i + 1) }] },
     });
     subEdges.push({ edgeId, childId, itemId });
+  }
+
+  // Se há item "Retornar" com número diferente de 0 e não coberto pelos filhos, adiciona condição extra
+  if (retornarItem && retornarItem.number > sortedChildren.length) {
+    const retItemId = generateId();
+    const retEdgeId = generateId();
+    subItems.push({
+      id: retItemId,
+      outgoingEdgeId: retEdgeId,
+      content: { comparisons: [{ id: generateId(), variableId: varSub.id, comparisonOperator: 'Equal to', value: String(retornarItem.number) }] },
+    });
+    // Reutiliza o mesmo destino do back0 (menu pai)
+    edgesOut.push({ id: retEdgeId, from: { blockId: bSubCond, itemId: retItemId }, to: { groupId: parentGroupId || groupId } });
   }
 
   // Texto do submenu com limpeza do prefixo numérico
@@ -605,6 +725,7 @@ function buildSubmenuGroup(nodeId, text, groupId, children, vertices, nodeConten
   for (const { edgeId, childId, itemId } of subEdges) {
     // Resolve pass-through: segue nós intermediários com 1 filho (labels de opção)
     // Para em nós com >= 2 itens de menu (são submenus reais)
+    // Para em nós com texto longo sem itens de menu (são conteúdo final)
     let effectiveChildId = childId;
     {
       const visited = new Set([childId]);
@@ -614,7 +735,7 @@ function buildSubmenuGroup(nodeId, text, groupId, children, vertices, nodeConten
         if (detectMenuItems(currentText).length >= 2) break;
         const directChildren = (adjacency[effectiveChildId] || []).filter(c => c && c !== 'undefined');
         if (directChildren.length !== 1) break;
-        if (currentText.length > 40) break;
+        if (currentText.length > 80 && !detectMenuItems(currentText).length) break;
         const nextId = directChildren[0];
         if (visited.has(nextId)) break;
         visited.add(nextId);

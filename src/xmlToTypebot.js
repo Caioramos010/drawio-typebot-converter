@@ -114,19 +114,48 @@ async function xmlToTypebot(xmlString, options = {}) {
     return bestId;
   }
 
+  // Resolve células-filhas dentro de containers/grupos:
+  // Em DrawIO, sub-cells possuem parent=containerId. Arestas originadas de sub-cells
+  // devem ser mapeadas para o container (vértice de conteúdo).
+  const vertexIds = new Set(vertices.map(v => v.$.id));
+  const parentOf = {}; // cellId → ancestral vértice mais próximo
+  const allCells = [...cells, ...userObjects.map(uo => uo.mxCell?.[0]).filter(Boolean)];
+  for (const c of cells) {
+    const p = c.$.parent;
+    if (p && p !== '0' && p !== '1' && vertexIds.has(p)) {
+      parentOf[c.$.id] = p;
+    }
+  }
+  // Resolve transitivamente (sub-sub-cells)
+  function resolveParent(id) {
+    const visited = new Set();
+    let cur = id;
+    while (parentOf[cur] && !visited.has(cur)) {
+      visited.add(cur);
+      cur = parentOf[cur];
+    }
+    return cur;
+  }
+
   for (const e of edges) {
-    const src = e.$.source;
+    let src = e.$.source;
     const tgt = e.$.target;
     if (!src) continue;
+    // Resolve sub-cell para o vértice-container pai
+    src = resolveParent(src);
     // Resolve target: explícito ou por coordenada de ponto-final
-    const resolvedTgt = (tgt && tgt !== 'undefined')
+    let resolvedTgt = (tgt && tgt !== 'undefined')
       ? tgt
       : resolveTargetByCoord(e.mxGeometry, src);
     if (!resolvedTgt) {
       brokenEdgeSources.add(src);
       continue;
     }
+    // Resolve sub-cell target para o vértice-container pai
+    resolvedTgt = resolveParent(resolvedTgt);
     if (!adjacency[src]) adjacency[src] = [];
+    // Ignora self-loops (arestas que apontam para o próprio nó)
+    if (resolvedTgt === src) continue;
     if (!adjacency[src].includes(resolvedTgt)) adjacency[src].push(resolvedTgt);
     edgeMap[e.$.id] = { source: src, target: resolvedTgt };
   }
@@ -368,15 +397,17 @@ async function xmlToTypebot(xmlString, options = {}) {
     const { edgeId, targetId, itemId, isSubmenu: aiIsSubmenu, subOptions } = condEdges[i];
 
     // Resolve "pass-through": segue encadeamentos de nós intermediários com exatamente 1 filho.
+    // Para em nós com >= 2 itens de menu (são submenus reais, não labels intermediários).
     let effectiveTargetId = targetId;
     {
       const visited = new Set([targetId]);
       while (true) {
         const current = nodeContent[effectiveTargetId];
         const currentText = (current && current.text || '').trim();
+        if (detectMenuItems(currentText).length >= 2) break;
         const directChildren = (adjacency[effectiveTargetId] || []).filter(c => c && c !== 'undefined');
         if (directChildren.length !== 1) break;
-        if (currentText.length > 40 && !detectMenuItems(currentText).length) break;
+        if (currentText.length > 40) break;
         const nextId = directChildren[0];
         if (visited.has(nextId)) break;
         visited.add(nextId);
@@ -402,7 +433,7 @@ async function xmlToTypebot(xmlString, options = {}) {
       buildSubmenuGroup(
         targetId, text, groupId, children, vertices, nodeContent,
         adjacency, edgesOut, groups, waitGroupId, variables,
-        i, responseY, queueIds, mainGroupId
+        i, responseY, queueIds, mainGroupId, 1
       );
       responseY += LAYOUT.responseStepY * (children.length + 1);
     } else {
@@ -492,7 +523,10 @@ async function xmlToTypebot(xmlString, options = {}) {
 }
 
 // ─── Monta submenu recursivo ──────────────────────────────────────────────────
-function buildSubmenuGroup(nodeId, text, groupId, children, vertices, nodeContent, adjacency, edgesOut, groups, waitGroupId, variables, parentIdx, startY, queueIds, mainGroupId) {
+function buildSubmenuGroup(nodeId, text, groupId, children, vertices, nodeContent, adjacency, edgesOut, groups, waitGroupId, variables, parentIdx, startY, queueIds, parentGroupId, depth) {
+  depth = depth || 1;
+  const maxDepth = 5; // Limite de recursão para evitar loops infinitos
+
   const varSub = { id: generateId(), name: `subMenu_${groupId.substring(0, 6)}`, isSessionVariable: false };
   variables.push(varSub);
 
@@ -507,7 +541,7 @@ function buildSubmenuGroup(nodeId, text, groupId, children, vertices, nodeConten
   const subItems = [];
   const subEdges = [];
 
-  // Verifica se algum filho é fila (queueId configurado)
+  // Ordena filhos por coordenada Y
   const sortedChildren = [...children].sort((a, b) => {
     const va = vertices.find(v => v.$.id === a);
     const vb = vertices.find(v => v.$.id === b);
@@ -516,7 +550,7 @@ function buildSubmenuGroup(nodeId, text, groupId, children, vertices, nodeConten
     return ya - yb;
   });
 
-  // Opção 0 = voltar ao menu principal
+  // Opção 0 = voltar ao menu pai (ou menu principal se for level 1)
   const back0Id = generateId();
   const back0Edge = generateId();
   subItems.push({
@@ -537,12 +571,15 @@ function buildSubmenuGroup(nodeId, text, groupId, children, vertices, nodeConten
     subEdges.push({ edgeId, childId, itemId });
   }
 
+  // Texto do submenu com limpeza do prefixo numérico
+  const cleanMenuText = cleanResponseText(text);
+
   groups.push({
     id: groupId,
-    title: text.substring(0, 50) || `Submenu ${parentIdx + 1}`,
-    graphCoordinates: { x: LAYOUT.responseBaseX, y: startY },
+    title: (cleanMenuText || text).substring(0, 50) || `Submenu ${parentIdx + 1}`,
+    graphCoordinates: { x: LAYOUT.responseBaseX + (depth - 1) * 600, y: startY },
     blocks: [
-      { id: bSubText, type: 'text', content: { richText: textToRichText(text) } },
+      { id: bSubText, type: 'text', content: { richText: textToRichText(cleanMenuText || text) } },
       { id: bSubInput, type: 'text input', options: { variableId: varSub.id } },
       { id: bSubCond, outgoingEdgeId: subInvalidEdge, type: 'Condition', items: subItems },
     ],
@@ -552,7 +589,7 @@ function buildSubmenuGroup(nodeId, text, groupId, children, vertices, nodeConten
   groups.push({
     id: subInvalidGroupId,
     title: 'Opção inválida - Submenu',
-    graphCoordinates: { x: LAYOUT.responseBaseX, y: startY + 600 },
+    graphCoordinates: { x: LAYOUT.responseBaseX + (depth - 1) * 600, y: startY + 600 },
     blocks: [
       { id: bSubInvalid, outgoingEdgeId: subInvalidBackEdge, type: 'text', content: { richText: textToRichText('Não entendemos sua resposta. Por favor, tente novamente.') } },
     ],
@@ -560,43 +597,76 @@ function buildSubmenuGroup(nodeId, text, groupId, children, vertices, nodeConten
 
   edgesOut.push({ id: subInvalidEdge, from: { blockId: bSubCond }, to: { groupId: subInvalidGroupId } });
   edgesOut.push({ id: subInvalidBackEdge, from: { blockId: bSubInvalid }, to: { groupId } });
-  // Opção 0 volta para o Menu Principal
-  edgesOut.push({ id: back0Edge, from: { blockId: bSubCond, itemId: back0Id }, to: { groupId: mainGroupId || groupId } });
+  // Opção 0 volta para o menu pai
+  edgesOut.push({ id: back0Edge, from: { blockId: bSubCond, itemId: back0Id }, to: { groupId: parentGroupId || groupId } });
 
   // Filhos do submenu
   let childY = startY + LAYOUT.responseStepY;
   for (const { edgeId, childId, itemId } of subEdges) {
-    const childGroupId = generateId();
-    const { text: childText } = nodeContent[childId] || { text: '' };
+    // Resolve pass-through: segue nós intermediários com 1 filho (labels de opção)
+    // Para em nós com >= 2 itens de menu (são submenus reais)
+    let effectiveChildId = childId;
+    {
+      const visited = new Set([childId]);
+      while (true) {
+        const current = nodeContent[effectiveChildId];
+        const currentText = (current && current.text || '').trim();
+        if (detectMenuItems(currentText).length >= 2) break;
+        const directChildren = (adjacency[effectiveChildId] || []).filter(c => c && c !== 'undefined');
+        if (directChildren.length !== 1) break;
+        if (currentText.length > 40) break;
+        const nextId = directChildren[0];
+        if (visited.has(nextId)) break;
+        visited.add(nextId);
+        effectiveChildId = nextId;
+      }
+    }
+
+    const { text: childText } = nodeContent[effectiveChildId] || { text: '' };
     const cleanChildText = cleanResponseText(childText);
+    const childGroupId = generateId();
     const bChild = generateId();
     const childToWaitEdge = generateId();
 
+    // Filhos deste nó (para verificar se é submenu recursivo)
+    const grandchildren = (adjacency[effectiveChildId] || []).filter(c => c && c !== 'undefined');
+    const childMenuItems = detectMenuItems(childText);
+    const isChildSubmenu = depth < maxDepth && childMenuItems.length >= 2 && grandchildren.length >= 1;
+
     // Detecta se é uma fila (queueId passado pelo usuário)
-    const queueId = queueIds[childId] || queueIds[childText?.substring(0, 30)];
+    const queueId = queueIds[childId] || queueIds[effectiveChildId] || queueIds[childText?.substring(0, 30)];
+
+    edgesOut.push({ id: edgeId, from: { blockId: bSubCond, itemId }, to: { groupId: childGroupId } });
 
     if (queueId) {
       // Bloco de Typebot link (fila)
       groups.push({
         id: childGroupId,
         title: cleanChildText.substring(0, 50) || `Fila ${childId}`,
-        graphCoordinates: { x: LAYOUT.responseBaseX + 600, y: childY },
+        graphCoordinates: { x: LAYOUT.responseBaseX + depth * 600, y: childY },
         blocks: [{ id: bChild, type: 'Typebot link', options: { typebotId: queueId } }],
       });
+      childY += LAYOUT.responseStepY;
+    } else if (isChildSubmenu) {
+      // Recursão: o filho é ele próprio um submenu
+      buildSubmenuGroup(
+        effectiveChildId, childText, childGroupId, grandchildren, vertices, nodeContent,
+        adjacency, edgesOut, groups, waitGroupId, variables,
+        parentIdx, childY, queueIds, groupId, depth + 1
+      );
+      childY += LAYOUT.responseStepY * (grandchildren.length + 2);
     } else {
       groups.push({
         id: childGroupId,
         title: cleanChildText.substring(0, 50) || `Opção ${childId}`,
-        graphCoordinates: { x: LAYOUT.responseBaseX + 600, y: childY },
+        graphCoordinates: { x: LAYOUT.responseBaseX + depth * 600, y: childY },
         blocks: [
-          { id: bChild, outgoingEdgeId: childToWaitEdge, type: 'text', content: { richText: textToRichText(cleanChildText) } },
+          { id: bChild, outgoingEdgeId: childToWaitEdge, type: 'text', content: { richText: textToRichText(cleanChildText || childText) } },
         ],
       });
       edgesOut.push({ id: childToWaitEdge, from: { blockId: bChild }, to: { groupId: waitGroupId } });
+      childY += LAYOUT.responseStepY;
     }
-
-    edgesOut.push({ id: edgeId, from: { blockId: bSubCond, itemId }, to: { groupId: childGroupId } });
-    childY += LAYOUT.responseStepY;
   }
 }
 

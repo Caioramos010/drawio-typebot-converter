@@ -72,10 +72,18 @@ function cleanResponseText(text) {
   }
 
   // Filtra linhas de navegação, cabeçalhos e "Digite X para retornar"
-  const NAV_PATTERN = /(?:[\d️⃣\*_]+\s*[.\)\-]?\s*)?[Mm]enu\s+(?:[Pp]rincipal|[Aa]nterior)|[Vv]oltar\s+ao\s+[Mm]enu|^\s*[0️⃣1️⃣2️⃣]\s*[.\-]?\s*[Mm]enu/u;
+  // NAV_PATTERN: só filtra linhas CURTAS (<=80 chars) que são primariamente de navegação,
+  // ou linhas que COMEÇAM com padrão de menu (evita filtrar conteúdo que apenas menciona "menu")
+  const NAV_LINE_PATTERN = /^\s*(?:[\d️⃣\*_]+\s*[.\)\-]?\s*)?(?:[Mm]enu\s+(?:[Pp]rincipal|[Aa]nterior)|[Vv]oltar\s+ao\s+[Mm]enu|[Rr]etornar\s+ao\s+[Mm]enu)\s*$/u;
   const HEADER_PATTERN = /^\s*Resposta\s+Autom[aá]tica\s*$/i;
   const BACK_PATTERN = /[Dd]igite\s+[Xx]\s+para\s+retornar/;
-  const cleaned = lines.filter(line => !NAV_PATTERN.test(line) && !HEADER_PATTERN.test(line) && !BACK_PATTERN.test(line));
+  // Remove sufixo de navegação no final de linhas longas ("Ou digite 0 para retornar ao menu anterior")
+  const NAV_SUFFIX = /\s*(?:Ou\s+)?[Dd]igite\s+\d+\s+para\s+(?:retornar|voltar)\s+ao\s+menu\s+(?:anterior|principal)\.?\s*$/;
+  const FIN_SUFFIX = /\s*(?:\*?[Dd]igite\s+\d+\*?\s+para\s+finalizar\s+o\s+atendimento\s+ou\s+\*?\d+\*?\s+para\s+retornar\s+ao\s+menu\s+anterior)\.?\s*$/;
+  const FIN_SUFFIX2 = /\s*(?:\*?Ou\s+digite\s+\d+\*?\s+para\s+finalizar\s+o\s+atendimento\s+ou\s+\*?\d+\*?\s+para\s+retornar\s+ao\s+menu\s+anterior)\.?\s*$/;
+  const cleaned = lines
+    .filter(line => !NAV_LINE_PATTERN.test(line) && !HEADER_PATTERN.test(line) && !BACK_PATTERN.test(line))
+    .map(line => line.replace(FIN_SUFFIX, '').replace(FIN_SUFFIX2, '').replace(NAV_SUFFIX, ''));
 
   // Remove linhas em branco consecutivas no final
   while (cleaned.length > 0 && !cleaned[cleaned.length - 1].trim()) cleaned.pop();
